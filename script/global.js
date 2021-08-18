@@ -2,6 +2,13 @@
 	$(document).ready(function () {
 		fadeIn();
 
+		$('.mobile_slider').slick({
+		  
+		 	infinite: false,
+		  slidesToShow: 1,
+		  centerMode: true,
+		});
+
         $('.custom_select').select2({
             closeOnSelect: false
         });
