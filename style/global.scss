@@ -735,7 +735,7 @@ header{
 			width: 0%;
 			@include transition(all, 400ms, ease-in, 400ms);
 
-			.form_holder, .form_header{
+			.form_holder, .form_header, .success_message_content{
 				opacity: 0;
 				@include transition(all, 400ms, ease-in, 0ms);
 			}
@@ -744,10 +744,70 @@ header{
 
 	.contact_form_wrap{
 		background-color: #fff;
+		position: relative;
 		width: 0%;
 		margin-left: auto;
 		height: 100%;
 		@include transition(all, 400ms, ease-in, 800ms);
+
+		.success_message_wrap{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			background-color: #EFF4F7;
+			z-index: 1;
+			display: none;
+
+			.success_message_content_wrap{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100%;
+				padding: 100px;
+				box-sizing: border-box;
+				text-align: center;
+				position: relative;
+
+				.close_form{
+					@include transition();
+					position: absolute;
+					right: 30px;
+					top: 30px;
+					cursor: pointer;
+					
+					&:hover{
+						opacity: 0.6;
+					}
+
+					@media #{$s1500} {
+						max-width: 15px;
+
+						img{
+							width: 100%;
+						}
+					}
+				}
+
+				@media #{$s750} {
+					padding: 50px;
+				}
+
+				.success_message_content{
+
+					h2{
+						@extend .secondary_headline;
+						line-height: 1em;
+						margin-bottom: 40px;
+					}
+
+					p{
+						@extend .text;
+					}
+				}
+			}
+		}
 
 		.form_header{
 			opacity: 0;

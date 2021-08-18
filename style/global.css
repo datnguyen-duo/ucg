@@ -362,29 +362,29 @@ body {
     .primary_headline, .second_section .left h2, .third_section .left h2, .fourth_section .left h2, .fifth_section .founder_info .founder_info_content h2 {
       font-size: 65px; } }
 
-.secondary_headline, .contact_form_holder .form_description h3, .first_section h2, .first_section .three_box_section .single_box_wrap .single_box h3, .sixth_section .sixth_section_content h2, .seventh_section .seventh_section_content h2, .single_storie_wrap .single_storie_content .single_storie_hero .hero_content .left h2, footer .top h2 {
+.secondary_headline, .contact_form_holder .contact_form_wrap .success_message_wrap .success_message_content_wrap .success_message_content h2, .contact_form_holder .form_description h3, .first_section h2, .first_section .three_box_section .single_box_wrap .single_box h3, .sixth_section .sixth_section_content h2, .seventh_section .seventh_section_content h2, .single_storie_wrap .single_storie_content .single_storie_hero .hero_content .left h2, footer .top h2 {
   font-size: 5.7vw;
   color: #000C45;
   font-family: "PPRadioGrotesk-Regular", sans-serif;
   line-height: 1.15em; }
   @media only screen and (max-width: 1020px) {
-    .secondary_headline, .contact_form_holder .form_description h3, .first_section h2, .first_section .three_box_section .single_box_wrap .single_box h3, .sixth_section .sixth_section_content h2, .seventh_section .seventh_section_content h2, .single_storie_wrap .single_storie_content .single_storie_hero .hero_content .left h2, footer .top h2 {
+    .secondary_headline, .contact_form_holder .contact_form_wrap .success_message_wrap .success_message_content_wrap .success_message_content h2, .contact_form_holder .form_description h3, .first_section h2, .first_section .three_box_section .single_box_wrap .single_box h3, .sixth_section .sixth_section_content h2, .seventh_section .seventh_section_content h2, .single_storie_wrap .single_storie_content .single_storie_hero .hero_content .left h2, footer .top h2 {
       font-size: 36px; } }
   @media only screen and (max-width: 750px) {
-    .secondary_headline, .contact_form_holder .form_description h3, .first_section h2, .first_section .three_box_section .single_box_wrap .single_box h3, .sixth_section .sixth_section_content h2, .seventh_section .seventh_section_content h2, .single_storie_wrap .single_storie_content .single_storie_hero .hero_content .left h2, footer .top h2 {
+    .secondary_headline, .contact_form_holder .contact_form_wrap .success_message_wrap .success_message_content_wrap .success_message_content h2, .contact_form_holder .form_description h3, .first_section h2, .first_section .three_box_section .single_box_wrap .single_box h3, .sixth_section .sixth_section_content h2, .seventh_section .seventh_section_content h2, .single_storie_wrap .single_storie_content .single_storie_hero .hero_content .left h2, footer .top h2 {
       font-size: 46px; } }
 
-.text, .hero_wrap .hero_content_wrap .hero_content p, .first_section p, .second_section .right ul li p {
+.text, .contact_form_holder .contact_form_wrap .success_message_wrap .success_message_content_wrap .success_message_content p, .hero_wrap .hero_content_wrap .hero_content p, .first_section p, .second_section .right ul li p {
   font-size: 1.45vw;
   color: #4C4E58;
   font-family: "PPRadioGrotesk-Regular", sans-serif;
   line-height: 1.25em;
   letter-spacing: 0.3px; }
   @media only screen and (max-width: 1020px) {
-    .text, .hero_wrap .hero_content_wrap .hero_content p, .first_section p, .second_section .right ul li p {
+    .text, .contact_form_holder .contact_form_wrap .success_message_wrap .success_message_content_wrap .success_message_content p, .hero_wrap .hero_content_wrap .hero_content p, .first_section p, .second_section .right ul li p {
       font-size: 18px; } }
   @media only screen and (max-width: 750px) {
-    .text, .hero_wrap .hero_content_wrap .hero_content p, .first_section p, .second_section .right ul li p {
+    .text, .contact_form_holder .contact_form_wrap .success_message_wrap .success_message_content_wrap .success_message_content p, .hero_wrap .hero_content_wrap .hero_content p, .first_section p, .second_section .right ul li p {
       font-size: 20px; } }
 
 .small_text, .select2 .select2-selection.select2-selection--multiple .select2-search__field, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice:after, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice span, .select2-dropdown .select2-results .select2-results__options .select2-results__option, .contact_form_holder .contact_form_wrap .form_header .page span, .contact_form_holder .contact_form_wrap .form_header p, .contact_form_holder .form_description p, .contact_form_holder form .second_part .button_holder .prev, .contact_form_holder form .input_holder label, .contact_form_holder form .input_holder input, .contact_form_holder form .input_holder input::-webkit-input-placeholder, .hero_wrap .hero_content_wrap .hero_content .clients_wrap p, .hero_wrap .hero_content_wrap .hero_content .clients_wrap .more, .first_section .three_box_section .single_box_wrap .single_box p, .second_section .left p, .second_section .right p, .third_section .left p, .fourth_section .left p, .sixth_section .sixth_section_content .faq_section .single_question p, .single_storie_wrap .single_storie_content .storie_content p {
@@ -589,17 +589,63 @@ header {
     width: 0%;
     -webkit-transition: all 400ms ease-in 400ms;
     transition: all 400ms ease-in 400ms; }
-    .contact_form_holder.close .contact_form_wrap .form_holder, .contact_form_holder.close .contact_form_wrap .form_header {
+    .contact_form_holder.close .contact_form_wrap .form_holder, .contact_form_holder.close .contact_form_wrap .form_header, .contact_form_holder.close .contact_form_wrap .success_message_content {
       opacity: 0;
       -webkit-transition: all 400ms ease-in 0ms;
       transition: all 400ms ease-in 0ms; }
   .contact_form_holder .contact_form_wrap {
     background-color: #fff;
+    position: relative;
     width: 0%;
     margin-left: auto;
     height: 100%;
     -webkit-transition: all 400ms ease-in 800ms;
     transition: all 400ms ease-in 800ms; }
+    .contact_form_holder .contact_form_wrap .success_message_wrap {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-color: #EFF4F7;
+      z-index: 1;
+      display: none; }
+      .contact_form_holder .contact_form_wrap .success_message_wrap .success_message_content_wrap {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        height: 100%;
+        padding: 100px;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        text-align: center;
+        position: relative; }
+        .contact_form_holder .contact_form_wrap .success_message_wrap .success_message_content_wrap .close_form {
+          -webkit-transition: all 600ms ease 0ms;
+          transition: all 600ms ease 0ms;
+          position: absolute;
+          right: 30px;
+          top: 30px;
+          cursor: pointer; }
+          .contact_form_holder .contact_form_wrap .success_message_wrap .success_message_content_wrap .close_form:hover {
+            opacity: 0.6; }
+          @media only screen and (max-width: 1500px) {
+            .contact_form_holder .contact_form_wrap .success_message_wrap .success_message_content_wrap .close_form {
+              max-width: 15px; }
+              .contact_form_holder .contact_form_wrap .success_message_wrap .success_message_content_wrap .close_form img {
+                width: 100%; } }
+        @media only screen and (max-width: 750px) {
+          .contact_form_holder .contact_form_wrap .success_message_wrap .success_message_content_wrap {
+            padding: 50px; } }
+        .contact_form_holder .contact_form_wrap .success_message_wrap .success_message_content_wrap .success_message_content h2 {
+          line-height: 1em;
+          margin-bottom: 40px; }
     .contact_form_holder .contact_form_wrap .form_header {
       opacity: 0;
       display: -webkit-box;
