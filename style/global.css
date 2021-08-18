@@ -1655,9 +1655,13 @@ header {
     cursor: pointer; }
     .news_wrap .single_news_wrap:hover .single_news .read_more img {
       left: 10px; }
+    .news_wrap .single_news_wrap:hover .single_news:after {
+      opacity: 0.5; }
+
+.slick-current .single_news:after {
+  opacity: 0.5; }
 
 .single_news {
-  background: #1D7476;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 25px;
@@ -1669,12 +1673,37 @@ header {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  position: relative;
+  overflow: hidden; }
+  .single_news img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    z-index: 0; }
+  .single_news:after {
+    content: '';
+    background: #1D7476;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    z-index: 1;
+    -webkit-transition: all 600ms ease 0ms;
+    transition: all 600ms ease 0ms; }
   @media only screen and (max-width: 750px) {
     .single_news {
       margin-left: 20px;
       padding: 40px 32px; } }
   .single_news .category {
+    z-index: 2;
     background: #096162;
     text-align: center;
     min-width: 150px;
@@ -1701,6 +1730,7 @@ header {
       .single_news .category {
         font-size: 14px; } }
   .single_news h3 {
+    z-index: 2;
     font-size: 2.5vw;
     color: #fff !important;
     font-family: "PPRadioGrotesk-Regular", sans-serif;
@@ -1710,6 +1740,7 @@ header {
       .single_news h3 {
         font-size: 24px; } }
   .single_news .read_more {
+    z-index: 2;
     margin-top: auto;
     color: #fff;
     display: -webkit-box;
@@ -1733,6 +1764,11 @@ header {
       margin-left: 10px;
       position: relative;
       left: 0;
+      -o-object-fit: none;
+         object-fit: none;
+      top: auto;
+      width: auto;
+      height: auto;
       -webkit-transition: all 600ms ease 0ms;
       transition: all 600ms ease 0ms; }
 
