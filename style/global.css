@@ -66,9 +66,12 @@ button:focus {
 .select2-container--default .select2-selection--single .select2-selection__arrow, .select2-container--default .select2-selection--multiple .select2-selection__arrow {
   position: absolute;
   height: 26px;
-  top: 20px;
-  right: 10px;
-  width: 20px; }
+  top: 1.1vw;
+  right: 1vw;
+  width: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
   @media only screen and (max-width: 750px) {
     .select2-container--default .select2-selection--single .select2-selection__arrow, .select2-container--default .select2-selection--multiple .select2-selection__arrow {
       top: 15px; } }
@@ -79,7 +82,7 @@ button:focus {
             transform: translateY(-50%) rotate(180deg); }
 
 .select2-selection--multiple {
-  padding: 1vw 1.5vw !important; }
+  padding: 0.65vw 1.5vw !important; }
   @media only screen and (max-width: 750px) {
     .select2-selection--multiple {
       padding: 7px 15px !important;
@@ -221,6 +224,22 @@ button:focus {
           .select2-dropdown .select2-results .select2-results__options .select2-results__option:not(.select2-results__message).select2-results__option--selected:before {
             display: block; }
 
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid #fff;
+  -webkit-text-fill-color: #365BC1;
+  -webkit-box-shadow: 0 0 0px 1000px #EFF4F7 inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s; }
+
 .hero_content_wrap {
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
@@ -349,6 +368,12 @@ body {
   html.no_scroll,
   body.no_scroll {
     overflow: hidden; }
+  html.init__modal,
+  body.init__modal {
+    overflow: hidden; }
+  html.init__news,
+  body.init__news {
+    overflow: hidden; }
 
 .primary_headline, .second_section .left h2, .third_section .left h2, .fourth_section .left h2, .fifth_section .founder_info .founder_info_content h2 {
   font-size: 7.3vw;
@@ -362,16 +387,16 @@ body {
     .primary_headline, .second_section .left h2, .third_section .left h2, .fourth_section .left h2, .fifth_section .founder_info .founder_info_content h2 {
       font-size: 65px; } }
 
-.secondary_headline, .contact_form_holder .contact_form_wrap .success_message_wrap .success_message_content_wrap .success_message_content h2, .contact_form_holder .form_description h3, .first_section h2, .first_section .three_box_section .single_box_wrap .single_box h3, .sixth_section .sixth_section_content h2, .seventh_section .seventh_section_content h2, .single_storie_wrap .single_storie_content .single_storie_hero .hero_content .left h2, footer .top h2 {
+.secondary_headline, .contact_form_holder .contact_form_wrap .success_message_wrap .success_message_content_wrap .success_message_content h3, .contact_form_holder .form_description h3, .first_section h2, .first_section .three_box_section .single_box_wrap .single_box h3, .sixth_section .sixth_section_content h2, .seventh_section .seventh_section_content h2, .single_storie_wrap .single_storie_content .single_storie_hero .hero_content .left h2, footer .top h2 {
   font-size: 5.7vw;
   color: #000C45;
   font-family: "PPRadioGrotesk-Regular", sans-serif;
   line-height: 1.15em; }
   @media only screen and (max-width: 1020px) {
-    .secondary_headline, .contact_form_holder .contact_form_wrap .success_message_wrap .success_message_content_wrap .success_message_content h2, .contact_form_holder .form_description h3, .first_section h2, .first_section .three_box_section .single_box_wrap .single_box h3, .sixth_section .sixth_section_content h2, .seventh_section .seventh_section_content h2, .single_storie_wrap .single_storie_content .single_storie_hero .hero_content .left h2, footer .top h2 {
+    .secondary_headline, .contact_form_holder .contact_form_wrap .success_message_wrap .success_message_content_wrap .success_message_content h3, .contact_form_holder .form_description h3, .first_section h2, .first_section .three_box_section .single_box_wrap .single_box h3, .sixth_section .sixth_section_content h2, .seventh_section .seventh_section_content h2, .single_storie_wrap .single_storie_content .single_storie_hero .hero_content .left h2, footer .top h2 {
       font-size: 36px; } }
   @media only screen and (max-width: 750px) {
-    .secondary_headline, .contact_form_holder .contact_form_wrap .success_message_wrap .success_message_content_wrap .success_message_content h2, .contact_form_holder .form_description h3, .first_section h2, .first_section .three_box_section .single_box_wrap .single_box h3, .sixth_section .sixth_section_content h2, .seventh_section .seventh_section_content h2, .single_storie_wrap .single_storie_content .single_storie_hero .hero_content .left h2, footer .top h2 {
+    .secondary_headline, .contact_form_holder .contact_form_wrap .success_message_wrap .success_message_content_wrap .success_message_content h3, .contact_form_holder .form_description h3, .first_section h2, .first_section .three_box_section .single_box_wrap .single_box h3, .sixth_section .sixth_section_content h2, .seventh_section .seventh_section_content h2, .single_storie_wrap .single_storie_content .single_storie_hero .hero_content .left h2, footer .top h2 {
       font-size: 46px; } }
 
 .text, .contact_form_holder .contact_form_wrap .success_message_wrap .success_message_content_wrap .success_message_content p, .hero_wrap .hero_content_wrap .hero_content p, .first_section p, .second_section .right ul li p {
@@ -387,50 +412,50 @@ body {
     .text, .contact_form_holder .contact_form_wrap .success_message_wrap .success_message_content_wrap .success_message_content p, .hero_wrap .hero_content_wrap .hero_content p, .first_section p, .second_section .right ul li p {
       font-size: 20px; } }
 
-.small_text, .select2 .select2-selection.select2-selection--multiple .select2-search__field, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice:after, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice span, .select2-dropdown .select2-results .select2-results__options .select2-results__option, .contact_form_holder .contact_form_wrap .form_header .page span, .contact_form_holder .contact_form_wrap .form_header p, .contact_form_holder .form_description p, .contact_form_holder form .second_part .button_holder .prev, .contact_form_holder form .input_holder label, .contact_form_holder form .input_holder input, .contact_form_holder form .input_holder input::-webkit-input-placeholder, .hero_wrap .hero_content_wrap .hero_content .clients_wrap p, .hero_wrap .hero_content_wrap .hero_content .clients_wrap .more, .first_section .three_box_section .single_box_wrap .single_box p, .second_section .left p, .second_section .right p, .third_section .left p, .fourth_section .left p, .sixth_section .sixth_section_content .faq_section .single_question p, .single_storie_wrap .single_storie_content .storie_content p {
+.small_text, .select2-container--default .select2-selection--single .select2-selection__rendered, .select2 .select2-selection.select2-selection--multiple .select2-search__field, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice:after, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice span, .select2-dropdown .select2-results .select2-results__options .select2-results__option, .contact_form_holder .contact_form_wrap .form_header .page span, .contact_form_holder .contact_form_wrap .form_header p, .contact_form_holder .form_description p, .contact_form_holder form .second_part .button_holder .prev, .contact_form_holder form .input_holder label, .contact_form_holder form .input_holder input, .contact_form_holder form .input_holder input::-webkit-input-placeholder, .hero_wrap .hero_content_wrap .hero_content .clients_wrap p, .hero_wrap .hero_content_wrap .hero_content .clients_wrap .more, .first_section .three_box_section .single_box_wrap .single_box p, .second_section .left p, .second_section .right p, .third_section .left p, .fourth_section .left p, .sixth_section .sixth_section_content .faq_section .single_question p, .single_storie_wrap .single_storie_content .storie_content p {
   font-size: 1.1vw;
   letter-spacing: 0.3px;
   color: #4C4E58;
   font-family: "PPRadioGrotesk-Regular", sans-serif;
   line-height: 1.5em; }
 
-.small_text, .select2 .select2-selection.select2-selection--multiple .select2-search__field, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice:after, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice span, .select2-dropdown .select2-results .select2-results__options .select2-results__option, .contact_form_holder .contact_form_wrap .form_header .page span, .contact_form_holder .contact_form_wrap .form_header p, .contact_form_holder .form_description p, .contact_form_holder form .second_part .button_holder .prev, .contact_form_holder form .input_holder label, .contact_form_holder form .input_holder input, .contact_form_holder form .input_holder input:-ms-input-placeholder, .hero_wrap .hero_content_wrap .hero_content .clients_wrap p, .hero_wrap .hero_content_wrap .hero_content .clients_wrap .more, .first_section .three_box_section .single_box_wrap .single_box p, .second_section .left p, .second_section .right p, .third_section .left p, .fourth_section .left p, .sixth_section .sixth_section_content .faq_section .single_question p, .single_storie_wrap .single_storie_content .storie_content p {
+.small_text, .select2-container--default .select2-selection--single .select2-selection__rendered, .select2 .select2-selection.select2-selection--multiple .select2-search__field, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice:after, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice span, .select2-dropdown .select2-results .select2-results__options .select2-results__option, .contact_form_holder .contact_form_wrap .form_header .page span, .contact_form_holder .contact_form_wrap .form_header p, .contact_form_holder .form_description p, .contact_form_holder form .second_part .button_holder .prev, .contact_form_holder form .input_holder label, .contact_form_holder form .input_holder input, .contact_form_holder form .input_holder input:-ms-input-placeholder, .hero_wrap .hero_content_wrap .hero_content .clients_wrap p, .hero_wrap .hero_content_wrap .hero_content .clients_wrap .more, .first_section .three_box_section .single_box_wrap .single_box p, .second_section .left p, .second_section .right p, .third_section .left p, .fourth_section .left p, .sixth_section .sixth_section_content .faq_section .single_question p, .single_storie_wrap .single_storie_content .storie_content p {
   font-size: 1.1vw;
   letter-spacing: 0.3px;
   color: #4C4E58;
   font-family: "PPRadioGrotesk-Regular", sans-serif;
   line-height: 1.5em; }
 
-.small_text, .select2 .select2-selection.select2-selection--multiple .select2-search__field, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice:after, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice span, .select2-dropdown .select2-results .select2-results__options .select2-results__option, .contact_form_holder .contact_form_wrap .form_header .page span, .contact_form_holder .contact_form_wrap .form_header p, .contact_form_holder .form_description p, .contact_form_holder form .second_part .button_holder .prev, .contact_form_holder form .input_holder label, .contact_form_holder form .input_holder input, .contact_form_holder form .input_holder input::-ms-input-placeholder, .hero_wrap .hero_content_wrap .hero_content .clients_wrap p, .hero_wrap .hero_content_wrap .hero_content .clients_wrap .more, .first_section .three_box_section .single_box_wrap .single_box p, .second_section .left p, .second_section .right p, .third_section .left p, .fourth_section .left p, .sixth_section .sixth_section_content .faq_section .single_question p, .single_storie_wrap .single_storie_content .storie_content p {
+.small_text, .select2-container--default .select2-selection--single .select2-selection__rendered, .select2 .select2-selection.select2-selection--multiple .select2-search__field, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice:after, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice span, .select2-dropdown .select2-results .select2-results__options .select2-results__option, .contact_form_holder .contact_form_wrap .form_header .page span, .contact_form_holder .contact_form_wrap .form_header p, .contact_form_holder .form_description p, .contact_form_holder form .second_part .button_holder .prev, .contact_form_holder form .input_holder label, .contact_form_holder form .input_holder input, .contact_form_holder form .input_holder input::-ms-input-placeholder, .hero_wrap .hero_content_wrap .hero_content .clients_wrap p, .hero_wrap .hero_content_wrap .hero_content .clients_wrap .more, .first_section .three_box_section .single_box_wrap .single_box p, .second_section .left p, .second_section .right p, .third_section .left p, .fourth_section .left p, .sixth_section .sixth_section_content .faq_section .single_question p, .single_storie_wrap .single_storie_content .storie_content p {
   font-size: 1.1vw;
   letter-spacing: 0.3px;
   color: #4C4E58;
   font-family: "PPRadioGrotesk-Regular", sans-serif;
   line-height: 1.5em; }
 
-.small_text, .select2 .select2-selection.select2-selection--multiple .select2-search__field, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice:after, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice span, .select2-dropdown .select2-results .select2-results__options .select2-results__option, .contact_form_holder .contact_form_wrap .form_header .page span, .contact_form_holder .contact_form_wrap .form_header p, .contact_form_holder .form_description p, .contact_form_holder form .second_part .button_holder .prev, .contact_form_holder form .input_holder label, .contact_form_holder form .input_holder input, .contact_form_holder form .input_holder input::placeholder, .hero_wrap .hero_content_wrap .hero_content .clients_wrap p, .hero_wrap .hero_content_wrap .hero_content .clients_wrap .more, .first_section .three_box_section .single_box_wrap .single_box p, .second_section .left p, .second_section .right p, .third_section .left p, .fourth_section .left p, .sixth_section .sixth_section_content .faq_section .single_question p, .single_storie_wrap .single_storie_content .storie_content p {
+.small_text, .select2-container--default .select2-selection--single .select2-selection__rendered, .select2 .select2-selection.select2-selection--multiple .select2-search__field, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice:after, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice span, .select2-dropdown .select2-results .select2-results__options .select2-results__option, .contact_form_holder .contact_form_wrap .form_header .page span, .contact_form_holder .contact_form_wrap .form_header p, .contact_form_holder .form_description p, .contact_form_holder form .second_part .button_holder .prev, .contact_form_holder form .input_holder label, .contact_form_holder form .input_holder input, .contact_form_holder form .input_holder input::placeholder, .hero_wrap .hero_content_wrap .hero_content .clients_wrap p, .hero_wrap .hero_content_wrap .hero_content .clients_wrap .more, .first_section .three_box_section .single_box_wrap .single_box p, .second_section .left p, .second_section .right p, .third_section .left p, .fourth_section .left p, .sixth_section .sixth_section_content .faq_section .single_question p, .single_storie_wrap .single_storie_content .storie_content p {
   font-size: 1.1vw;
   letter-spacing: 0.3px;
   color: #4C4E58;
   font-family: "PPRadioGrotesk-Regular", sans-serif;
   line-height: 1.5em; }
   @media only screen and (max-width: 1020px) {
-    .small_text, .select2 .select2-selection.select2-selection--multiple .select2-search__field, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice:after, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice span, .select2-dropdown .select2-results .select2-results__options .select2-results__option, .contact_form_holder .contact_form_wrap .form_header .page span, .contact_form_holder .contact_form_wrap .form_header p, .contact_form_holder .form_description p, .contact_form_holder form .second_part .button_holder .prev, .contact_form_holder form .input_holder label, .contact_form_holder form .input_holder input, .contact_form_holder form .input_holder input::-webkit-input-placeholder, .hero_wrap .hero_content_wrap .hero_content .clients_wrap p, .hero_wrap .hero_content_wrap .hero_content .clients_wrap .more, .first_section .three_box_section .single_box_wrap .single_box p, .second_section .left p, .second_section .right p, .third_section .left p, .fourth_section .left p, .sixth_section .sixth_section_content .faq_section .single_question p, .single_storie_wrap .single_storie_content .storie_content p {
+    .small_text, .select2-container--default .select2-selection--single .select2-selection__rendered, .select2 .select2-selection.select2-selection--multiple .select2-search__field, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice:after, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice span, .select2-dropdown .select2-results .select2-results__options .select2-results__option, .contact_form_holder .contact_form_wrap .form_header .page span, .contact_form_holder .contact_form_wrap .form_header p, .contact_form_holder .form_description p, .contact_form_holder form .second_part .button_holder .prev, .contact_form_holder form .input_holder label, .contact_form_holder form .input_holder input, .contact_form_holder form .input_holder input::-webkit-input-placeholder, .hero_wrap .hero_content_wrap .hero_content .clients_wrap p, .hero_wrap .hero_content_wrap .hero_content .clients_wrap .more, .first_section .three_box_section .single_box_wrap .single_box p, .second_section .left p, .second_section .right p, .third_section .left p, .fourth_section .left p, .sixth_section .sixth_section_content .faq_section .single_question p, .single_storie_wrap .single_storie_content .storie_content p {
       font-size: 16px; }
-    .small_text, .select2 .select2-selection.select2-selection--multiple .select2-search__field, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice:after, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice span, .select2-dropdown .select2-results .select2-results__options .select2-results__option, .contact_form_holder .contact_form_wrap .form_header .page span, .contact_form_holder .contact_form_wrap .form_header p, .contact_form_holder .form_description p, .contact_form_holder form .second_part .button_holder .prev, .contact_form_holder form .input_holder label, .contact_form_holder form .input_holder input, .contact_form_holder form .input_holder input:-ms-input-placeholder, .hero_wrap .hero_content_wrap .hero_content .clients_wrap p, .hero_wrap .hero_content_wrap .hero_content .clients_wrap .more, .first_section .three_box_section .single_box_wrap .single_box p, .second_section .left p, .second_section .right p, .third_section .left p, .fourth_section .left p, .sixth_section .sixth_section_content .faq_section .single_question p, .single_storie_wrap .single_storie_content .storie_content p {
+    .small_text, .select2-container--default .select2-selection--single .select2-selection__rendered, .select2 .select2-selection.select2-selection--multiple .select2-search__field, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice:after, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice span, .select2-dropdown .select2-results .select2-results__options .select2-results__option, .contact_form_holder .contact_form_wrap .form_header .page span, .contact_form_holder .contact_form_wrap .form_header p, .contact_form_holder .form_description p, .contact_form_holder form .second_part .button_holder .prev, .contact_form_holder form .input_holder label, .contact_form_holder form .input_holder input, .contact_form_holder form .input_holder input:-ms-input-placeholder, .hero_wrap .hero_content_wrap .hero_content .clients_wrap p, .hero_wrap .hero_content_wrap .hero_content .clients_wrap .more, .first_section .three_box_section .single_box_wrap .single_box p, .second_section .left p, .second_section .right p, .third_section .left p, .fourth_section .left p, .sixth_section .sixth_section_content .faq_section .single_question p, .single_storie_wrap .single_storie_content .storie_content p {
       font-size: 16px; }
-    .small_text, .select2 .select2-selection.select2-selection--multiple .select2-search__field, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice:after, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice span, .select2-dropdown .select2-results .select2-results__options .select2-results__option, .contact_form_holder .contact_form_wrap .form_header .page span, .contact_form_holder .contact_form_wrap .form_header p, .contact_form_holder .form_description p, .contact_form_holder form .second_part .button_holder .prev, .contact_form_holder form .input_holder label, .contact_form_holder form .input_holder input, .contact_form_holder form .input_holder input::-ms-input-placeholder, .hero_wrap .hero_content_wrap .hero_content .clients_wrap p, .hero_wrap .hero_content_wrap .hero_content .clients_wrap .more, .first_section .three_box_section .single_box_wrap .single_box p, .second_section .left p, .second_section .right p, .third_section .left p, .fourth_section .left p, .sixth_section .sixth_section_content .faq_section .single_question p, .single_storie_wrap .single_storie_content .storie_content p {
+    .small_text, .select2-container--default .select2-selection--single .select2-selection__rendered, .select2 .select2-selection.select2-selection--multiple .select2-search__field, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice:after, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice span, .select2-dropdown .select2-results .select2-results__options .select2-results__option, .contact_form_holder .contact_form_wrap .form_header .page span, .contact_form_holder .contact_form_wrap .form_header p, .contact_form_holder .form_description p, .contact_form_holder form .second_part .button_holder .prev, .contact_form_holder form .input_holder label, .contact_form_holder form .input_holder input, .contact_form_holder form .input_holder input::-ms-input-placeholder, .hero_wrap .hero_content_wrap .hero_content .clients_wrap p, .hero_wrap .hero_content_wrap .hero_content .clients_wrap .more, .first_section .three_box_section .single_box_wrap .single_box p, .second_section .left p, .second_section .right p, .third_section .left p, .fourth_section .left p, .sixth_section .sixth_section_content .faq_section .single_question p, .single_storie_wrap .single_storie_content .storie_content p {
       font-size: 16px; }
-    .small_text, .select2 .select2-selection.select2-selection--multiple .select2-search__field, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice:after, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice span, .select2-dropdown .select2-results .select2-results__options .select2-results__option, .contact_form_holder .contact_form_wrap .form_header .page span, .contact_form_holder .contact_form_wrap .form_header p, .contact_form_holder .form_description p, .contact_form_holder form .second_part .button_holder .prev, .contact_form_holder form .input_holder label, .contact_form_holder form .input_holder input, .contact_form_holder form .input_holder input::placeholder, .hero_wrap .hero_content_wrap .hero_content .clients_wrap p, .hero_wrap .hero_content_wrap .hero_content .clients_wrap .more, .first_section .three_box_section .single_box_wrap .single_box p, .second_section .left p, .second_section .right p, .third_section .left p, .fourth_section .left p, .sixth_section .sixth_section_content .faq_section .single_question p, .single_storie_wrap .single_storie_content .storie_content p {
+    .small_text, .select2-container--default .select2-selection--single .select2-selection__rendered, .select2 .select2-selection.select2-selection--multiple .select2-search__field, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice:after, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice span, .select2-dropdown .select2-results .select2-results__options .select2-results__option, .contact_form_holder .contact_form_wrap .form_header .page span, .contact_form_holder .contact_form_wrap .form_header p, .contact_form_holder .form_description p, .contact_form_holder form .second_part .button_holder .prev, .contact_form_holder form .input_holder label, .contact_form_holder form .input_holder input, .contact_form_holder form .input_holder input::placeholder, .hero_wrap .hero_content_wrap .hero_content .clients_wrap p, .hero_wrap .hero_content_wrap .hero_content .clients_wrap .more, .first_section .three_box_section .single_box_wrap .single_box p, .second_section .left p, .second_section .right p, .third_section .left p, .fourth_section .left p, .sixth_section .sixth_section_content .faq_section .single_question p, .single_storie_wrap .single_storie_content .storie_content p {
       font-size: 16px; } }
   @media only screen and (max-width: 750px) {
-    .small_text, .select2 .select2-selection.select2-selection--multiple .select2-search__field, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice:after, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice span, .select2-dropdown .select2-results .select2-results__options .select2-results__option, .contact_form_holder .contact_form_wrap .form_header .page span, .contact_form_holder .contact_form_wrap .form_header p, .contact_form_holder .form_description p, .contact_form_holder form .second_part .button_holder .prev, .contact_form_holder form .input_holder label, .contact_form_holder form .input_holder input, .contact_form_holder form .input_holder input::-webkit-input-placeholder, .hero_wrap .hero_content_wrap .hero_content .clients_wrap p, .hero_wrap .hero_content_wrap .hero_content .clients_wrap .more, .first_section .three_box_section .single_box_wrap .single_box p, .second_section .left p, .second_section .right p, .third_section .left p, .fourth_section .left p, .sixth_section .sixth_section_content .faq_section .single_question p, .single_storie_wrap .single_storie_content .storie_content p {
+    .small_text, .select2-container--default .select2-selection--single .select2-selection__rendered, .select2 .select2-selection.select2-selection--multiple .select2-search__field, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice:after, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice span, .select2-dropdown .select2-results .select2-results__options .select2-results__option, .contact_form_holder .contact_form_wrap .form_header .page span, .contact_form_holder .contact_form_wrap .form_header p, .contact_form_holder .form_description p, .contact_form_holder form .second_part .button_holder .prev, .contact_form_holder form .input_holder label, .contact_form_holder form .input_holder input, .contact_form_holder form .input_holder input::-webkit-input-placeholder, .hero_wrap .hero_content_wrap .hero_content .clients_wrap p, .hero_wrap .hero_content_wrap .hero_content .clients_wrap .more, .first_section .three_box_section .single_box_wrap .single_box p, .second_section .left p, .second_section .right p, .third_section .left p, .fourth_section .left p, .sixth_section .sixth_section_content .faq_section .single_question p, .single_storie_wrap .single_storie_content .storie_content p {
       font-size: 20px; }
-    .small_text, .select2 .select2-selection.select2-selection--multiple .select2-search__field, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice:after, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice span, .select2-dropdown .select2-results .select2-results__options .select2-results__option, .contact_form_holder .contact_form_wrap .form_header .page span, .contact_form_holder .contact_form_wrap .form_header p, .contact_form_holder .form_description p, .contact_form_holder form .second_part .button_holder .prev, .contact_form_holder form .input_holder label, .contact_form_holder form .input_holder input, .contact_form_holder form .input_holder input:-ms-input-placeholder, .hero_wrap .hero_content_wrap .hero_content .clients_wrap p, .hero_wrap .hero_content_wrap .hero_content .clients_wrap .more, .first_section .three_box_section .single_box_wrap .single_box p, .second_section .left p, .second_section .right p, .third_section .left p, .fourth_section .left p, .sixth_section .sixth_section_content .faq_section .single_question p, .single_storie_wrap .single_storie_content .storie_content p {
+    .small_text, .select2-container--default .select2-selection--single .select2-selection__rendered, .select2 .select2-selection.select2-selection--multiple .select2-search__field, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice:after, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice span, .select2-dropdown .select2-results .select2-results__options .select2-results__option, .contact_form_holder .contact_form_wrap .form_header .page span, .contact_form_holder .contact_form_wrap .form_header p, .contact_form_holder .form_description p, .contact_form_holder form .second_part .button_holder .prev, .contact_form_holder form .input_holder label, .contact_form_holder form .input_holder input, .contact_form_holder form .input_holder input:-ms-input-placeholder, .hero_wrap .hero_content_wrap .hero_content .clients_wrap p, .hero_wrap .hero_content_wrap .hero_content .clients_wrap .more, .first_section .three_box_section .single_box_wrap .single_box p, .second_section .left p, .second_section .right p, .third_section .left p, .fourth_section .left p, .sixth_section .sixth_section_content .faq_section .single_question p, .single_storie_wrap .single_storie_content .storie_content p {
       font-size: 20px; }
-    .small_text, .select2 .select2-selection.select2-selection--multiple .select2-search__field, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice:after, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice span, .select2-dropdown .select2-results .select2-results__options .select2-results__option, .contact_form_holder .contact_form_wrap .form_header .page span, .contact_form_holder .contact_form_wrap .form_header p, .contact_form_holder .form_description p, .contact_form_holder form .second_part .button_holder .prev, .contact_form_holder form .input_holder label, .contact_form_holder form .input_holder input, .contact_form_holder form .input_holder input::-ms-input-placeholder, .hero_wrap .hero_content_wrap .hero_content .clients_wrap p, .hero_wrap .hero_content_wrap .hero_content .clients_wrap .more, .first_section .three_box_section .single_box_wrap .single_box p, .second_section .left p, .second_section .right p, .third_section .left p, .fourth_section .left p, .sixth_section .sixth_section_content .faq_section .single_question p, .single_storie_wrap .single_storie_content .storie_content p {
+    .small_text, .select2-container--default .select2-selection--single .select2-selection__rendered, .select2 .select2-selection.select2-selection--multiple .select2-search__field, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice:after, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice span, .select2-dropdown .select2-results .select2-results__options .select2-results__option, .contact_form_holder .contact_form_wrap .form_header .page span, .contact_form_holder .contact_form_wrap .form_header p, .contact_form_holder .form_description p, .contact_form_holder form .second_part .button_holder .prev, .contact_form_holder form .input_holder label, .contact_form_holder form .input_holder input, .contact_form_holder form .input_holder input::-ms-input-placeholder, .hero_wrap .hero_content_wrap .hero_content .clients_wrap p, .hero_wrap .hero_content_wrap .hero_content .clients_wrap .more, .first_section .three_box_section .single_box_wrap .single_box p, .second_section .left p, .second_section .right p, .third_section .left p, .fourth_section .left p, .sixth_section .sixth_section_content .faq_section .single_question p, .single_storie_wrap .single_storie_content .storie_content p {
       font-size: 20px; }
-    .small_text, .select2 .select2-selection.select2-selection--multiple .select2-search__field, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice:after, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice span, .select2-dropdown .select2-results .select2-results__options .select2-results__option, .contact_form_holder .contact_form_wrap .form_header .page span, .contact_form_holder .contact_form_wrap .form_header p, .contact_form_holder .form_description p, .contact_form_holder form .second_part .button_holder .prev, .contact_form_holder form .input_holder label, .contact_form_holder form .input_holder input, .contact_form_holder form .input_holder input::placeholder, .hero_wrap .hero_content_wrap .hero_content .clients_wrap p, .hero_wrap .hero_content_wrap .hero_content .clients_wrap .more, .first_section .three_box_section .single_box_wrap .single_box p, .second_section .left p, .second_section .right p, .third_section .left p, .fourth_section .left p, .sixth_section .sixth_section_content .faq_section .single_question p, .single_storie_wrap .single_storie_content .storie_content p {
+    .small_text, .select2-container--default .select2-selection--single .select2-selection__rendered, .select2 .select2-selection.select2-selection--multiple .select2-search__field, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice:after, .select2 .select2-selection.select2-selection--multiple .select2-selection__rendered .select2-selection__choice span, .select2-dropdown .select2-results .select2-results__options .select2-results__option, .contact_form_holder .contact_form_wrap .form_header .page span, .contact_form_holder .contact_form_wrap .form_header p, .contact_form_holder .form_description p, .contact_form_holder form .second_part .button_holder .prev, .contact_form_holder form .input_holder label, .contact_form_holder form .input_holder input, .contact_form_holder form .input_holder input::placeholder, .hero_wrap .hero_content_wrap .hero_content .clients_wrap p, .hero_wrap .hero_content_wrap .hero_content .clients_wrap .more, .first_section .three_box_section .single_box_wrap .single_box p, .second_section .left p, .second_section .right p, .third_section .left p, .fourth_section .left p, .sixth_section .sixth_section_content .faq_section .single_question p, .single_storie_wrap .single_storie_content .storie_content p {
       font-size: 20px; } }
 
 .home_wrap {
@@ -574,33 +599,24 @@ header {
   z-index: 101;
   height: 100vh;
   background-color: rgba(0, 3, 15, 0.9);
-  display: none; }
-  .contact_form_holder.active .contact_form_wrap {
-    width: 36%; }
-    @media only screen and (max-width: 1020px) {
-      .contact_form_holder.active .contact_form_wrap {
-        width: 60%; } }
-    @media only screen and (max-width: 750px) {
-      .contact_form_holder.active .contact_form_wrap {
-        width: 100%; } }
-    .contact_form_holder.active .contact_form_wrap .form_holder, .contact_form_holder.active .contact_form_wrap .form_header {
-      opacity: 1; }
-  .contact_form_holder.close .contact_form_wrap {
-    width: 0%;
-    -webkit-transition: all 400ms ease-in 400ms;
-    transition: all 400ms ease-in 400ms; }
-    .contact_form_holder.close .contact_form_wrap .form_holder, .contact_form_holder.close .contact_form_wrap .form_header, .contact_form_holder.close .contact_form_wrap .success_message_content {
-      opacity: 0;
-      -webkit-transition: all 400ms ease-in 0ms;
-      transition: all 400ms ease-in 0ms; }
+  opacity: 0;
+  pointer-events: none; }
+  body.init__modal .contact_form_holder {
+    opacity: 1;
+    pointer-events: initial; }
   .contact_form_holder .contact_form_wrap {
     background-color: #fff;
     position: relative;
-    width: 0%;
     margin-left: auto;
     height: 100%;
-    -webkit-transition: all 400ms ease-in 800ms;
-    transition: all 400ms ease-in 800ms; }
+    width: 0;
+    max-width: 36%; }
+    @media only screen and (max-width: 1020px) {
+      .contact_form_holder .contact_form_wrap {
+        max-width: 60%; } }
+    @media only screen and (max-width: 750px) {
+      .contact_form_holder .contact_form_wrap {
+        max-width: 100%; } }
     .contact_form_holder .contact_form_wrap .success_message_wrap {
       position: absolute;
       width: 100%;
@@ -643,11 +659,10 @@ header {
         @media only screen and (max-width: 750px) {
           .contact_form_holder .contact_form_wrap .success_message_wrap .success_message_content_wrap {
             padding: 50px; } }
-        .contact_form_holder .contact_form_wrap .success_message_wrap .success_message_content_wrap .success_message_content h2 {
+        .contact_form_holder .contact_form_wrap .success_message_wrap .success_message_content_wrap .success_message_content h3 {
           line-height: 1em;
           margin-bottom: 40px; }
     .contact_form_holder .contact_form_wrap .form_header {
-      opacity: 0;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -660,9 +675,7 @@ header {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      position: relative;
-      -webkit-transition: all 400ms ease-in 1200ms;
-      transition: all 400ms ease-in 1200ms; }
+      position: relative; }
       @media only screen and (max-width: 1020px) {
         .contact_form_holder .contact_form_wrap .form_header {
           padding: 20px; } }
@@ -723,15 +736,12 @@ header {
         font-size: 12px;
         opacity: 0.7; }
   .contact_form_holder .form_holder {
-    opacity: 0;
     padding: 1vw 5vw;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     overflow: scroll;
     height: 100%;
-    padding-bottom: 100px;
-    -webkit-transition: all 400ms ease-in 1200ms;
-    transition: all 400ms ease-in 1200ms; }
+    padding-bottom: 100px; }
   .contact_form_holder .form_description h3 {
     text-align: center;
     font-size: 1.5vw;
@@ -1780,38 +1790,28 @@ header {
   z-index: 101;
   height: 100vh;
   background-color: rgba(0, 3, 15, 0.9);
-  display: none; }
-  .single_storie_wrap.active .single_storie_content {
-    width: 85%; }
-    @media only screen and (max-width: 750px) {
-      .single_storie_wrap.active .single_storie_content {
-        width: 100%; } }
-    .single_storie_wrap.active .single_storie_content .single_storie_hero, .single_storie_wrap.active .single_storie_content .storie_content {
-      opacity: 1; }
-  .single_storie_wrap.close .single_storie_content {
-    width: 0%;
-    -webkit-transition: all 400ms ease-in 400ms;
-    transition: all 400ms ease-in 400ms; }
-    .single_storie_wrap.close .single_storie_content .single_storie_hero, .single_storie_wrap.close .single_storie_content .storie_content {
-      opacity: 0;
-      -webkit-transition: all 400ms ease-in 0ms;
-      transition: all 400ms ease-in 0ms; }
+  opacity: 0;
+  pointer-events: none; }
+  .single_storie_wrap.active {
+    opacity: 1;
+    pointer-events: initial; }
   .single_storie_wrap .single_storie_content {
     background-color: #Fff;
     width: 0%;
+    max-width: 85%;
     margin-left: auto;
     height: 100vh;
     overflow: hidden;
-    overflow-y: scroll;
-    -webkit-transition: all 400ms ease-in 800ms;
-    transition: all 400ms ease-in 800ms; }
+    overflow-y: scroll; }
+    @media only screen and (max-width: 750px) {
+      .single_storie_wrap .single_storie_content {
+        max-width: 100%; } }
+    .single_storie_wrap .single_storie_content.active {
+      width: 100%; }
     .single_storie_wrap .single_storie_content .single_storie_hero {
       position: relative;
       padding-top: 39%;
-      overflow: hidden;
-      opacity: 0;
-      -webkit-transition: all 400ms ease-in 1200ms;
-      transition: all 400ms ease-in 1200ms; }
+      overflow: hidden; }
       @media only screen and (max-width: 1100px) {
         .single_storie_wrap .single_storie_content .single_storie_hero {
           padding-top: 49%; } }
@@ -1997,10 +1997,7 @@ header {
     .single_storie_wrap .single_storie_content .storie_content {
       padding: 6vw 13vw;
       -webkit-box-sizing: border-box;
-              box-sizing: border-box;
-      opacity: 0;
-      -webkit-transition: all 400ms ease-in 1200ms;
-      transition: all 400ms ease-in 1200ms; }
+              box-sizing: border-box; }
       @media only screen and (max-width: 750px) {
         .single_storie_wrap .single_storie_content .storie_content {
           padding: 30px; } }

@@ -118,9 +118,10 @@ button:focus {
 .select2-container--default .select2-selection--single .select2-selection__arrow, .select2-container--default .select2-selection--multiple .select2-selection__arrow{
 	position: absolute;
     height: 26px;
-    top: 20px;
-    right: 10px;
+    top: 1.1vw;
+    right: 1vw;
     width: 20px;
+    display: flex;
 
     @media #{$s750} {
 		top: 15px;
@@ -136,7 +137,7 @@ button:focus {
 }
 
 .select2-selection--multiple{
-	padding: 1vw 1.5vw!important;
+	padding: 0.65vw 1.5vw !important;
 
 	@media #{$s750} {
 		padding: 7px 15px!important;
@@ -151,6 +152,7 @@ button:focus {
 }
 .select2-container--default .select2-selection--single .select2-selection__rendered{
 	color: $color2!important;
+	@extend .small_text;
 }
 .select2-container--default .select2-search--dropdown .select2-search__field{
 	display: none;
@@ -348,6 +350,23 @@ button:focus {
 	}
 }
 
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid #fff;
+  -webkit-text-fill-color: #365BC1;
+  -webkit-box-shadow: 0 0 0px 1000px $color4 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
 .hero_content_wrap {
 	transform: translateX(-100%);
 	z-index: 2;
@@ -467,6 +486,14 @@ body {
   font-family: $mainFont;
 
   &.no_scroll{
+  	overflow: hidden;
+  }
+
+  &.init__modal{
+  	overflow: hidden;
+  }
+
+  &.init__news{
   	overflow: hidden;
   }
 }
@@ -710,45 +737,29 @@ header{
 	z-index: 101;
 	height: 100vh;
 	background-color: rgba(0, 3, 15, 0.9);
-	display: none;
+	opacity: 0;
+	pointer-events: none;
 
-	&.active{
-		.contact_form_wrap{
-			width: 36%;
-
-			@media #{$s1020} {
-				width: 60%;
-			}
-
-			@media #{$s750} {
-				width: 100%;
-			}
-
-			.form_holder, .form_header{
-				opacity: 1;
-			}
-		}	
-	}
-
-	&.close{
-		.contact_form_wrap{
-			width: 0%;
-			@include transition(all, 400ms, ease-in, 400ms);
-
-			.form_holder, .form_header, .success_message_content{
-				opacity: 0;
-				@include transition(all, 400ms, ease-in, 0ms);
-			}
-		}	
+	body.init__modal & {
+		opacity: 1;
+		pointer-events: initial;
 	}
 
 	.contact_form_wrap{
 		background-color: #fff;
 		position: relative;
-		width: 0%;
 		margin-left: auto;
 		height: 100%;
-		@include transition(all, 400ms, ease-in, 800ms);
+		width: 0;
+		max-width: 36%;
+
+		@media #{$s1020} {
+			max-width: 60%;
+		}
+
+		@media #{$s750} {
+			max-width: 100%;
+		}
 
 		.success_message_wrap{
 			position: absolute;
@@ -796,7 +807,7 @@ header{
 
 				.success_message_content{
 
-					h2{
+					h3{
 						@extend .secondary_headline;
 						line-height: 1em;
 						margin-bottom: 40px;
@@ -810,14 +821,12 @@ header{
 		}
 
 		.form_header{
-			opacity: 0;
 			display: flex;
 			justify-content: space-between;
 			padding: 1vw;
 			box-sizing: border-box;
 			align-items: center;
 			position: relative;
-			@include transition(all, 400ms, ease-in, 1200ms);
 
 			@media #{$s1020} {
 				padding: 20px;
@@ -895,13 +904,11 @@ header{
 	}
 
 	.form_holder{
-		opacity: 0;
 		padding: 1vw 5vw;
 		box-sizing: border-box;
 		overflow: scroll;
 	    height: 100%;
 	    padding-bottom: 100px;
-	    @include transition(all, 400ms, ease-in, 1200ms);
 	}
 
 	.form_description{
@@ -2190,49 +2197,61 @@ header{
 	z-index: 101;
 	height: 100vh;
 	background-color: rgba(0, 3, 15, 0.9);
-	display: none;
+	opacity: 0;
+	pointer-events: none;
 
-	&.active{
-		.single_storie_content{
-			width: 85%;
-
-			@media #{$s750} {
-				width: 100%;
-			}
-
-			.single_storie_hero, .storie_content{
-				opacity: 1;
-			}
-		}	
+	&.active {
+		opacity: 1;
+		pointer-events: initial;
 	}
 
-	&.close{
-		.single_storie_content{
-			width: 0%;
-			@include transition(all, 400ms, ease-in, 400ms);
+	// &.active{
+	// 	.single_storie_content{
+	// 		width: 85%;
 
-			.single_storie_hero, .storie_content{
-				opacity: 0;
-				@include transition(all, 400ms, ease-in, 0ms);
-			}
-		}	
-	}
+	// 		@media #{$s750} {
+	// 			width: 100%;
+	// 		}
+
+	// 		.single_storie_hero, .storie_content{
+	// 			opacity: 1;
+	// 		}
+	// 	}	
+	// }
+
+	// &.close{
+	// 	.single_storie_content{
+	// 		width: 0%;
+	// 		@include transition(all, 400ms, ease-in, 400ms);
+
+	// 		.single_storie_hero, .storie_content{
+	// 			opacity: 0;
+	// 			@include transition(all, 400ms, ease-in, 0ms);
+	// 		}
+	// 	}	
+	// }
 
 	.single_storie_content{
 		background-color: #Fff;
 		width: 0%;
+		max-width: 85%;
 		margin-left: auto;
 		height: 100vh;
 		overflow: hidden;
 		overflow-y: scroll;
-		@include transition(all, 400ms, ease-in, 800ms);
+
+		@media #{$s750} {
+			max-width: 100%;
+		}
+
+		&.active{
+			width: 100%;
+		}
 
 		.single_storie_hero{
 			position: relative;
 			padding-top: 39%;
 			overflow: hidden;
-			opacity: 0;
-			@include transition(all, 400ms, ease-in, 1200ms);
 
 			@media #{$s1100} {
 				padding-top: 49%;
@@ -2446,8 +2465,6 @@ header{
 		.storie_content{
 			padding: 6vw 13vw;
 			box-sizing: border-box;
-			opacity: 0;
-			@include transition(all, 400ms, ease-in, 1200ms);
 
 			@media #{$s750} {
 				padding: 30px;
