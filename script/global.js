@@ -66,8 +66,8 @@
                             setTimeout(function() {
                                 $('.hero_content').addClass('show');
                                 $('header').addClass('show');
-                            }, 1000)
-                        }, 2000);
+                            }, 500)
+                        }, 1000);
                     });
                 }, wordEl.length * 1800);
             });

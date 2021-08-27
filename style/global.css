@@ -295,8 +295,8 @@ select:-webkit-autofill:focus {
 .page_loader .last.animate {
   -webkit-animation-name: animateLastWord;
           animation-name: animateLastWord;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s; }
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s; }
 
 .word.last {
   font-size: 40px;
@@ -564,6 +564,7 @@ header {
         -ms-flex-align: center;
             align-items: center; }
     .secondary_header nav .logo_holder {
+      margin-right: 25px;
       position: relative;
       left: auto;
       top: auto;
@@ -580,6 +581,7 @@ header {
         font-display: auto;
         font-style: normal;
         font-weight: 400;
+        display: inline-block;
         -webkit-transition: all 600ms ease 0ms;
         transition: all 600ms ease 0ms;
         font-size: 20px; }
@@ -590,6 +592,18 @@ header {
           font-weight: 700; }
         .secondary_header nav ul li a:hover {
           opacity: 0.6; }
+      .secondary_header nav ul li:nth-of-type(1) a {
+        width: 9vw; }
+      .secondary_header nav ul li:nth-of-type(2) a {
+        width: 18vw; }
+      .secondary_header nav ul li:nth-of-type(3) a {
+        width: 10vw; }
+      .secondary_header nav ul li:nth-of-type(3) a {
+        width: 10vw; }
+      .secondary_header nav ul li:nth-of-type(4) a {
+        width: 14vw; }
+      .secondary_header nav ul li:nth-of-type(5) a {
+        width: 10vw; }
 
 .contact_form_holder {
   position: fixed;
