@@ -95,14 +95,14 @@
             closeModal();
         });
 
-        $('.next').on('click', function(event) {
+        $('.next, .page .second').on('click', function(event) {
             $('.first_part').css('display', 'none');
             $('.second_part').css('display', 'block');
             $('.page .first').removeClass('active');
             $('.page .second').addClass('active');
         });
 
-        $('.prev').on('click', function(event) {
+        $('.prev, .page .first').on('click', function(event) {
             $('.first_part').css('display', 'block');
             $('.second_part').css('display', 'none');
             $('.page .first').addClass('active');

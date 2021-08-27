@@ -65,16 +65,15 @@ button:focus {
 
 .select2-container--default .select2-selection--single .select2-selection__arrow, .select2-container--default .select2-selection--multiple .select2-selection__arrow {
   position: absolute;
-  height: 26px;
-  top: 1.1vw;
+  height: auto;
+  top: 50%;
   right: 1vw;
   width: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
-  @media only screen and (max-width: 750px) {
-    .select2-container--default .select2-selection--single .select2-selection__arrow, .select2-container--default .select2-selection--multiple .select2-selection__arrow {
-      top: 15px; } }
+  display: flex;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); }
   .select2-container--default .select2-selection--single .select2-selection__arrow b, .select2-container--default .select2-selection--multiple .select2-selection__arrow b {
     display: none; }
   .select2-container--default .select2-selection--single .select2-selection__arrow.rotate, .select2-container--default .select2-selection--multiple .select2-selection__arrow.rotate {
@@ -88,7 +87,7 @@ button:focus {
       padding: 7px 15px !important;
       padding-left: 21px !important; } }
 
-.select2-container--open .select2-selection__arrow {
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow, .select2-container--default.select2-container--open .select2-selection--multiple .select2-selection__arrow {
   -webkit-transform: translateY(-50%) rotate(180deg);
           transform: translateY(-50%) rotate(180deg); }
 
