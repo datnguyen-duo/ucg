@@ -1,2 +1,7 @@
-@font-face{font-family:"PPRadioGrotesk-Regular";src:url("fonts/PPRadioGrotesk-Regular.eot?#iefix") format("embedded-opentype"),url("fonts/PPRadioGrotesk-Regular.woff") format("woff"),url("fonts/PPRadioGrotesk-Regular.eot") format("eot"),url("fonts/PPRadioGrotesk-Regular.ttf") format("ttf");font-weight:normal;font-style:normal}
+@font-face {
+  font-family: "PPRadioGrotesk-Regular";
+  src: url("fonts/PPRadioGrotesk-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/PPRadioGrotesk-Regular.woff") format("woff"), url("fonts/PPRadioGrotesk-Regular.eot") format("eot"), url("fonts/PPRadioGrotesk-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal; }
+
 /*# sourceMappingURL=fonts.css.map */
