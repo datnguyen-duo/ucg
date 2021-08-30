@@ -45,7 +45,12 @@
             closeOnSelect: false
         });
 
-        if ($('.page_loader').length) {
+        let loader = sessionStorage.getItem("loader");
+        
+        if ($('.page_loader').length && loader != 'true') {
+
+            sessionStorage.setItem('loader', 'true');
+
             var wordEl = $('.page_loader .word');
 
             wordEl.each(function(index) {
@@ -70,6 +75,18 @@
                         }, 1000);
                     });
                 }, wordEl.length * 1800);
+            });
+        } else{
+            document.getElementById('video').play();
+
+            $('.page_loader').fadeOut(function() {
+                setTimeout(function() {
+                    $('.hero_content_wrap').addClass('show');
+                    setTimeout(function() {
+                        $('.hero_content').addClass('show');
+                        $('header').addClass('show');
+                    }, 500)
+                }, 1000);
             });
         }
 
