@@ -113,10 +113,13 @@
         });
 
         $('.next, .page .second').on('click', function(event) {
-            $('.first_part').css('display', 'none');
-            $('.second_part').css('display', 'block');
-            $('.page .first').removeClass('active');
-            $('.page .second').addClass('active');
+            if (validateForm()) {
+                $('.first_part').css('display', 'none');
+                $('.second_part').css('display', 'block');
+                $('.page .first').removeClass('active');
+                $('.page .second').addClass('active');
+                $('.form_header_headline').text('Investment Preferences');
+            }
         });
 
         $('.prev, .page .first').on('click', function(event) {
@@ -124,7 +127,23 @@
             $('.second_part').css('display', 'none');
             $('.page .first').addClass('active');
             $('.page .second').removeClass('active');
+            $('.form_header_headline').text('Personal Information');
         });
+
+        function validateForm() {
+          var isValid = true;
+          $('.input_holder input').each(function() {
+            if ( $(this).val() === '' ){
+                isValid = false;
+                $(this).parent().addClass('not_valid')
+            } else{
+                $(this).parent().removeClass('not_valid')
+            }
+
+          });
+
+          return isValid;
+        }
 
         $('.read_more').on('click', function(event) {
 
@@ -330,11 +349,11 @@
                             easing: 'swing',
                             step: function(now) {
                                 if ($(this).hasClass('transactions')) {
-                                    $(this).text(Math.ceil(now) + 'M+');
+                                    $(this).text('$' + Math.ceil(now) + 'M+');
                                 } else if ($(this).hasClass('investors')) {
-                                    $(this).text(getRupeesFormat(Math.ceil(now)) + '+');
+                                    $(this).text(getRupeesFormat(Math.ceil(now)));
                                 } else if ($(this).hasClass('capital')) {
-                                    $(this).text(getFormat('$' + Math.ceil(now)) + 'B+');
+                                    $(this).text(getFormat('$' + Math.ceil(now)) + 'B');
                                 } else {
                                     $(this).text(Math.ceil(now));
                                 }
@@ -350,8 +369,8 @@
                     }
 
                     function getFormat(val) {
-                        while (/(\d+)(\d{1})/.test(val.toString())) {
-                            val = val.toString().replace(/(\d+)(\d{1})/, '$1' + '.' + '$2');
+                        while (/(\d+)(\d{2})/.test(val.toString())) {
+                            val = val.toString().replace(/(\d+)(\d{2})/, '$1' + '.' + '$2');
                         }
                         return val;
                     }

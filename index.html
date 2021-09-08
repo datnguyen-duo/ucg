@@ -24,7 +24,7 @@
         <div class="logo_holder">
             <img src="images/header_logo.svg" />
         </div>
-        <a class="button access"> Request Access </a>
+        <a class="button access"> Request Deal Flow </a>
     </header>
     <div class="page_loader">
         <div class="word">Connected</div>
@@ -39,16 +39,13 @@
             </div>
             <ul>
                 <li>
-                    <a href="#numbers">By The Numbers</a>
+                    <a href="#numbers">About</a>
                 </li>
                 <li>
-                    <a href="#connected">Connected, Curated, Confidential</a>
+                    <a href="#about">Founder Story</a>
                 </li>
                 <li>
-                    <a href="#about">About The Founder</a>
-                </li>
-                <li>
-                    <a href="#faq">Frequently Asked Questions</a>
+                    <a href="#faq">FAQs</a>
                 </li>
                 <li>
                     <a href="#news">Resources & News</a>
@@ -85,10 +82,9 @@
             </div>
             <div class="form_holder">
                 <div class="form_description">
-                    <h3>Request Access Headline</h3>
+                    <h3>Request Access Today</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut
-                        commodo ante, ut efficitur neque.
+                        Please provide your information and a member of our team will reach out to discuss next steps and answer any questions you have.
                     </p>
                 </div>
                 <form action="">
@@ -96,41 +92,48 @@
                         <div class="input_holder">
                             <label for="">Investor Type</label>
                             <select class="custom_select">
-                                <option value="volvo">Individual</option>
-                                <option value="saab">Company</option>
-                            </select>
-                        </div>
-                        <div class="input_holder">
-                            <label for="">Potential Investment</label>
-                            <select class="custom_select">
-                                <option value="volvo">$250,000-999,999</option>
-                                <option value="saab">$240,000-1,000,000</option>
+                                <option value="Family Office">Family Office</option>
+                                <option value="Registered Investment Advisor">Registered Investment Advisor</option>
+                                <option value="Individual">Individual</option>
+                                <option value="Institution">Institution</option>
                             </select>
                         </div>
                         <div class="input_holder">
                             <label for="">Which property types are you interested in?</label>
                             <select class="custom_select" multiple="multiple">
-                                <option value="volvo" selected>Multifamily</option>
-                                <option value="saab">Industrial</option>
-                                <option value="mercedes">Office</option>
-                                <option value="audi">Retail</option>
-                                <option value="audi">Hotels</option>
-                                <option value="audi">Self storage</option>
-                                <option value="audi">Self storage</option>
+                                <option value="Multifamily" selected>Multifamily</option>
+                                <option value="Industrial">Industrial</option>
+                                <option value="Office">Office</option>
+                                <option value="Retail">Retail</option>
+                                <option value="Hotels">Hotels</option>
+                                <option value="Self storage">Self storage</option>
+                                <option value="Student housing">Student housing</option>
+                                <option value="Data Centers">Data Centers</option>
                             </select>
                         </div>
                         <div class="input_holder">
                             <label for="">What is your primary investment objective?</label>
                             <select class="custom_select">
-                                <option value="multifamily">Multifamily</option>
-                                <option value="industrial">Industrial</option>
+                                <option value="Growth: higher risk, higher return">Growth: higher risk, higher return</option>
+                                <option value="Current Income: lower risk, lower return">Current Income: lower risk, lower return</option>
+                                <option value="Growth and Income: medium risk, medium return">Growth and Income: medium risk, medium return</option>
                             </select>
                         </div>
                         <div class="input_holder">
-                            <label for="">Are you an accredited investor?</label>
+                            <label for="">Investor Status</label>
                             <select class="custom_select">
-                                <option value="yes">Yes</option>
-                                <option value="no">No</option>
+                                <option value="Qualified Purchaser">Qualified Purchaser</option>
+                                <option value="Accredited Investor">Accredited Investor</option>
+                                <option value="Non-Accredited Investor">Non-Accredited Investor</option>
+                            </select>
+                        </div>
+                        <div class="input_holder">
+                            <label for="">What is your typical investment amount per offering?</label>
+                            <select class="custom_select">
+                                <option value="Less than $250,000">Less than $250,000</option>
+                                <option value="$250,000 – 999,999">$250,000 – 999,999</option>
+                                <option value="$1,000,000 - $4,999,999">$1,000,000 - $4,999,999</option>
+                                <option value="$5,000,000 or more">$5,000,000 or more</option>
                             </select>
                         </div>
                         <div class="button_holder">
@@ -142,22 +145,27 @@
                         <div class="input_holder">
                             <label>First Name</label>
                             <input type="text" name="first_name" placeholder="First Name" required />
+                            <span class="error">Required Field</span>
                         </div>
                         <div class="input_holder">
                             <label>Last Name</label>
                             <input type="text" name="last_name" placeholder="Last Name" required />
+                            <span class="error">Required Field</span>
                         </div>
                         <div class="input_holder">
                             <label>Email</label>
                             <input type="email" name="email" placeholder="Email" required />
+                            <span class="error">Required Field</span>
                         </div>
                         <div class="input_holder">
                             <label>Phone Number</label>
                             <input type="phone" name="phone" placeholder="Phone Number" required />
+                            <span class="error">Required Field</span>
                         </div>
                         <div class="input_holder">
                             <label>Zip Code</label>
                             <input type="phone" name="zip" placeholder="Zip Code" required />
+                            <span class="error">Required Field</span>
                         </div>
                         <div class="button_holder">
                             <div class="next">Next</div>
@@ -648,15 +656,14 @@
                 <div class="hero_content">
                     <h1>Your Way In</h1>
                     <p>
-                        Access exclusive private real estate offerings typically reserved
-                        for the friends and family of leading sponsors.
+                        Our team has connected $500M+ of investor capital with exclusive offerings from leading real estate managers.
                     </p>
-                    <div class="clients_wrap">
+                    <!-- <div class="clients_wrap">
                         <p>Our clients include:</p>
                         <img src="images/betterment.png" />
                         <img src="images/origin.svg" />
                         <div class="more">+ More</div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -665,27 +672,25 @@
                 <img src="images/first_section_shape.svg" class="first_section_shape" />
                 <h2 class="fadein-wrap fade_up">Why uncommon capital?</h2>
                 <p class="fadein-wrap fade_up">
-                    Our team has a proven track record of connecting family offices,
-                    high-net-worth-individuals and registered investment advisors with
-                    unique investment offerings from leading sponsors.
+                    Uncommon Capital is the only place where individual investors are the first resort for seasoned real estate investment managers and their most in-demand investment opportunities. Our team has partnered with more than one thousand family offices, high-net-worth-individuals and registered investment advisors.
                 </p>
                 <div class="three_box_section fadein-wrap fade_up">
                     <div class="single_box_wrap">
                         <div class="single_box">
-                            <h3 class="count transactions">450</h3>
-                            <p>Transactions Funded</p>
+                            <h3 class="count transactions">500</h3>
+                            <p>Investor Capital Placed</p>
                         </div>
                     </div>
                     <div class="single_box_wrap">
                         <div class="single_box">
-                            <h3 class="count investors">1200</h3>
+                            <h3 class="count investors">1300</h3>
                             <p>Investors Partnered With</p>
                         </div>
                     </div>
                     <div class="single_box_wrap">
                         <div class="single_box">
-                            <h3 class="count capital">14</h3>
-                            <p>Capital Placed</p>
+                            <h3 class="count capital">175</h3>
+                            <p>Value of Transactions Funded</p>
                         </div>
                     </div>
                 </div>
@@ -695,10 +700,7 @@
                     <div class="left fadein-wrap fade_up">
                         <h2>Connected</h2>
                         <p>
-                            Private investing is about who you know. As real estate industry
-                            veterans, we have fostered deep relationships with leading
-                            sponsors across the country, and we are the first call when they
-                            have a new, exclusive offering.
+                            Our team of industry insiders has worked at institutional private real estate companies for nearly a decade. We have deep relationships with talented firms across the country and we are their first call when they have a new, unique investment opportunity.
                         </p>
                     </div>
                     <div class="right fadein-wrap fade_up">
@@ -714,7 +716,7 @@
                             </li>
                             <li>
                                 <img src="images/checkmark.svg" />
-                                <p>Institutional team with material co-invest</p>
+                                <p>Institutional team with material co-investment</p>
                             </li>
                             <li>
                                 <img src="images/checkmark.svg" />
@@ -731,10 +733,7 @@
                     <div class="left fadein-wrap fade_up">
                         <h2>Curated</h2>
                         <p>
-                            Uncommon investments have one thing in common - an edge. We
-                            specialize in delivering differentiated offerings to our members
-                            that are usually reserved for the friends and family of leading
-                            sponsors. Quality is our focus. Quantity can be found elsewhere.
+                            We are highly selective with what we share with you. Our expertise in sourcing and analyzing real estate offerings allows us to provide opportunities with clear alpha that are structured fairly and transparently.
                         </p>
                     </div>
                     <div class="right fadein-wrap fade_up">
@@ -747,10 +746,7 @@
                     <div class="left fadein-wrap fade_up">
                         <h2>Confidential</h2>
                         <p>
-                            Leading sponsors only share their most private offerings with
-                            who they know and trust. We are their longtime peers and
-                            understand the importance of confidentiality, so they can move
-                            quickly and quietly on a unique investment opportunity.
+                            We work with investment managers on an exclusive basis, so we are the only place you will find their in-demand offerings. We have established ourselves as a preferred partner because we consistently perform and connect them with great investors.
                         </p>
                     </div>
                     <div class="right fadein-wrap fade_up">
@@ -767,15 +763,13 @@
                     <div class="quote fadein-wrap fade_up">
                         <img src="images/quote.svg" />
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                            bibendum pellentesque lorem. Aenean suscipit, neque non elementum
-                            consectetur.
+                            We are transforming private real estate investing and who gets access to the most exclusive investment opportunities.
                         </p>
                     </div>
                     <div class="separator"></div>
                     <div class="author_info fadein-wrap fade_up">
                         <h3>Ben Harris</h3>
-                        <p>President of Uncommon Capital Group</p>
+                        <p>Founder of Uncommon Capital Group</p>
                     </div>
                 </div>
                 <div class="founder_info">
@@ -792,17 +786,12 @@
                             </div>
                             <div class="right">
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                                    ut commodo ante, ut efficitur neque. Cras scelerisque
-                                    lobortis laoreet. Curabitur pulvinar lacus in tellus porta
-                                    ultricies. Lorem ipsum dolor sit amet, consectetur
-                                    <br /><br />adipiscing elit. In ut commodo ante, ut
-                                    efficitur neque. Cras scelerisque lobortis laoreet.
-                                    Curabitur pulvinar lacus in tellus porta ultricies. Lorem
-                                    ipsum dolor sit amet, consectetur adipiscing elit. In ut
-                                    commodo ante, ut efficitur <br /><br />neque. Cras
-                                    scelerisque lobortis laoreet. Curabitur pulvinar lacus in
-                                    tellus porta ultricies.
+                                    Over nearly a decade in the commercial real estate industry, Ben has established himself as a thought leader and premier capital raising professional. He has been featured in the Wall Street Journal and other prominent industry publications, such as Real Estate Alert, RE Journals and wealthmanagement.com <br><br>
+
+                                    Ben has introduced more than one thousand family offices, high-net-worth-individuals, and wealth managers to unique deals and funds across the country. <br><br>
+
+                                    He currently serves as a Senior Vice President of CRG, a leading national real estate developer where he oversees capital raising efforts and structures the company’s investment vehicles. He previously served as Vice President of Investor Relations and Business Development at Origin Investments, a Chicago-based real estate investment firm, where he expanded the firm’s local footprint to a national one. Prior to Origin, Ben was one of the first employees at Starwood Retail Group, a subsidiary of Starwood Capital that is now one of the largest owners of regional malls in the United States. <br><br>
+                                    Ben is a graduate from the Wisconsin School of Business at UW-Madison and is an active member in the Wisconsin Real Estate Alumni Association. He also currently holds the Series 7 and 63 registrations with FINRA.
                                 </p>
                             </div>
                         </div>
@@ -816,30 +805,26 @@
                     <div class="faq_section">
                         <div class="single_question fadein-wrap fade_up">
                             <h3>
-                                How do I become a member?
+                                How do I access Uncommon Capital’s unique investment offerings?
                                 <div class="opener">
                                     <span></span>
                                     <span></span>
                                 </div>
                             </h3>
                             <p>
-                                Fill out the membership request form and then we will reach
-                                out to set up an intro call. We value getting to know each of
-                                our members and like to learn about your investment
-                                preferences, so we can curate offerings for you.
+                                Click the “Request Deal Flow” button and fill out the form. Once the form is submitted, our team will reach out to you to set up an introductory call. We value getting to know each of our investment partners and like to learn about your investment preferences, so we can curate offerings for you.
                             </p>
                         </div>
                         <div class="single_question fadein-wrap fade_up">
                             <h3>
-                                How much does it cost to become a member?
+                                How much does it cost to access offerings from Uncommon Capital?
                                 <div class="opener">
                                     <span></span>
                                     <span></span>
                                 </div>
                             </h3>
                             <p>
-                                It is free to become a member. Sponsors compensate Uncommon
-                                for introductions, at no cost to you.
+                                It is free to work with us. Sponsors compensate Uncommon Capital for introductions, at no cost to you.
                             </p>
                         </div>
                         <div class="single_question fadein-wrap fade_up">
@@ -851,13 +836,12 @@
                                 </div>
                             </h3>
                             <p>
-                                The minimum investment varies per sponsor and offering.
-                                Typically minimums range from $250,000 to $1,000,000 or more.
+                               The minimum investment varies per sponsor and offering. Typically, minimums range from $250,000 to $1,000,000 or more. All offerings require investors to at least be Accredited Investors and many offerings require investors to be Qualified Purchasers.
                             </p>
                         </div>
                         <div class="single_question fadein-wrap fade_up">
                             <h3>
-                                Do I invest with Uncommon or the sponsor?
+                                Do I invest with Uncommon Capital or directly with the sponsor?
                                 <div class="opener">
                                     <span></span>
                                     <span></span>
