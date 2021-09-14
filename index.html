@@ -25,7 +25,7 @@
         <a href="#top" class="logo_holder">
             <img src="images/header_logo.svg" />
         </a>
-        <a class="button access"> Request Deal Flow </a>
+        <a class="button access">Request Deal Flow</a>
     </header>
     <div class="page_loader">
         <div class="word">Connected</div>
@@ -88,11 +88,11 @@
                         Please provide your information and a member of our team will reach out to discuss next steps and answer any questions you have.
                     </p>
                 </div>
-                <form action="">
+                <form action="#" name="contact" method="POST" id="requestAccessForm">
                     <div class="second_part">
                         <div class="input_holder">
                             <label for="">Investor Type</label>
-                            <select class="custom_select">
+                            <select class="custom_select" name="investor_type">
                                 <option value="Family Office">Family Office</option>
                                 <option value="Registered Investment Advisor">Registered Investment Advisor</option>
                                 <option value="Individual">Individual</option>
@@ -101,7 +101,7 @@
                         </div>
                         <div class="input_holder">
                             <label for="">Which property types are you interested in?</label>
-                            <select class="custom_select" multiple="multiple">
+                            <select class="custom_select" multiple="multiple" name="property_types">
                                 <option value="Multifamily" selected>Multifamily</option>
                                 <option value="Industrial">Industrial</option>
                                 <option value="Office">Office</option>
@@ -114,7 +114,7 @@
                         </div>
                         <div class="input_holder">
                             <label for="">What is your primary investment objective?</label>
-                            <select class="custom_select">
+                            <select class="custom_select" name="investment_objective">
                                 <option value="Growth: higher risk, higher return">Growth: higher risk, higher return</option>
                                 <option value="Current Income: lower risk, lower return">Current Income: lower risk, lower return</option>
                                 <option value="Growth and Income: medium risk, medium return">Growth and Income: medium risk, medium return</option>
@@ -122,7 +122,7 @@
                         </div>
                         <div class="input_holder">
                             <label for="">Investor Status</label>
-                            <select class="custom_select">
+                            <select class="custom_select" name="investor_status">
                                 <option value="Qualified Purchaser">Qualified Purchaser</option>
                                 <option value="Accredited Investor">Accredited Investor</option>
                                 <option value="Non-Accredited Investor">Non-Accredited Investor</option>
@@ -130,7 +130,7 @@
                         </div>
                         <div class="input_holder">
                             <label for="">What is your typical investment amount per offering?</label>
-                            <select class="custom_select">
+                            <select class="custom_select" name="amount_per_offering">
                                 <option value="Less than $250,000">Less than $250,000</option>
                                 <option value="$250,000 – 999,999">$250,000 – 999,999</option>
                                 <option value="$1,000,000 - $4,999,999">$1,000,000 - $4,999,999</option>
@@ -154,7 +154,7 @@
                             <span class="error">Required Field</span>
                         </div>
                         <div class="input_holder">
-                            <label>Email</label>
+                            <label>Email Address</label>
                             <input type="email" name="email" placeholder="Email" required />
                             <span class="error">Required Field</span>
                         </div>
@@ -165,7 +165,7 @@
                         </div>
                         <div class="input_holder">
                             <label>Zip Code</label>
-                            <input type="phone" name="zip" placeholder="Zip Code" required />
+                            <input type="text" name="zip" placeholder="Zip Code" required />
                             <span class="error">Required Field</span>
                         </div>
                         <div class="button_holder">
@@ -176,9 +176,9 @@
             </div>
         </div>
     </div>
-    <div class="single_storie_wrap" data-story="1" data-url="5-fees-you-didnt-know-you-were-paying">
-        <div class="single_storie_content">
-            <div class="single_storie_hero">
+    <div class="single_story_wrap" data-story="1" data-url="5-fees-you-didnt-know-you-were-paying">
+        <div class="single_story_content">
+            <div class="single_story_hero">
                 <img src="images/story_hero.png" class="cover_image" />
                 <p class="main_category">Resources & News</p>
                 <div class="close_popup">
@@ -211,11 +211,11 @@
                     </div>
                 </div>
             </div>
-            <div class="storie_content">
-                <div class="storie_first_section">
+            <div class="story_content">
+                <div class="story_first_section">
                     <div class="left">
                         <div class="image_holder">
-                            <img src="images/storie_image.png" />
+                            <img src="images/story_image.png" />
                         </div>
                     </div>
                     <div class="right">
@@ -232,7 +232,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="storie_second_section">
+                <div class="story_second_section">
                     <h3>1. Subhead Text: Lorem ipsum dolor sit amet.</h3>
                     <p>
                         Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
@@ -334,9 +334,9 @@
             </div>
         </div>
     </div>
-    <div class="single_storie_wrap" data-story="2" data-url="10-due-diligence-questions-everyone-should-be-asking">
-        <div class="single_storie_content">
-            <div class="single_storie_hero">
+    <div class="single_story_wrap" data-story="2" data-url="10-due-diligence-questions-everyone-should-be-asking">
+        <div class="single_story_content">
+            <div class="single_story_hero">
                 <img src="images/story_hero.png" class="cover_image" />
                 <p class="main_category">Resources & News</p>
                 <div class="close_popup">
@@ -369,11 +369,11 @@
                     </div>
                 </div>
             </div>
-            <div class="storie_content">
-                <div class="storie_first_section">
+            <div class="story_content">
+                <div class="story_first_section">
                     <div class="left">
                         <div class="image_holder">
-                            <img src="images/storie_image.png" />
+                            <img src="images/story_image.png" />
                         </div>
                     </div>
                     <div class="right">
@@ -390,7 +390,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="storie_second_section">
+                <div class="story_second_section">
                     <h3>1. Subhead Text: Lorem ipsum dolor sit amet.</h3>
                     <p>
                         Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
@@ -490,9 +490,9 @@
             </div>
         </div>
     </div>
-    <div class="single_storie_wrap" data-story="3" data-url="real-esate-alert-fundraising-pro-hangs-own-shingle">
-        <div class="single_storie_content">
-            <div class="single_storie_hero">
+    <div class="single_story_wrap" data-story="3" data-url="real-esate-alert-fundraising-pro-hangs-own-shingle">
+        <div class="single_story_content">
+            <div class="single_story_hero">
                 <img src="images/story_hero.png" class="cover_image" />
                 <p class="main_category">Resources & News</p>
                 <div class="close_popup">
@@ -525,11 +525,11 @@
                     </div>
                 </div>
             </div>
-            <div class="storie_content">
-                <div class="storie_first_section">
+            <div class="story_content">
+                <div class="story_first_section">
                     <div class="left">
                         <div class="image_holder">
-                            <img src="images/storie_image.png" />
+                            <img src="images/story_image.png" />
                         </div>
                     </div>
                     <div class="right">
@@ -546,7 +546,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="storie_second_section">
+                <div class="story_second_section">
                     <h3>1. Subhead Text: Lorem ipsum dolor sit amet.</h3>
                     <p>
                         Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut

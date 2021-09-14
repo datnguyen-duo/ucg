@@ -180,8 +180,8 @@
         var paramValue = url.searchParams.get("story");
 
         if (paramValue) {
-            $(".single_storie_wrap").each(function(index) {
-                $(".single_storie_content").css('width', '100%');
+            $(".single_story_wrap").each(function(index) {
+                $(".single_story_content").css('width', '100%');
                 if ($(this).data('url') == paramValue) {
                     var currentModal = $(this);
                     openNews(currentModal);
@@ -196,14 +196,14 @@
                     $(modal).addClass("active");
                 },
                 onComplete: function() {
-                    $(".single_storie_content").css('width', '100%');
+                    $(".single_story_content").css('width', '100%');
                     clicked = true;
                 }
             });
 
-            let modalT = modal.find(".single_storie_content");
-            let heading = modal.find(".single_storie_hero");
-            let details = modal.find(".storie_content");
+            let modalT = modal.find(".single_story_content");
+            let heading = modal.find(".single_story_hero");
+            let details = modal.find(".story_content");
 
             tl.to(modalT, { width: "100%", ease: "Expo.easeIn" });
             tl.from(heading, { opacity: 0 });
@@ -216,25 +216,25 @@
                 onComplete: function() {
                     $("body").removeClass("init__news");
                     $(modal).removeClass("active");
-                    $(".single_storie_content").css('width', '0%');
+                    $(".single_story_content").css('width', '0%');
                     clicked = false;
                 },
             });
 
-            let modalT = modal.find(".single_storie_content");
-            let heading = modal.find(".single_storie_hero");
-            let details = modal.find(".storie_content");
+            let modalT = modal.find(".single_story_content");
+            let heading = modal.find(".single_story_hero");
+            let details = modal.find(".story_content");
             
             gsap.to(heading, { opacity: 0 });
             tl.to(details, { opacity: 0 });
             tl.to(modalT, { width: 0, ease: "Expo.easeOut" });
-            tl.set(".single_storie_content *", { clearProps: "all" });
+            tl.set(".single_story_content *", { clearProps: "all" });
         }
 
         $('.single_news_wrap').on('click', function(event) {
             var currentStory = $(this).data('story');
 
-            $(".single_storie_wrap").each(function(index) {
+            $(".single_story_wrap").each(function(index) {
                 var currentModal = $(this);
                 if ($(this).data('story') == currentStory) {
                     var currentUrl = $(this).data('url');
@@ -243,11 +243,11 @@
                     if (clicked == false) {
                         openNews(currentModal);
                     } else{
-                        $(".single_storie_content").css('width', '100%');
-                        $(".single_storie_wrap").removeClass('active');
+                        $(".single_story_content").css('width', '100%');
+                        $(".single_story_wrap").removeClass('active');
                         openNews(currentModal);
                         setTimeout(function(){
-                            $(".single_storie_content").animate({ scrollTop: 0 });
+                            $(".single_story_content").animate({ scrollTop: 0 });
                         }, 500)
                     }
 
@@ -378,4 +378,56 @@
             }
         });
     }
+
+    //start form
+
+    $("#requestAccessForm").on("submit", function (event) {
+        event.preventDefault();
+        var $form = $(this);
+        var origin = window.location.origin;
+        var url = origin + "/mail.php";
+        // var subject = "";
+        // var fname = "";
+        // var lname = "";
+        // var email = "";
+        // var zip = "";
+    
+        var subject = "Request Access Form Submission";
+        var fname = $form.find('input[name="first_name"]').val();
+        var lname = $form.find('input[name="last_name"]').val();
+        var email = $form.find('input[name="email"]').val();
+        var phone = $form.find('input[name="phone"]').val();
+        var zip = $form.find('input[name="zip"]').val();
+
+        var itype = $form.find('input[name="investor_type"]').val();
+        var ptype = $form.find('input[name="property_types"]').val();
+        var objective = $form.find('input[name="investment_objective"]').val();
+        var istatus = $form.find('input[name="investor_status"]').val();
+        var amount = $form.find('input[name="amount_per_offering"]').val();
+    
+        $.ajax({
+          url: url,
+          data: {
+            subject: subject,
+            fname: fname,
+            lname: lname,
+            email: email,
+            phone: phone,
+            zip: zip,
+            itype: itype,
+            ptype: ptype,
+            objective: objective,
+            istatus: istatus,
+            amount: amount
+          },
+          type: "POST",
+          error: function (xhr, ajaxOptions, thrownError) {
+            console.log(xhr.responseText);
+          },
+          success: function (data) {
+            $("#requestAccessForm").trigger("reset");
+            gsap.to("form .note", { y: 0 });
+          },
+        });
+      });
 })(jQuery);
