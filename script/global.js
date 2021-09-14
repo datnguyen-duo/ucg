@@ -296,7 +296,7 @@
             });
         }
 
-        if (scrollTop > $('.hero_wrap').height()) {
+        if (scrollTop > $('.hero_wrap').height() - 200) {
             $('.secondary_header').addClass('active');
             $('header').addClass('remove');
         } else {
@@ -351,7 +351,7 @@
                                 if ($(this).hasClass('transactions')) {
                                     $(this).text('$' + Math.ceil(now) + 'M+');
                                 } else if ($(this).hasClass('investors')) {
-                                    $(this).text(getRupeesFormat(Math.ceil(now)));
+                                    $(this).text(getRupeesFormat(Math.ceil(now)) + '+');
                                 } else if ($(this).hasClass('capital')) {
                                     $(this).text(getFormat('$' + Math.ceil(now)) + 'B');
                                 } else {

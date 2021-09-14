@@ -981,7 +981,7 @@ header {
           .hero_wrap .hero_content_wrap .hero_content h1 {
             margin-bottom: 30px; } }
       .hero_wrap .hero_content_wrap .hero_content p {
-        max-width: 35vw;
+        max-width: 40vw;
         color: #fff; }
         @media only screen and (max-width: 1020px) {
           .hero_wrap .hero_content_wrap .hero_content p {
