@@ -513,7 +513,7 @@ body {
 
 .secondary_headline{
 	// font-size: 110px;
-    font-size: 5.7vw;
+    font-size: 5.5vw;
 	color: $color1;
 	font-family: $mainFont;
 	line-height: 1.15em;
@@ -803,14 +803,15 @@ header{
 			top: 0;
 			background-color: #EFF4F7;
 			z-index: 1;
-			display: none;
+			opacity: 0;
+      pointer-events: none;
 
 			.success_message_content_wrap{
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				height: 100%;
-				padding: 100px;
+				padding: 80px;
 				box-sizing: border-box;
 				text-align: center;
 				position: relative;
@@ -849,6 +850,7 @@ header{
 
 					p{
 						@extend .text;
+            font-size: 24px;
 					}
 				}
 			}

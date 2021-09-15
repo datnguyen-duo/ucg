@@ -279,6 +279,56 @@
                 $('.hero_content_wrap').css('width', '66%');
             }
         );
+
+        $("#requestAccessForm").on("submit", function (event) {
+            event.preventDefault();
+            var $form = $(this);
+            var origin = window.location.origin;
+            var url = origin + "/mail.php";
+            // var subject = "";
+            // var fname = "";
+            // var lname = "";
+            // var email = "";
+            // var zip = "";
+        
+            var subject = "Request Access Form Submission";
+            var fname = $form.find('input[name="first_name"]').val();
+            var lname = $form.find('input[name="last_name"]').val();
+            var email = $form.find('input[name="email"]').val();
+            var phone = $form.find('input[name="phone"]').val();
+            var zip = $form.find('input[name="zip"]').val();
+    
+            var itype = $form.find('select[name="investor_type"]').val();
+            var ptype = $form.find('select[name="property_types"]').val();
+            var objective = $form.find('select[name="investment_objective"]').val();
+            var istatus = $form.find('select[name="investor_status"]').val();
+            var amount = $form.find('select[name="amount_per_offering"]').val();
+
+            $.ajax({
+              url: url,
+              data: {
+                subject: subject,
+                fname: fname,
+                lname: lname,
+                email: email,
+                phone: phone,
+                zip: zip,
+                itype: itype,
+                ptype: ptype,
+                objective: objective,
+                istatus: istatus,
+                amount: amount
+              },
+              type: "POST",
+              error: function (xhr, ajaxOptions, thrownError) {
+                console.log(xhr.responseText);
+              },
+              success: function (data) {
+                $("#requestAccessForm").trigger("reset");
+                gsap.to(".success_message_wrap", { opacity: 1 , pointerEvents: "initial"});
+              },
+            });
+          });
     })
 
     $(window).scroll(function() {
@@ -381,53 +431,5 @@
 
     //start form
 
-    $("#requestAccessForm").on("submit", function (event) {
-        event.preventDefault();
-        var $form = $(this);
-        var origin = window.location.origin;
-        var url = origin + "/mail.php";
-        // var subject = "";
-        // var fname = "";
-        // var lname = "";
-        // var email = "";
-        // var zip = "";
-    
-        var subject = "Request Access Form Submission";
-        var fname = $form.find('input[name="first_name"]').val();
-        var lname = $form.find('input[name="last_name"]').val();
-        var email = $form.find('input[name="email"]').val();
-        var phone = $form.find('input[name="phone"]').val();
-        var zip = $form.find('input[name="zip"]').val();
 
-        var itype = $form.find('input[name="investor_type"]').val();
-        var ptype = $form.find('input[name="property_types"]').val();
-        var objective = $form.find('input[name="investment_objective"]').val();
-        var istatus = $form.find('input[name="investor_status"]').val();
-        var amount = $form.find('input[name="amount_per_offering"]').val();
-    
-        $.ajax({
-          url: url,
-          data: {
-            subject: subject,
-            fname: fname,
-            lname: lname,
-            email: email,
-            phone: phone,
-            zip: zip,
-            itype: itype,
-            ptype: ptype,
-            objective: objective,
-            istatus: istatus,
-            amount: amount
-          },
-          type: "POST",
-          error: function (xhr, ajaxOptions, thrownError) {
-            console.log(xhr.responseText);
-          },
-          success: function (data) {
-            $("#requestAccessForm").trigger("reset");
-            gsap.to("form .note", { y: 0 });
-          },
-        });
-      });
 })(jQuery);
