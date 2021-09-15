@@ -113,6 +113,7 @@
 
         $('.next, .page .second').on('click', function(event) {
             if (validateForm()) {
+                $('.form_holder').scrollTop(0);
                 $('.first_part').css('display', 'none');
                 $('.second_part').css('display', 'block');
                 $('.page .first').removeClass('active');
