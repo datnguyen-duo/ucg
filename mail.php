@@ -1,6 +1,8 @@
 <?php
 
     $to = "dat@duo-studio.co";
+    $to = "ben@investuncommon.com";
+
 
     $message = '<table style="background: #ffffff; margin: 0 auto;" width="100%" cellspacing="0" cellpadding="0">
 

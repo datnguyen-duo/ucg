@@ -1,1018 +1,1194 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Uncommon Investments</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="shortcut icon"  type="image/png" href="images/favicon.jpg"/>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.jpg" />
     <link rel="stylesheet" href="https://use.typekit.net/aos8uzp.css" />
     <link rel="stylesheet" href="style/select2.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
     <link rel="stylesheet" href="style/global.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
     <script src="script/select2.js"></script>
     <script src="script/global.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="top"></div>
     <header>
-        <a href="#top" class="logo_holder">
-            <img src="images/header_logo.svg" />
-        </a>
-        <a class="button access">Request Deal Flow</a>
+      <a href="#top" class="logo_holder">
+        <img src="images/header_logo.svg" />
+      </a>
+      <a class="button access">Request Deal Flow</a>
     </header>
     <div class="page_loader">
-        <div class="word">Connected</div>
-        <div class="word">Curated</div>
-        <div class="word">Confidential</div>
-        <div class="word last"><img src="images/header_logo.svg" /></div>
+      <div class="word">Connected</div>
+      <div class="word">Curated</div>
+      <div class="word">Confidential</div>
+      <div class="word last"><img src="images/header_logo.svg" /></div>
     </div>
     <div class="secondary_header">
-        <nav>
-            <a href="#top" class="logo_holder secondary">
-                <img src="images/small_logo.svg" />
-            </a>
-            <ul>
-                <li>
-                    <a href="#numbers">About</a>
-                </li>
-                <li>
-                    <a href="#about">Founder Story</a>
-                </li>
-                <li>
-                    <a href="#faq">FAQs</a>
-                </li>
-                <li>
-                    <a href="#news">Resources & News</a>
-                </li>
-            </ul>
-        </nav>
-        <a class="button access"> Request Deal Flow </a>
+      <nav>
+        <a href="#top" class="logo_holder secondary">
+          <img src="images/header_logo.svg" />
+        </a>
+        <ul>
+          <li>
+            <a href="#numbers">About</a>
+          </li>
+          <li>
+            <a href="#about">Founder Story</a>
+          </li>
+          <li>
+            <a href="#faq">FAQs</a>
+          </li>
+          <li>
+            <a href="#news">Resources & News</a>
+          </li>
+        </ul>
+      </nav>
+      <a class="button access"> Request Deal Flow </a>
     </div>
     <div class="contact_form_holder">
-        <div class="contact_form_wrap">
-            <div class="success_message_wrap">
-              <div class="success_message_content_wrap">
-                <div class="close_form">
-                    <img src="images/form_close.svg" alt="close-icon" />
+      <div class="contact_form_wrap">
+        <div class="success_message_wrap">
+          <div class="success_message_content_wrap">
+            <div class="close_form">
+              <img src="images/form_close.svg" alt="close-icon" />
+            </div>
+            <div class="success_message_content">
+              <img src="images/email.svg" alt="email-icon" />
+              <h3>Message Submitted!</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut
+                commodo ante, ut efficitur neque.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="form_header">
+          <div class="page">
+            <span class="first active">1</span>
+            <span class="second">2</span>
+          </div>
+          <p class="form_header_headline">Personal information</p>
+          <div class="close_form">
+            <img src="images/form_close.svg" alt="close-icon" />
+          </div>
+        </div>
+        <div class="form_holder">
+          <div class="form_description">
+            <h3>Request Access Today</h3>
+            <p>
+              Please provide your information and a member of our team will
+              reach out to discuss next steps and answer any questions you have.
+            </p>
+          </div>
+          <form action="#" name="contact" method="POST" id="requestAccessForm">
+            <div class="second_part">
+              <div class="input_holder">
+                <label for="">Investor Type</label>
+                <select class="custom_select" name="investor_type">
+                  <option value="Family Office" selected>Family Office</option>
+                  <option value="Registered Investment Advisor">
+                    Registered Investment Advisor
+                  </option>
+                  <option value="Individual">Individual</option>
+                  <option value="Institution">Institution</option>
+                </select>
+              </div>
+              <div class="input_holder">
+                <label for=""
+                  >Which property types are you interested in?</label
+                >
+                <select
+                  class="custom_select"
+                  multiple="multiple"
+                  name="property_types"
+                >
+                  <option value="Multifamily" selected>Multifamily</option>
+                  <option value="Industrial">Industrial</option>
+                  <option value="Office">Office</option>
+                  <option value="Retail">Retail</option>
+                  <option value="Hotels">Hotels</option>
+                  <option value="Self storage">Self storage</option>
+                  <option value="Student housing">Student housing</option>
+                  <option value="Data Centers">Data Centers</option>
+                </select>
+              </div>
+              <div class="input_holder">
+                <label for="">What is your primary investment objective?</label>
+                <select class="custom_select" name="investment_objective">
+                  <option value="Growth: higher risk, higher return" selected>
+                    Growth: higher risk, higher return
+                  </option>
+                  <option value="Current Income: lower risk, lower return">
+                    Current Income: lower risk, lower return
+                  </option>
+                  <option value="Growth and Income: medium risk, medium return">
+                    Growth and Income: medium risk, medium return
+                  </option>
+                </select>
+              </div>
+              <div class="input_holder">
+                <label for="">Investor Status</label>
+                <select class="custom_select" name="investor_status">
+                  <option value="Qualified Purchaser" selected>
+                    Qualified Purchaser
+                  </option>
+                  <option value="Accredited Investor">
+                    Accredited Investor
+                  </option>
+                  <option value="Non-Accredited Investor">
+                    Non-Accredited Investor
+                  </option>
+                </select>
+              </div>
+              <div class="input_holder">
+                <label for=""
+                  >What is your typical investment amount per offering?</label
+                >
+                <select class="custom_select" name="amount_per_offering">
+                  <option value="Less than $250,000" selected>
+                    Less than $250,000
+                  </option>
+                  <option value="$250,000 – 999,999">$250,000 – 999,999</option>
+                  <option value="$1,000,000 - $4,999,999">
+                    $1,000,000 - $4,999,999
+                  </option>
+                  <option value="$5,000,000 or more">$5,000,000 or more</option>
+                </select>
+              </div>
+              <div class="button_holder">
+                <p class="prev">Previous</p>
+                <button class="submit">Submit</button>
+              </div>
+            </div>
+            <div class="first_part">
+              <div class="input_holder">
+                <label>First Name</label>
+                <input
+                  type="text"
+                  name="first_name"
+                  placeholder="First Name"
+                  required
+                />
+                <span class="error">Required Field</span>
+              </div>
+              <div class="input_holder">
+                <label>Last Name</label>
+                <input
+                  type="text"
+                  name="last_name"
+                  placeholder="Last Name"
+                  required
+                />
+                <span class="error">Required Field</span>
+              </div>
+              <div class="input_holder">
+                <label>Email Address</label>
+                <input type="email" name="email" placeholder="Email" required />
+                <span class="error">Required Field</span>
+              </div>
+              <div class="input_holder">
+                <label>Phone Number</label>
+                <input
+                  type="phone"
+                  name="phone"
+                  placeholder="Phone Number"
+                  required
+                />
+                <span class="error">Required Field</span>
+              </div>
+              <div class="input_holder">
+                <label>Zip Code</label>
+                <input type="text" name="zip" placeholder="Zip Code" required />
+                <span class="error">Required Field</span>
+              </div>
+              <div class="button_holder">
+                <div class="next">Next</div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div
+      class="single_story_wrap"
+      data-story="1"
+      data-url="5-fees-you-didnt-know-you-were-paying"
+    >
+      <div class="single_story_content">
+        <div class="single_story_hero">
+          <img src="images/story_hero.png" class="cover_image" />
+          <p class="main_category">Resources & News</p>
+          <div class="close_popup">
+            <img src="images/close_popup.svg" />
+          </div>
+          <div class="hero_content">
+            <div class="left">
+              <div class="category">Resources</div>
+              <h2>5 fees you didn’t <br />know you were paying</h2>
+            </div>
+            <div class="right">
+              <div class="social">
+                <span>Share On</span>
+                <a
+                  href=""
+                  onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+                  target="_blank"
+                  title="Share on Facebook"
+                  class="facebook"
+                >
+                  <img src="images/facebook.svg" />
+                  <img src="images/facebook_white.svg" class="hover_icon" />
+                </a>
+                <a href="" target="_blank" class="linkedin">
+                  <img src="images/linkedin.svg" />
+                  <img src="images/linkedin_white.svg" class="hover_icon" />
+                </a>
+                <a
+                  href=""
+                  onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+                  target="_blank"
+                  title="Share on Twitter"
+                  class="twitter"
+                >
+                  <img src="images/twitter.svg" />
+                  <img src="images/twitter_white.svg" class="hover_icon" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="story_content">
+          <div class="story_first_section">
+            <div class="left">
+              <div class="image_holder">
+                <img src="images/story_image.png" />
+              </div>
+            </div>
+            <div class="right">
+              <p>
+                Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
+                venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
+                Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
+                dapibus ullamcorper. Class aptent taciti sociosqu ad litora
+                torquent per conubia nostra, per inceptos himenaeos. Proin
+                molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
+                nec pretium magna risus ac metus. Quisque dapibus quam vitae Leo
+                lacinia ornare. Donec lacinia vulputate lectus, eget gravida
+                mauris ultricies sed.
+              </p>
+            </div>
+          </div>
+          <div class="story_second_section">
+            <h3>1. Subhead Text: Lorem ipsum dolor sit amet.</h3>
+            <p>
+              Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
+              venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
+              Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
+              dapibus ullamcorper. Class aptent taciti sociosqu ad litora
+              torquent per conubia nostra, per inceptos himenaeos. Proin
+              molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
+              nec pretium magna risus ac metus. Quisque dapibus quam vitae leo
+              lacinia ornare. Donec lacinia vulputate lectus, eget gravida
+              mauris ultricies sed. Morbi euismod quis ipsum id luctus. Nunc eu
+              sapien mi. Curabitur ornare imperdiet risus. Mauris nec ligula
+              turpis.
+            </p>
+            <h3>2. Subhead Text: Lorem ipsum dolor sit amet.</h3>
+            <p>
+              Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
+              venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
+              Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
+              dapibus ullamcorper. Class aptent taciti sociosqu ad litora
+              torquent per conubia nostra, per inceptos himenaeos. Proin
+              molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
+              nec pretium magna risus ac metus. Quisque dapibus quam vitae leo
+              lacinia ornare. Donec lacinia vulputate lectus, eget gravida
+              mauris ultricies sed. Morbi euismod quis ipsum id luctus. Nunc eu
+              sapien mi. Curabitur ornare imperdiet risus. Mauris nec ligula
+              turpis.
+            </p>
+            <h3>3. Subhead Text: Lorem ipsum dolor sit amet.</h3>
+            <p>
+              Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
+              venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
+              Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
+              dapibus ullamcorper. Class aptent taciti sociosqu ad litora
+              torquent per conubia nostra, per inceptos himenaeos. Proin
+              molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
+              nec pretium magna risus ac metus. Quisque dapibus quam vitae leo
+              lacinia ornare. Donec lacinia vulputate lectus, eget gravida
+              mauris ultricies sed. Morbi euismod quis ipsum id luctus. Nunc eu
+              sapien mi. Curabitur ornare imperdiet risus. Mauris nec ligula
+              turpis.
+            </p>
+            <h3>4. Subhead Text: Lorem ipsum dolor sit amet.</h3>
+            <p>
+              Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
+              venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
+              Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
+              dapibus ullamcorper. Class aptent taciti sociosqu ad litora
+              torquent per conubia nostra, per inceptos himenaeos. Proin
+              molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
+              nec pretium magna risus ac metus. Quisque dapibus quam vitae leo
+              lacinia ornare. Donec lacinia vulputate lectus, eget gravida
+              mauris ultricies sed. Morbi euismod quis ipsum id luctus. Nunc eu
+              sapien mi. Curabitur ornare imperdiet risus. Mauris nec ligula
+              turpis.
+            </p>
+            <h3>5. Subhead Text: Lorem ipsum dolor sit amet.</h3>
+            <p>
+              Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
+              venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
+              Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
+              dapibus ullamcorper. Class aptent taciti sociosqu ad litora
+              torquent per conubia nostra, per inceptos himenaeos. Proin
+              molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
+              nec pretium magna risus ac metus. Quisque dapibus quam vitae leo
+              lacinia ornare. Donec lacinia vulputate lectus, eget gravida
+              mauris ultricies sed. Morbi euismod quis ipsum id luctus. Nunc eu
+              sapien mi. Curabitur ornare imperdiet risus. Mauris nec ligula
+              turpis.
+            </p>
+            <div class="related_news">
+              <h4>More Resources & News</h4>
+              <div class="news_wrap">
+                <div
+                  class="single_news_wrap"
+                  data-story="2"
+                  data-url="10-due-diligence-questions-everyone-should-be-asking"
+                >
+                  <div class="single_news">
+                    <img src="images/blog-duediligence.jpg" alt="" />
+                    <div class="category_wrap">
+                      <div class="category">Resources</div>
+                    </div>
+                    <h3>
+                      10 due diligence questions everyone should be asking
+                    </h3>
+                  </div>
                 </div>
-                <div class="success_message_content">
-                  <img src="images/email.svg" alt="email-icon">
-                  <h3>Message Submitted!</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut commodo ante, ut efficitur neque.
-                  </p>
+                <div
+                  class="single_news_wrap"
+                  data-story="3"
+                  ata-url="real-esate-alert-fundraising-pro-hangs-own-shingle"
+                >
+                  <div class="single_news">
+                    <img src="images/blog-alert.jpg" alt="" />
+                    <div class="category_wrap">
+                      <div class="category">News</div>
+                    </div>
+                    <h3>
+                      Real estate alert: fundraising pro hangs own shingle
+                    </h3>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="form_header">
-                <div class="page">
-                    <span class="first active">1</span>
-                    <span class="second">2</span>
-                </div>
-                <p class="form_header_headline">Personal information</p>
-                <div class="close_form">
-                    <img src="images/form_close.svg" alt="close-icon" />
-                </div>
-            </div>
-            <div class="form_holder">
-                <div class="form_description">
-                    <h3>Request Access Today</h3>
-                    <p>
-                        Please provide your information and a member of our team will reach out to discuss next steps and answer any questions you have.
-                    </p>
-                </div>
-                <form action="#" name="contact" method="POST" id="requestAccessForm">
-                    <div class="second_part">
-                        <div class="input_holder">
-                            <label for="">Investor Type</label>
-                            <select class="custom_select" name="investor_type">
-                                <option value="Family Office" selected>Family Office</option>
-                                <option value="Registered Investment Advisor">Registered Investment Advisor</option>
-                                <option value="Individual">Individual</option>
-                                <option value="Institution">Institution</option>
-                            </select>
-                        </div>
-                        <div class="input_holder">
-                            <label for="">Which property types are you interested in?</label>
-                            <select class="custom_select" multiple="multiple" name="property_types">
-                                <option value="Multifamily" selected>Multifamily</option>
-                                <option value="Industrial">Industrial</option>
-                                <option value="Office">Office</option>
-                                <option value="Retail">Retail</option>
-                                <option value="Hotels">Hotels</option>
-                                <option value="Self storage">Self storage</option>
-                                <option value="Student housing">Student housing</option>
-                                <option value="Data Centers">Data Centers</option>
-                            </select>
-                        </div>
-                        <div class="input_holder">
-                            <label for="">What is your primary investment objective?</label>
-                            <select class="custom_select" name="investment_objective">
-                                <option value="Growth: higher risk, higher return" selected>Growth: higher risk, higher return</option>
-                                <option value="Current Income: lower risk, lower return">Current Income: lower risk, lower return</option>
-                                <option value="Growth and Income: medium risk, medium return">Growth and Income: medium risk, medium return</option>
-                            </select>
-                        </div>
-                        <div class="input_holder">
-                            <label for="">Investor Status</label>
-                            <select class="custom_select" name="investor_status">
-                                <option value="Qualified Purchaser" selected>Qualified Purchaser</option>
-                                <option value="Accredited Investor">Accredited Investor</option>
-                                <option value="Non-Accredited Investor">Non-Accredited Investor</option>
-                            </select>
-                        </div>
-                        <div class="input_holder">
-                            <label for="">What is your typical investment amount per offering?</label>
-                            <select class="custom_select" name="amount_per_offering">
-                                <option value="Less than $250,000" selected>Less than $250,000</option>
-                                <option value="$250,000 – 999,999">$250,000 – 999,999</option>
-                                <option value="$1,000,000 - $4,999,999">$1,000,000 - $4,999,999</option>
-                                <option value="$5,000,000 or more">$5,000,000 or more</option>
-                            </select>
-                        </div>
-                        <div class="button_holder">
-                            <p class="prev">Previous</p>
-                            <button class="submit">Submit</button>
-                        </div>
-                    </div>
-                    <div class="first_part">
-                        <div class="input_holder">
-                            <label>First Name</label>
-                            <input type="text" name="first_name" placeholder="First Name" required />
-                            <span class="error">Required Field</span>
-                        </div>
-                        <div class="input_holder">
-                            <label>Last Name</label>
-                            <input type="text" name="last_name" placeholder="Last Name" required />
-                            <span class="error">Required Field</span>
-                        </div>
-                        <div class="input_holder">
-                            <label>Email Address</label>
-                            <input type="email" name="email" placeholder="Email" required />
-                            <span class="error">Required Field</span>
-                        </div>
-                        <div class="input_holder">
-                            <label>Phone Number</label>
-                            <input type="phone" name="phone" placeholder="Phone Number" required />
-                            <span class="error">Required Field</span>
-                        </div>
-                        <div class="input_holder">
-                            <label>Zip Code</label>
-                            <input type="text" name="zip" placeholder="Zip Code" required />
-                            <span class="error">Required Field</span>
-                        </div>
-                        <div class="button_holder">
-                            <div class="next">Next</div>
-                        </div>
-                    </div>
-                </form>
-            </div>
+          </div>
         </div>
+      </div>
     </div>
-    <div class="single_story_wrap" data-story="1" data-url="5-fees-you-didnt-know-you-were-paying">
-        <div class="single_story_content">
-            <div class="single_story_hero">
-                <img src="images/story_hero.png" class="cover_image" />
-                <p class="main_category">Resources & News</p>
-                <div class="close_popup">
-                    <img src="images/close_popup.svg" />
-                </div>
-                <div class="hero_content">
-                    <div class="left">
-                        <div class="category">Resources</div>
-                        <h2>5 fees you didn’t <br />know you were paying</h2>
-                    </div>
-                    <div class="right">
-                        <div class="social">
-                            <span>Share On</span>
-                            <a href=""
-             onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
-             target="_blank" title="Share on Facebook" class="facebook">
-                                <img src="images/facebook.svg" />
-                                <img src="images/facebook_white.svg" class="hover_icon" />
-                            </a>
-                            <a href="" target="_blank" class="linkedin">
-                                <img src="images/linkedin.svg" />
-                                <img src="images/linkedin_white.svg" class="hover_icon" />
-                            </a>
-                            <a href="" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
-             target="_blank" title="Share on Twitter" class="twitter">
-                                <img src="images/twitter.svg" />
-                                <img src="images/twitter_white.svg" class="hover_icon" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
+    <div
+      class="single_story_wrap"
+      data-story="2"
+      data-url="10-due-diligence-questions-everyone-should-be-asking"
+    >
+      <div class="single_story_content">
+        <div class="single_story_hero">
+          <img src="images/blog-duediligence.jpg" class="cover_image"  />
+          <p class="main_category">Resources & News</p>
+          <div class="close_popup">
+            <img src="images/close_popup.svg" />
+          </div>
+          <div class="hero_content">
+            <div class="left">
+              <div class="category">Resources</div>
+              <h2>10 due diligence questions everyone should be asking</h2>
             </div>
-            <div class="story_content">
-                <div class="story_first_section">
-                    <div class="left">
-                        <div class="image_holder">
-                            <img src="images/story_image.png" />
-                        </div>
-                    </div>
-                    <div class="right">
-                        <p>
-                            Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
-                            venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
-                            Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
-                            dapibus ullamcorper. Class aptent taciti sociosqu ad litora
-                            torquent per conubia nostra, per inceptos himenaeos. Proin
-                            molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
-                            nec pretium magna risus ac metus. Quisque dapibus quam vitae Leo
-                            lacinia ornare. Donec lacinia vulputate lectus, eget gravida
-                            mauris ultricies sed.
-                        </p>
-                    </div>
-                </div>
-                <div class="story_second_section">
-                    <h3>1. Subhead Text: Lorem ipsum dolor sit amet.</h3>
-                    <p>
-                        Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
-                        venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
-                        Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
-                        dapibus ullamcorper. Class aptent taciti sociosqu ad litora
-                        torquent per conubia nostra, per inceptos himenaeos. Proin
-                        molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
-                        nec pretium magna risus ac metus. Quisque dapibus quam vitae leo
-                        lacinia ornare. Donec lacinia vulputate lectus, eget gravida
-                        mauris ultricies sed. Morbi euismod quis ipsum id luctus. Nunc eu
-                        sapien mi. Curabitur ornare imperdiet risus. Mauris nec ligula
-                        turpis.
-                    </p>
-                    <h3>2. Subhead Text: Lorem ipsum dolor sit amet.</h3>
-                    <p>
-                        Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
-                        venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
-                        Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
-                        dapibus ullamcorper. Class aptent taciti sociosqu ad litora
-                        torquent per conubia nostra, per inceptos himenaeos. Proin
-                        molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
-                        nec pretium magna risus ac metus. Quisque dapibus quam vitae leo
-                        lacinia ornare. Donec lacinia vulputate lectus, eget gravida
-                        mauris ultricies sed. Morbi euismod quis ipsum id luctus. Nunc eu
-                        sapien mi. Curabitur ornare imperdiet risus. Mauris nec ligula
-                        turpis.
-                    </p>
-                    <h3>3. Subhead Text: Lorem ipsum dolor sit amet.</h3>
-                    <p>
-                        Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
-                        venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
-                        Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
-                        dapibus ullamcorper. Class aptent taciti sociosqu ad litora
-                        torquent per conubia nostra, per inceptos himenaeos. Proin
-                        molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
-                        nec pretium magna risus ac metus. Quisque dapibus quam vitae leo
-                        lacinia ornare. Donec lacinia vulputate lectus, eget gravida
-                        mauris ultricies sed. Morbi euismod quis ipsum id luctus. Nunc eu
-                        sapien mi. Curabitur ornare imperdiet risus. Mauris nec ligula
-                        turpis.
-                    </p>
-                    <h3>4. Subhead Text: Lorem ipsum dolor sit amet.</h3>
-                    <p>
-                        Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
-                        venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
-                        Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
-                        dapibus ullamcorper. Class aptent taciti sociosqu ad litora
-                        torquent per conubia nostra, per inceptos himenaeos. Proin
-                        molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
-                        nec pretium magna risus ac metus. Quisque dapibus quam vitae leo
-                        lacinia ornare. Donec lacinia vulputate lectus, eget gravida
-                        mauris ultricies sed. Morbi euismod quis ipsum id luctus. Nunc eu
-                        sapien mi. Curabitur ornare imperdiet risus. Mauris nec ligula
-                        turpis.
-                    </p>
-                    <h3>5. Subhead Text: Lorem ipsum dolor sit amet.</h3>
-                    <p>
-                        Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
-                        venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
-                        Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
-                        dapibus ullamcorper. Class aptent taciti sociosqu ad litora
-                        torquent per conubia nostra, per inceptos himenaeos. Proin
-                        molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
-                        nec pretium magna risus ac metus. Quisque dapibus quam vitae leo
-                        lacinia ornare. Donec lacinia vulputate lectus, eget gravida
-                        mauris ultricies sed. Morbi euismod quis ipsum id luctus. Nunc eu
-                        sapien mi. Curabitur ornare imperdiet risus. Mauris nec ligula
-                        turpis.
-                    </p>
-                    <div class="related_news">
-                        <h4>More Resources & News</h4>
-                        <div class="news_wrap">
-                            <div class="single_news_wrap" data-story="2" data-url="10-due-diligence-questions-everyone-should-be-asking">
-                                <div class="single_news">
-                                    <img src="images/story_hero.png" alt="">
-                                    <div class="category_wrap">
-                                        <div class="category">Resources</div>
-                                    </div>
-                                    <h3>
-                                        10 due diligence questions everyone should be asking
-                                    </h3>
-                                </div>
-                            </div>
-                            <div class="single_news_wrap" data-story="3" ata-url="real-esate-alert-fundraising-pro-hangs-own-shingle">
-                                <div class="single_news">
-                                    <img src="images/story_hero.png" alt="">
-                                    <div class="category_wrap">
-                                        <div class="category">News</div>
-                                    </div>
-                                    <h3>
-                                        Real estate alert: fundraising pro hangs own shingle
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="right">
+              <div class="social">
+                <span>Share On</span>
+                <a
+                  href=""
+                  onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+                  target="_blank"
+                  title="Share on Facebook"
+                  class="facebook"
+                >
+                  <img src="images/facebook.svg" />
+                  <img src="images/facebook_white.svg" class="hover_icon" />
+                </a>
+                <a href="" target="_blank" class="linkedin">
+                  <img src="images/linkedin.svg" />
+                  <img src="images/linkedin_white.svg" class="hover_icon" />
+                </a>
+                <a
+                  href=""
+                  onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+                  target="_blank"
+                  title="Share on Twitter"
+                  class="twitter"
+                >
+                  <img src="images/twitter.svg" />
+                  <img src="images/twitter_white.svg" class="hover_icon" />
+                </a>
+              </div>
             </div>
+          </div>
         </div>
+        <div class="story_content">
+          <div class="story_first_section">
+            <div class="left">
+              <div class="image_holder">
+                <img src="images/blog-alert.jpg" alt="blog-image" />
+              </div>
+            </div>
+            <div class="right">
+              <p>
+                Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
+                venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
+                Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
+                dapibus ullamcorper. Class aptent taciti sociosqu ad litora
+                torquent per conubia nostra, per inceptos himenaeos. Proin
+                molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
+                nec pretium magna risus ac metus. Quisque dapibus quam vitae Leo
+                lacinia ornare. Donec lacinia vulputate lectus, eget gravida
+                mauris ultricies sed.
+              </p>
+            </div>
+          </div>
+          <div class="story_second_section">
+            <h3>1. Subhead Text: Lorem ipsum dolor sit amet.</h3>
+            <p>
+              Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
+              venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
+              Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
+              dapibus ullamcorper. Class aptent taciti sociosqu ad litora
+              torquent per conubia nostra, per inceptos himenaeos. Proin
+              molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
+              nec pretium magna risus ac metus. Quisque dapibus quam vitae leo
+              lacinia ornare. Donec lacinia vulputate lectus, eget gravida
+              mauris ultricies sed. Morbi euismod quis ipsum id luctus. Nunc eu
+              sapien mi. Curabitur ornare imperdiet risus. Mauris nec ligula
+              turpis.
+            </p>
+            <h3>2. Subhead Text: Lorem ipsum dolor sit amet.</h3>
+            <p>
+              Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
+              venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
+              Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
+              dapibus ullamcorper. Class aptent taciti sociosqu ad litora
+              torquent per conubia nostra, per inceptos himenaeos. Proin
+              molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
+              nec pretium magna risus ac metus. Quisque dapibus quam vitae leo
+              lacinia ornare. Donec lacinia vulputate lectus, eget gravida
+              mauris ultricies sed. Morbi euismod quis ipsum id luctus. Nunc eu
+              sapien mi. Curabitur ornare imperdiet risus. Mauris nec ligula
+              turpis.
+            </p>
+            <h3>3. Subhead Text: Lorem ipsum dolor sit amet.</h3>
+            <p>
+              Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
+              venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
+              Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
+              dapibus ullamcorper. Class aptent taciti sociosqu ad litora
+              torquent per conubia nostra, per inceptos himenaeos. Proin
+              molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
+              nec pretium magna risus ac metus. Quisque dapibus quam vitae leo
+              lacinia ornare. Donec lacinia vulputate lectus, eget gravida
+              mauris ultricies sed. Morbi euismod quis ipsum id luctus. Nunc eu
+              sapien mi. Curabitur ornare imperdiet risus. Mauris nec ligula
+              turpis.
+            </p>
+            <h3>4. Subhead Text: Lorem ipsum dolor sit amet.</h3>
+            <p>
+              Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
+              venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
+              Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
+              dapibus ullamcorper. Class aptent taciti sociosqu ad litora
+              torquent per conubia nostra, per inceptos himenaeos. Proin
+              molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
+              nec pretium magna risus ac metus. Quisque dapibus quam vitae leo
+              lacinia ornare. Donec lacinia vulputate lectus, eget gravida
+              mauris ultricies sed. Morbi euismod quis ipsum id luctus. Nunc eu
+              sapien mi. Curabitur ornare imperdiet risus. Mauris nec ligula
+              turpis.
+            </p>
+            <h3>5. Subhead Text: Lorem ipsum dolor sit amet.</h3>
+            <p>
+              Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
+              venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
+              Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
+              dapibus ullamcorper. Class aptent taciti sociosqu ad litora
+              torquent per conubia nostra, per inceptos himenaeos. Proin
+              molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
+              nec pretium magna risus ac metus. Quisque dapibus quam vitae leo
+              lacinia ornare. Donec lacinia vulputate lectus, eget gravida
+              mauris ultricies sed. Morbi euismod quis ipsum id luctus. Nunc eu
+              sapien mi. Curabitur ornare imperdiet risus. Mauris nec ligula
+              turpis.
+            </p>
+            <div class="related_news">
+              <h4>More Resources & News</h4>
+              <div class="news_wrap">
+                <div
+                  class="single_news_wrap"
+                  data-story="1"
+                  data-url="5-fees-you-didnt-know-you-were-paying"
+                >
+                  <div class="single_news">
+                    <img src="images/story_hero.png" alt="" />
+                    <div class="category_wrap">
+                      <div class="category">Resources</div>
+                    </div>
+                    <h3>5 fees you didn’t know you were paying</h3>
+                  </div>
+                </div>
+                <div
+                  class="single_news_wrap"
+                  data-story="3"
+                  ata-url="real-esate-alert-fundraising-pro-hangs-own-shingle"
+                >
+                  <div class="single_news">
+                    <img src="images/blog-alert.jpg" alt="" />
+                    <div class="category_wrap">
+                      <div class="category">News</div>
+                    </div>
+                    <h3>
+                      Real estate alert: fundraising pro hangs own shingle
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="single_story_wrap" data-story="2" data-url="10-due-diligence-questions-everyone-should-be-asking">
-        <div class="single_story_content">
-            <div class="single_story_hero">
-                <img src="images/story_hero.png" class="cover_image" />
-                <p class="main_category">Resources & News</p>
-                <div class="close_popup">
-                    <img src="images/close_popup.svg" />
-                </div>
-                <div class="hero_content">
-                    <div class="left">
-                        <div class="category">Resources</div>
-                        <h2>10 due diligence questions everyone should be asking</h2>
-                    </div>
-                    <div class="right">
-                        <div class="social">
-                            <span>Share On</span>
-                            <a href=""
-             onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
-             target="_blank" title="Share on Facebook" class="facebook">
-                                <img src="images/facebook.svg" />
-                                <img src="images/facebook_white.svg" class="hover_icon" />
-                            </a>
-                            <a href="" target="_blank" class="linkedin">
-                                <img src="images/linkedin.svg" />
-                                <img src="images/linkedin_white.svg" class="hover_icon" />
-                            </a>
-                            <a href="" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
-             target="_blank" title="Share on Twitter" class="twitter">
-                                <img src="images/twitter.svg" />
-                                <img src="images/twitter_white.svg" class="hover_icon" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
+    <div
+      class="single_story_wrap"
+      data-story="3"
+      data-url="real-esate-alert-fundraising-pro-hangs-own-shingle"
+    >
+      <div class="single_story_content">
+        <div class="single_story_hero">
+          <img src="images/blog-alert.jpg" class="cover_image" />
+          <p class="main_category">Resources & News</p>
+          <div class="close_popup">
+            <img src="images/close_popup.svg" />
+          </div>
+          <div class="hero_content">
+            <div class="left">
+              <div class="category">Resources</div>
+              <h2>Real estate alert: fundraising pro hangs own shingle</h2>
             </div>
-            <div class="story_content">
-                <div class="story_first_section">
-                    <div class="left">
-                        <div class="image_holder">
-                            <img src="images/story_image.png" />
-                        </div>
-                    </div>
-                    <div class="right">
-                        <p>
-                            Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
-                            venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
-                            Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
-                            dapibus ullamcorper. Class aptent taciti sociosqu ad litora
-                            torquent per conubia nostra, per inceptos himenaeos. Proin
-                            molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
-                            nec pretium magna risus ac metus. Quisque dapibus quam vitae Leo
-                            lacinia ornare. Donec lacinia vulputate lectus, eget gravida
-                            mauris ultricies sed.
-                        </p>
-                    </div>
-                </div>
-                <div class="story_second_section">
-                    <h3>1. Subhead Text: Lorem ipsum dolor sit amet.</h3>
-                    <p>
-                        Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
-                        venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
-                        Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
-                        dapibus ullamcorper. Class aptent taciti sociosqu ad litora
-                        torquent per conubia nostra, per inceptos himenaeos. Proin
-                        molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
-                        nec pretium magna risus ac metus. Quisque dapibus quam vitae leo
-                        lacinia ornare. Donec lacinia vulputate lectus, eget gravida
-                        mauris ultricies sed. Morbi euismod quis ipsum id luctus. Nunc eu
-                        sapien mi. Curabitur ornare imperdiet risus. Mauris nec ligula
-                        turpis.
-                    </p>
-                    <h3>2. Subhead Text: Lorem ipsum dolor sit amet.</h3>
-                    <p>
-                        Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
-                        venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
-                        Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
-                        dapibus ullamcorper. Class aptent taciti sociosqu ad litora
-                        torquent per conubia nostra, per inceptos himenaeos. Proin
-                        molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
-                        nec pretium magna risus ac metus. Quisque dapibus quam vitae leo
-                        lacinia ornare. Donec lacinia vulputate lectus, eget gravida
-                        mauris ultricies sed. Morbi euismod quis ipsum id luctus. Nunc eu
-                        sapien mi. Curabitur ornare imperdiet risus. Mauris nec ligula
-                        turpis.
-                    </p>
-                    <h3>3. Subhead Text: Lorem ipsum dolor sit amet.</h3>
-                    <p>
-                        Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
-                        venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
-                        Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
-                        dapibus ullamcorper. Class aptent taciti sociosqu ad litora
-                        torquent per conubia nostra, per inceptos himenaeos. Proin
-                        molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
-                        nec pretium magna risus ac metus. Quisque dapibus quam vitae leo
-                        lacinia ornare. Donec lacinia vulputate lectus, eget gravida
-                        mauris ultricies sed. Morbi euismod quis ipsum id luctus. Nunc eu
-                        sapien mi. Curabitur ornare imperdiet risus. Mauris nec ligula
-                        turpis.
-                    </p>
-                    <h3>4. Subhead Text: Lorem ipsum dolor sit amet.</h3>
-                    <p>
-                        Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
-                        venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
-                        Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
-                        dapibus ullamcorper. Class aptent taciti sociosqu ad litora
-                        torquent per conubia nostra, per inceptos himenaeos. Proin
-                        molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
-                        nec pretium magna risus ac metus. Quisque dapibus quam vitae leo
-                        lacinia ornare. Donec lacinia vulputate lectus, eget gravida
-                        mauris ultricies sed. Morbi euismod quis ipsum id luctus. Nunc eu
-                        sapien mi. Curabitur ornare imperdiet risus. Mauris nec ligula
-                        turpis.
-                    </p>
-                    <h3>5. Subhead Text: Lorem ipsum dolor sit amet.</h3>
-                    <p>
-                        Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
-                        venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
-                        Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
-                        dapibus ullamcorper. Class aptent taciti sociosqu ad litora
-                        torquent per conubia nostra, per inceptos himenaeos. Proin
-                        molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
-                        nec pretium magna risus ac metus. Quisque dapibus quam vitae leo
-                        lacinia ornare. Donec lacinia vulputate lectus, eget gravida
-                        mauris ultricies sed. Morbi euismod quis ipsum id luctus. Nunc eu
-                        sapien mi. Curabitur ornare imperdiet risus. Mauris nec ligula
-                        turpis.
-                    </p>
-                    <div class="related_news">
-                        <h4>More Resources & News</h4>
-                        <div class="news_wrap">
-                            <div class="single_news_wrap" data-story="1" data-url="5-fees-you-didnt-know-you-were-paying">
-                                <div class="single_news">
-                                    <img src="images/story_hero.png" alt="">
-                                    <div class="category_wrap">
-                                        <div class="category">Resources</div>
-                                    </div>
-                                    <h3>5 fees you didn’t know you were paying</h3>
-                                </div>
-                            </div>
-                            <div class="single_news_wrap" data-story="3" ata-url="real-esate-alert-fundraising-pro-hangs-own-shingle">
-                                <div class="single_news">
-                                    <img src="images/story_hero.png" alt="">
-                                    <div class="category_wrap">
-                                        <div class="category">News</div>
-                                    </div>
-                                    <h3>
-                                        Real estate alert: fundraising pro hangs own shingle
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="right">
+              <div class="social">
+                <span>Share On</span>
+                <a
+                  href=""
+                  onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+                  target="_blank"
+                  title="Share on Facebook"
+                  class="facebook"
+                >
+                  <img src="images/facebook.svg" />
+                  <img src="images/facebook_white.svg" class="hover_icon" />
+                </a>
+                <a href="" target="_blank" class="linkedin">
+                  <img src="images/linkedin.svg" />
+                  <img src="images/linkedin_white.svg" class="hover_icon" />
+                </a>
+                <a
+                  href=""
+                  onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+                  target="_blank"
+                  title="Share on Twitter"
+                  class="twitter"
+                >
+                  <img src="images/twitter.svg" />
+                  <img src="images/twitter_white.svg" class="hover_icon" />
+                </a>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-    <div class="single_story_wrap" data-story="3" data-url="real-esate-alert-fundraising-pro-hangs-own-shingle">
-        <div class="single_story_content">
-            <div class="single_story_hero">
-                <img src="images/story_hero.png" class="cover_image" />
-                <p class="main_category">Resources & News</p>
-                <div class="close_popup">
-                    <img src="images/close_popup.svg" />
-                </div>
-                <div class="hero_content">
-                    <div class="left">
-                        <div class="category">Resources</div>
-                        <h2>Real estate alert: fundraising pro hangs own shingle</h2>
-                    </div>
-                    <div class="right">
-                        <div class="social">
-                            <span>Share On</span>
-                            <a href=""
-             onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
-             target="_blank" title="Share on Facebook" class="facebook">
-                                <img src="images/facebook.svg" />
-                                <img src="images/facebook_white.svg" class="hover_icon" />
-                            </a>
-                            <a href="" target="_blank" class="linkedin">
-                                <img src="images/linkedin.svg" />
-                                <img src="images/linkedin_white.svg" class="hover_icon" />
-                            </a>
-                            <a href="" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
-             target="_blank" title="Share on Twitter" class="twitter">
-                                <img src="images/twitter.svg" />
-                                <img src="images/twitter_white.svg" class="hover_icon" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
+        <div class="story_content">
+          <div class="story_first_section">
+            <div class="left">
+              <div class="image_holder">
+                <img src="images/story_image.png" />
+              </div>
             </div>
-            <div class="story_content">
-                <div class="story_first_section">
-                    <div class="left">
-                        <div class="image_holder">
-                            <img src="images/story_image.png" />
-                        </div>
-                    </div>
-                    <div class="right">
-                        <p>
-                            Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
-                            venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
-                            Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
-                            dapibus ullamcorper. Class aptent taciti sociosqu ad litora
-                            torquent per conubia nostra, per inceptos himenaeos. Proin
-                            molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
-                            nec pretium magna risus ac metus. Quisque dapibus quam vitae Leo
-                            lacinia ornare. Donec lacinia vulputate lectus, eget gravida
-                            mauris ultricies sed.
-                        </p>
-                    </div>
-                </div>
-                <div class="story_second_section">
-                    <h3>1. Subhead Text: Lorem ipsum dolor sit amet.</h3>
-                    <p>
-                        Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
-                        venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
-                        Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
-                        dapibus ullamcorper. Class aptent taciti sociosqu ad litora
-                        torquent per conubia nostra, per inceptos himenaeos. Proin
-                        molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
-                        nec pretium magna risus ac metus. Quisque dapibus quam vitae leo
-                        lacinia ornare. Donec lacinia vulputate lectus, eget gravida
-                        mauris ultricies sed. Morbi euismod quis ipsum id luctus. Nunc eu
-                        sapien mi. Curabitur ornare imperdiet risus. Mauris nec ligula
-                        turpis.
-                    </p>
-                    <h3>2. Subhead Text: Lorem ipsum dolor sit amet.</h3>
-                    <p>
-                        Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
-                        venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
-                        Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
-                        dapibus ullamcorper. Class aptent taciti sociosqu ad litora
-                        torquent per conubia nostra, per inceptos himenaeos. Proin
-                        molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
-                        nec pretium magna risus ac metus. Quisque dapibus quam vitae leo
-                        lacinia ornare. Donec lacinia vulputate lectus, eget gravida
-                        mauris ultricies sed. Morbi euismod quis ipsum id luctus. Nunc eu
-                        sapien mi. Curabitur ornare imperdiet risus. Mauris nec ligula
-                        turpis.
-                    </p>
-                    <h3>3. Subhead Text: Lorem ipsum dolor sit amet.</h3>
-                    <p>
-                        Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
-                        venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
-                        Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
-                        dapibus ullamcorper. Class aptent taciti sociosqu ad litora
-                        torquent per conubia nostra, per inceptos himenaeos. Proin
-                        molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
-                        nec pretium magna risus ac metus. Quisque dapibus quam vitae leo
-                        lacinia ornare. Donec lacinia vulputate lectus, eget gravida
-                        mauris ultricies sed. Morbi euismod quis ipsum id luctus. Nunc eu
-                        sapien mi. Curabitur ornare imperdiet risus. Mauris nec ligula
-                        turpis.
-                    </p>
-                    <h3>4. Subhead Text: Lorem ipsum dolor sit amet.</h3>
-                    <p>
-                        Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
-                        venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
-                        Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
-                        dapibus ullamcorper. Class aptent taciti sociosqu ad litora
-                        torquent per conubia nostra, per inceptos himenaeos. Proin
-                        molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
-                        nec pretium magna risus ac metus. Quisque dapibus quam vitae leo
-                        lacinia ornare. Donec lacinia vulputate lectus, eget gravida
-                        mauris ultricies sed. Morbi euismod quis ipsum id luctus. Nunc eu
-                        sapien mi. Curabitur ornare imperdiet risus. Mauris nec ligula
-                        turpis.
-                    </p>
-                    <h3>5. Subhead Text: Lorem ipsum dolor sit amet.</h3>
-                    <p>
-                        Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
-                        venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
-                        Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
-                        dapibus ullamcorper. Class aptent taciti sociosqu ad litora
-                        torquent per conubia nostra, per inceptos himenaeos. Proin
-                        molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
-                        nec pretium magna risus ac metus. Quisque dapibus quam vitae leo
-                        lacinia ornare. Donec lacinia vulputate lectus, eget gravida
-                        mauris ultricies sed. Morbi euismod quis ipsum id luctus. Nunc eu
-                        sapien mi. Curabitur ornare imperdiet risus. Mauris nec ligula
-                        turpis.
-                    </p>
-                    <div class="related_news">
-                        <h4>More Resources & News</h4>
-                        <div class="news_wrap">
-                            <div class="single_news_wrap" data-story="1" data-url="5-fees-you-didnt-know-you-were-paying">
-                                <div class="single_news">
-                                    <img src="images/story_hero.png" alt="">
-                                    <div class="category_wrap">
-                                        <div class="category">Resources</div>
-                                    </div>
-                                    <h3>5 fees you didn’t know you were paying</h3>
-                                </div>
-                            </div>
-                            <div class="single_news_wrap" data-story="2" data-url="10-due-diligence-questions-everyone-should-be-asking">
-                                <div class="single_news">
-                                    <img src="images/story_hero.png" alt="">
-                                    <div class="category_wrap">
-                                        <div class="category">Resources</div>
-                                    </div>
-                                    <h3>
-                                        10 due diligence questions everyone should be asking
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="right">
+              <p>
+                Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
+                venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
+                Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
+                dapibus ullamcorper. Class aptent taciti sociosqu ad litora
+                torquent per conubia nostra, per inceptos himenaeos. Proin
+                molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
+                nec pretium magna risus ac metus. Quisque dapibus quam vitae Leo
+                lacinia ornare. Donec lacinia vulputate lectus, eget gravida
+                mauris ultricies sed.
+              </p>
             </div>
+          </div>
+          <div class="story_second_section">
+            <h3>1. Subhead Text: Lorem ipsum dolor sit amet.</h3>
+            <p>
+              Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
+              venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
+              Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
+              dapibus ullamcorper. Class aptent taciti sociosqu ad litora
+              torquent per conubia nostra, per inceptos himenaeos. Proin
+              molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
+              nec pretium magna risus ac metus. Quisque dapibus quam vitae leo
+              lacinia ornare. Donec lacinia vulputate lectus, eget gravida
+              mauris ultricies sed. Morbi euismod quis ipsum id luctus. Nunc eu
+              sapien mi. Curabitur ornare imperdiet risus. Mauris nec ligula
+              turpis.
+            </p>
+            <h3>2. Subhead Text: Lorem ipsum dolor sit amet.</h3>
+            <p>
+              Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
+              venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
+              Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
+              dapibus ullamcorper. Class aptent taciti sociosqu ad litora
+              torquent per conubia nostra, per inceptos himenaeos. Proin
+              molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
+              nec pretium magna risus ac metus. Quisque dapibus quam vitae leo
+              lacinia ornare. Donec lacinia vulputate lectus, eget gravida
+              mauris ultricies sed. Morbi euismod quis ipsum id luctus. Nunc eu
+              sapien mi. Curabitur ornare imperdiet risus. Mauris nec ligula
+              turpis.
+            </p>
+            <h3>3. Subhead Text: Lorem ipsum dolor sit amet.</h3>
+            <p>
+              Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
+              venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
+              Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
+              dapibus ullamcorper. Class aptent taciti sociosqu ad litora
+              torquent per conubia nostra, per inceptos himenaeos. Proin
+              molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
+              nec pretium magna risus ac metus. Quisque dapibus quam vitae leo
+              lacinia ornare. Donec lacinia vulputate lectus, eget gravida
+              mauris ultricies sed. Morbi euismod quis ipsum id luctus. Nunc eu
+              sapien mi. Curabitur ornare imperdiet risus. Mauris nec ligula
+              turpis.
+            </p>
+            <h3>4. Subhead Text: Lorem ipsum dolor sit amet.</h3>
+            <p>
+              Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
+              venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
+              Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
+              dapibus ullamcorper. Class aptent taciti sociosqu ad litora
+              torquent per conubia nostra, per inceptos himenaeos. Proin
+              molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
+              nec pretium magna risus ac metus. Quisque dapibus quam vitae leo
+              lacinia ornare. Donec lacinia vulputate lectus, eget gravida
+              mauris ultricies sed. Morbi euismod quis ipsum id luctus. Nunc eu
+              sapien mi. Curabitur ornare imperdiet risus. Mauris nec ligula
+              turpis.
+            </p>
+            <h3>5. Subhead Text: Lorem ipsum dolor sit amet.</h3>
+            <p>
+              Vivamus vel auctor arcu. Quisque bibendum consequat aliquam. Ut
+              venenatis libero vitae tempor suscipit. Duis sed ligula tellus.
+              Phasellus efficitur luctus sodales. Curabitur feugiat nunc ut ex
+              dapibus ullamcorper. Class aptent taciti sociosqu ad litora
+              torquent per conubia nostra, per inceptos himenaeos. Proin
+              molestie, turpis a feugiat aliquet, magna metus tincidunt enim,
+              nec pretium magna risus ac metus. Quisque dapibus quam vitae leo
+              lacinia ornare. Donec lacinia vulputate lectus, eget gravida
+              mauris ultricies sed. Morbi euismod quis ipsum id luctus. Nunc eu
+              sapien mi. Curabitur ornare imperdiet risus. Mauris nec ligula
+              turpis.
+            </p>
+            <div class="related_news">
+              <h4>More Resources & News</h4>
+              <div class="news_wrap">
+                <div
+                  class="single_news_wrap"
+                  data-story="1"
+                  data-url="5-fees-you-didnt-know-you-were-paying"
+                >
+                  <div class="single_news">
+                    <img src="images/story_hero.png" alt="" />
+                    <div class="category_wrap">
+                      <div class="category">Resources</div>
+                    </div>
+                    <h3>5 fees you didn’t know you were paying</h3>
+                  </div>
+                </div>
+                <div
+                  class="single_news_wrap"
+                  data-story="2"
+                  data-url="10-due-diligence-questions-everyone-should-be-asking"
+                >
+                  <div class="single_news">
+                    <img src="images/blog-duediligence.jpg" alt="" />
+                    <div class="category_wrap">
+                      <div class="category">Resources</div>
+                    </div>
+                    <h3>
+                      10 due diligence questions everyone should be asking
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <div class="home_wrap">
-        <div class="hero_wrap fixed-hero animate-scale">
-            <div class="tint-mask"></div>
-            <video muted loop id="video">
-                <source src="videos/uncommon_video.mp4" type="video/mp4" />
-            </video>
-            <div class="hero_content_wrap">
-                <img src="images/hero_shape.svg" alt="" class="hero_shape" />
-                <div class="hero_content">
-                    <h1>Your Way In</h1>
-                    <p>
-                        Our team has connected over $500M of investor capital with exclusive offerings from leading real estate managers.
-                    </p>
-                    <!-- <div class="clients_wrap">
+      <div class="hero_wrap fixed-hero animate-scale">
+        <div class="tint-mask"></div>
+        <video muted loop id="video">
+          <source src="videos/uncommon_video.mp4" type="video/mp4" />
+        </video>
+        <div class="hero_content_wrap">
+          <img src="images/hero_shape.svg" alt="" class="hero_shape" />
+          <div class="hero_content">
+            <h1>Your Way In</h1>
+            <p>
+              Our team has connected over $500M of investor capital with
+              exclusive offerings from leading real estate managers.
+            </p>
+            <!-- <div class="clients_wrap">
                         <p>Our clients include:</p>
                         <img src="images/betterment.png" />
                         <img src="images/origin.svg" />
                         <div class="more">+ More</div>
                     </div> -->
-                </div>
-            </div>
+          </div>
         </div>
-        <div class="scroll-wrap">
-            <div class="first_section single_section" id="numbers">
-                <img src="images/first_section_shape.svg" class="first_section_shape" />
-                <h2 class="fadein-wrap fade_up">Why uncommon capital?</h2>
-                <p class="fadein-wrap fade_up">
-                    We are the only place where family offices, high-net-worth-individuals and investment advisors are the first resort for the most in-demand private real estate investment opportunities.
+      </div>
+      <div class="scroll-wrap">
+        <div class="first_section single_section" id="numbers">
+          <img
+            src="images/first_section_shape.svg"
+            class="first_section_shape"
+          />
+          <h2 class="fadein-wrap fade_up">Why uncommon capital?</h2>
+          <p class="fadein-wrap fade_up">
+            We are the only place where family offices,
+            high-net-worth-individuals and investment advisors are the first
+            resort for the most in-demand private real estate investment
+            opportunities.
+          </p>
+          <div class="three_box_section fadein-wrap fade_up">
+            <div class="single_box_wrap">
+              <div class="single_box">
+                <h3 class="count transactions">500</h3>
+                <p>Investor Capital Placed</p>
+              </div>
+            </div>
+            <div class="single_box_wrap">
+              <div class="single_box">
+                <h3 class="count investors">1300</h3>
+                <p>Investors Partnered With</p>
+              </div>
+            </div>
+            <div class="single_box_wrap">
+              <div class="single_box">
+                <h3 class="count capital">175</h3>
+                <p>Value of Transactions Funded</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="single_section" id="connected">
+          <div class="second_section">
+            <div class="left fadein-wrap fade_up">
+              <h2>Connected</h2>
+              <p>
+                Our team of industry insiders has worked at institutional
+                private real estate firms for nearly a decade. We have deep
+                relationships with talented managers across the country that
+                focus on all property types. We are the first call when they
+                have new, unique investment offerings.
+              </p>
+            </div>
+            <div class="right fadein-wrap fade_up">
+              <p>Our Manager Requirements:</p>
+              <ul>
+                <li>
+                  <img src="images/checkmark.svg" />
+                  <p>Track record of success</p>
+                </li>
+                <li>
+                  <img src="images/checkmark.svg" />
+                  <p>Differentiated, defensible strategy</p>
+                </li>
+                <li>
+                  <img src="images/checkmark.svg" />
+                  <p>Material co-investment</p>
+                </li>
+                <li>
+                  <img src="images/checkmark.svg" />
+                  <p>Strong reputation in the marketplace</p>
+                </li>
+                <li>
+                  <img src="images/checkmark.svg" />
+                  <p>Fair and transparent fee structures</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="third_section">
+            <div class="left fadein-wrap fade_up">
+              <h2>Curated</h2>
+              <p>
+                We are highly selective with what we share with you. Our
+                expertise in sourcing and analyzing real estate offerings allows
+                us to provide opportunities with clear alpha that are structured
+                fairly and transparently for you.
+              </p>
+            </div>
+            <div class="right fadein-wrap fade_up">
+              <div class="image_holder">
+                <img src="images/curated.png" />
+              </div>
+            </div>
+          </div>
+          <div class="fourth_section">
+            <div class="left fadein-wrap fade_up">
+              <h2>Confidential</h2>
+              <p>
+                We work with investment managers on an exclusive basis, so we
+                are the only place you will find their in-demand offerings. We
+                have established ourselves as a preferred partner because we
+                consistently perform and connect them with great people.
+              </p>
+            </div>
+            <div class="right fadein-wrap fade_up">
+              <div class="image_holder">
+                <img src="images/confidential.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fifth_section single_section" id="about">
+          <img
+            src="images/fifth_section_first_shape.svg"
+            class="fifth_section_first_shape"
+          />
+          <img
+            src="images/fifth_section_second_shape.svg"
+            class="fifth_section_second_shape"
+          />
+          <div class="quote_wrap">
+            <div class="quote fadein-wrap fade_up">
+              <img src="images/quote.svg" />
+              <p>
+                We are transforming private real estate investing and who gets
+                access to the most exclusive investment opportunities.
+              </p>
+            </div>
+            <div class="separator"></div>
+            <div class="author_info fadein-wrap fade_up">
+              <h3>Ben Harris</h3>
+              <p>Founder of Uncommon Capital Group</p>
+            </div>
+          </div>
+          <div class="founder_info">
+            <div class="founder_info_content">
+              <div class="image_holder_mobile">
+                <img src="images/founder_mobile.png" />
+              </div>
+              <h2 class="fadein-wrap fade_up">About The Founder</h2>
+              <div class="founder_description fadein-wrap fade_up">
+                <div class="left">
+                  <div class="image_holder">
+                    <img src="images/founder.png" alt="" />
+                  </div>
+                </div>
+                <div class="right">
+                  <p>
+                    Over nearly a decade in the commercial real estate industry,
+                    Ben has established himself as a thought leader and premier
+                    capital raising professional. He has been featured in the
+                    Wall Street Journal and other prominent industry
+                    publications, such as Real Estate Alert, RE Journals and
+                    wealthmanagement.com <br /><br />
+
+                    Ben has introduced more than one thousand family offices,
+                    high-net-worth-individuals, and wealth managers to unique
+                    deals and funds across the country. <br /><br />
+
+                    He currently serves as a Senior Vice President of CRG, a
+                    leading national real estate developer where he oversees
+                    capital raising efforts and structures the company’s
+                    investment vehicles. He previously served as Vice President
+                    of Investor Relations and Business Development at Origin
+                    Investments, a Chicago-based real estate investment firm,
+                    where he expanded the firm’s local footprint to a national
+                    one. Prior to Origin, Ben was one of the first employees at
+                    Starwood Retail Group, a subsidiary of Starwood Capital that
+                    is now one of the largest owners of regional malls in the
+                    United States. <br /><br />
+                    Ben is a graduate from the Wisconsin School of Business at
+                    UW-Madison and is an active member in the Wisconsin Real
+                    Estate Alumni Association. He also currently holds the
+                    Series 7 and 63 registrations with FINRA.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sixth_section single_section" id="faq">
+          <img src="images/faq_shape.svg" class="faq_shape" />
+          <div class="sixth_section_content">
+            <h2 class="fadein-wrap fade_up">Frequently Asked Questions</h2>
+            <div class="faq_section">
+              <div class="single_question fadein-wrap fade_up">
+                <h3>
+                  How do I access Uncommon Capital’s unique investment
+                  offerings?
+                  <div class="opener">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </h3>
+                <p>
+                  Click the “Request Deal Flow” button and fill out the form.
+                  Once the form is submitted, our team will reach out to you to
+                  set up an introductory call. We value getting to know each of
+                  our investment partners and like to learn about your
+                  investment preferences, so we can curate offerings for you.
                 </p>
-                <div class="three_box_section fadein-wrap fade_up">
-                    <div class="single_box_wrap">
-                        <div class="single_box">
-                            <h3 class="count transactions">500</h3>
-                            <p>Investor Capital Placed</p>
-                        </div>
-                    </div>
-                    <div class="single_box_wrap">
-                        <div class="single_box">
-                            <h3 class="count investors">1300</h3>
-                            <p>Investors Partnered With</p>
-                        </div>
-                    </div>
-                    <div class="single_box_wrap">
-                        <div class="single_box">
-                            <h3 class="count capital">175</h3>
-                            <p>Value of Transactions Funded</p>
-                        </div>
-                    </div>
-                </div>
+              </div>
+              <div class="single_question fadein-wrap fade_up">
+                <h3>
+                  How much does it cost to access offerings from Uncommon
+                  Capital?
+                  <div class="opener">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </h3>
+                <p>
+                  It is free to access our unique deal flow. Sponsors compensate
+                  Uncommon Capital for introductions, at no cost to you.
+                </p>
+              </div>
+              <div class="single_question fadein-wrap fade_up">
+                <h3>
+                  What is a typical investment minimum for an offering?
+                  <div class="opener">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </h3>
+                <p>
+                  The minimum investment varies per sponsor and offering.
+                  Typically, minimums range from $250,000 to $1,000,000 or more.
+                  All offerings require investors to at least be Accredited
+                  Investors and many offerings require investors to be Qualified
+                  Purchasers.
+                </p>
+              </div>
+              <div class="single_question fadein-wrap fade_up">
+                <h3>
+                  Do I invest with Uncommon Capital or directly with the
+                  sponsor?
+                  <div class="opener">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </h3>
+                <p>
+                  Uncommon provides insider access to sponsors and then your
+                  investment is directly with the sponsor. They handle your
+                  funds and will provide updates on the performance of your
+                  investments.
+                </p>
+              </div>
             </div>
-            <div class="single_section" id="connected">
-                <div class="second_section">
-                    <div class="left fadein-wrap fade_up">
-                        <h2>Connected</h2>
-                        <p>
-                            Our team of industry insiders has worked at institutional private real estate firms for nearly a decade. We have deep relationships with talented managers across the country that focus on all property types. We are the first call when they have new, unique investment offerings.
-                        </p>
-                    </div>
-                    <div class="right fadein-wrap fade_up">
-                        <p>Our Manager Requirements:</p>
-                        <ul>
-                            <li>
-                                <img src="images/checkmark.svg" />
-                                <p>Track record of success</p>
-                            </li>
-                            <li>
-                                <img src="images/checkmark.svg" />
-                                <p>Differentiated, defensible strategy</p>
-                            </li>
-                            <li>
-                                <img src="images/checkmark.svg" />
-                                <p>Material co-investment</p>
-                            </li>
-                            <li>
-                                <img src="images/checkmark.svg" />
-                                <p>Strong reputation in the marketplace</p>
-                            </li>
-                            <li>
-                                <img src="images/checkmark.svg" />
-                                <p>Fair and transparent fee structures</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="third_section">
-                    <div class="left fadein-wrap fade_up">
-                        <h2>Curated</h2>
-                        <p>
-                            We are highly selective with what we share with you. Our expertise in sourcing and analyzing real estate offerings allows us to provide opportunities with clear alpha that are structured fairly and transparently for you.
-                        </p>
-                    </div>
-                    <div class="right fadein-wrap fade_up">
-                        <div class="image_holder">
-                            <img src="images/curated.png" />
-                        </div>
-                    </div>
-                </div>
-                <div class="fourth_section">
-                    <div class="left fadein-wrap fade_up">
-                        <h2>Confidential</h2>
-                        <p>
-                            We work with investment managers on an exclusive basis, so we are the only place you will find their in-demand offerings. We have established ourselves as a preferred partner because we consistently perform and connect them with great people.
-                        </p>
-                    </div>
-                    <div class="right fadein-wrap fade_up">
-                        <div class="image_holder">
-                            <img src="images/confidential.png" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="fifth_section single_section" id="about">
-                <img src="images/fifth_section_first_shape.svg" class="fifth_section_first_shape" />
-                <img src="images/fifth_section_second_shape.svg" class="fifth_section_second_shape" />
-                <div class="quote_wrap">
-                    <div class="quote fadein-wrap fade_up">
-                        <img src="images/quote.svg" />
-                        <p>
-                            We are transforming private real estate investing and who gets access to the most exclusive investment opportunities.
-                        </p>
-                    </div>
-                    <div class="separator"></div>
-                    <div class="author_info fadein-wrap fade_up">
-                        <h3>Ben Harris</h3>
-                        <p>Founder of Uncommon Capital Group</p>
-                    </div>
-                </div>
-                <div class="founder_info">
-                    <div class="founder_info_content">
-                        <div class="image_holder_mobile">
-                            <img src="images/founder_mobile.png">
-                        </div>
-                        <h2 class="fadein-wrap fade_up">About The Founder</h2>
-                        <div class="founder_description fadein-wrap fade_up">
-                            <div class="left">
-                                <div class="image_holder">
-                                    <img src="images/founder.png" alt="" />
-                                </div>
-                            </div>
-                            <div class="right">
-                                <p>
-                                    Over nearly a decade in the commercial real estate industry, Ben has established himself as a thought leader and premier capital raising professional. He has been featured in the Wall Street Journal and other prominent industry publications, such as Real Estate Alert, RE Journals and wealthmanagement.com <br><br>
-
-                                    Ben has introduced more than one thousand family offices, high-net-worth-individuals, and wealth managers to unique deals and funds across the country. <br><br>
-
-                                    He currently serves as a Senior Vice President of CRG, a leading national real estate developer where he oversees capital raising efforts and structures the company’s investment vehicles. He previously served as Vice President of Investor Relations and Business Development at Origin Investments, a Chicago-based real estate investment firm, where he expanded the firm’s local footprint to a national one. Prior to Origin, Ben was one of the first employees at Starwood Retail Group, a subsidiary of Starwood Capital that is now one of the largest owners of regional malls in the United States. <br><br>
-                                    Ben is a graduate from the Wisconsin School of Business at UW-Madison and is an active member in the Wisconsin Real Estate Alumni Association. He also currently holds the Series 7 and 63 registrations with FINRA.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="sixth_section single_section" id="faq">
-                <img src="images/faq_shape.svg" class="faq_shape" />
-                <div class="sixth_section_content">
-                    <h2 class="fadein-wrap fade_up">Frequently Asked Questions</h2>
-                    <div class="faq_section">
-                        <div class="single_question fadein-wrap fade_up">
-                            <h3>
-                                How do I access Uncommon Capital’s unique investment offerings?
-                                <div class="opener">
-                                    <span></span>
-                                    <span></span>
-                                </div>
-                            </h3>
-                            <p>
-                                Click the “Request Deal Flow” button and fill out the form. Once the form is submitted, our team will reach out to you to set up an introductory call. We value getting to know each of our investment partners and like to learn about your investment preferences, so we can curate offerings for you.
-                            </p>
-                        </div>
-                        <div class="single_question fadein-wrap fade_up">
-                            <h3>
-                                How much does it cost to access offerings from Uncommon Capital?
-                                <div class="opener">
-                                    <span></span>
-                                    <span></span>
-                                </div>
-                            </h3>
-                            <p>
-                                It is free to access our unique deal flow. Sponsors compensate Uncommon Capital for introductions, at no cost to you.
-                            </p>
-                        </div>
-                        <div class="single_question fadein-wrap fade_up">
-                            <h3>
-                                What is a typical investment minimum for an offering?
-                                <div class="opener">
-                                    <span></span>
-                                    <span></span>
-                                </div>
-                            </h3>
-                            <p>
-                               The minimum investment varies per sponsor and offering. Typically, minimums range from $250,000 to $1,000,000 or more. All offerings require investors to at least be Accredited Investors and many offerings require investors to be Qualified Purchasers.
-                            </p>
-                        </div>
-                        <div class="single_question fadein-wrap fade_up">
-                            <h3>
-                                Do I invest with Uncommon Capital or directly with the sponsor?
-                                <div class="opener">
-                                    <span></span>
-                                    <span></span>
-                                </div>
-                            </h3>
-                            <p>
-                                Uncommon provides insider access to sponsors and then your
-                                investment is directly with the sponsor. They handle your
-                                funds and will provide updates on the performance of your
-                                investments.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="seventh_section single_section" id="news">
-                <div class="seventh_section_content">
-                    <h2 class="fadein-wrap fade_up">Resources & News</h2>
-                    <div class="news_wrap fadein-wrap fade_up">
-                        <div class="single_news_wrap" data-story="1">
-                            <div class="single_news">
-                                <img src="images/story_hero.png" alt="">
-                                <div class="category_wrap">
-                                    <div class="category">Resources</div>
-                                </div>
-                                <h3>5 fees you didn’t know you were paying</h3>
-                                <p class="read_more">
-                                    Read
-                                    <img src="images/arrow_right.svg" />
-                                </p>
-                            </div>
-                        </div>
-                        <div class="single_news_wrap" data-story="2">
-                            <div class="single_news">
-                                <img src="images/story_hero.png" alt="">
-                                <div class="category_wrap">
-                                    <div class="category">Resources</div>
-                                </div>
-                                <h3>10 due diligence questions everyone should be asking</h3>
-                                <p class="read_more">
-                                    Read
-                                    <img src="images/arrow_right.svg" />
-                                </p>
-                            </div>
-                        </div>
-                        <div class="single_news_wrap" data-story="3">
-                            <div class="single_news">
-                                <img src="images/story_hero.png" alt="">
-                                <div class="category_wrap">
-                                    <div class="category">News</div>
-                                </div>
-                                <h3>Real estate alert: fundraising pro hangs own shingle</h3>
-                                <p class="read_more">
-                                    Read
-                                    <img src="images/arrow_right.svg" />
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mobile_slider_holder">
-                      <div class="mobile_slider">
-                      
-                        <div class="single_news_wrap" data-story="1">
-                            <div class="single_news">
-                                <img src="images/story_hero.png" alt="">
-                                <div class="category_wrap">
-                                    <div class="category">Resources</div>
-                                </div>
-                                <h3>5 fees you didn’t know you were paying</h3>
-                                <p class="read_more">
-                                    Read
-                                    <img src="images/arrow_right.svg" />
-                                </p>
-                            </div>
-                        </div>
-                        <div class="single_news_wrap" data-story="2">
-                            <div class="single_news">
-                                <img src="images/story_hero.png" alt="">
-                                <div class="category_wrap">
-                                    <div class="category">Resources</div>
-                                </div>
-                                <h3>10 due diligence questions everyone should be asking</h3>
-                                <p class="read_more">
-                                    Read
-                                    <img src="images/arrow_right.svg" />
-                                </p>
-                            </div>
-                        </div>
-                        <div class="single_news_wrap" data-story="3">
-                            <div class="single_news">
-                                <img src="images/story_hero.png" alt="">
-                                <div class="category_wrap">
-                                    <div class="category">News</div>
-                                </div>
-                                <h3>Real estate alert: fundraising pro hangs own shingle</h3>
-                                <p class="read_more">
-                                    Read
-                                    <img src="images/arrow_right.svg" />
-                                </p>
-                            </div>
-                        </div>
-                          
-                      </div>
-                    </div>
-                </div>
-            </div>
-            <footer>
-                <img src="images/fotter_first_shape.svg" class="fotter_first_shape" />
-                <img src="images/footer_second_shape.svg" class="fotter_second_shape" />
-                <div class="top">
-                    <h2>Get Started Today</h2>
-                    <a class="button access">Request Deal Flow</a>
-                    <div class="contact_section">
-                        <div class="left">
-                            <div class="logo_holder">
-                                <img src="images/uncommon_capital_logo.svg" />
-                            </div>
-                            <div class="contact">
-                                <div class="single_contact">
-                                    <p>Connect</p>
-                                    <a href="https://www.linkedin.com/company/uncommoncapitalgroup" target="_blank">LinkedIn</a>
-                                </div>
-                                <div class="single_contact">
-                                    <p>Contact</p>
-                                    <a href="">Email Us</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="right">
-                            <p>Subscribe to our newsletter for updates</p>
-                            <div class="newsletter_form_wrap">
-                                <form>
-                                    <input type="email" name="" placeholder="Email Address" />
-                                    <button>Sign Up</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="left">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                            consectetur volutpat erat ut luctus. Integer dapibus metus sed
-                            leo viverra, cursus dictum nibh condimentum. Aliquam
-                            sollicitudin arcu ut neque rhoncus, et cursus orci vehicula.
-                            Mauris egestas volutpat nibh in consectetur. Orci varius natoque
-                            penatibus et magnis dis parturient montes, nascetur ridiculus
-                            mus. In laoreet rhoncus aliquet. Ut fermentum nulla.
-                        </p>
-                        <p class="hidden">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                            consectetur volutpat erat ut luctus. Integer dapibus metus sed
-                            leo viverra, cursus dictum nibh condimentum. Aliquam
-                            sollicitudin arcu ut neque rhoncus, et cursus orci vehicula.
-                            Mauris egestas volutpat nibh in consectetur. Orci varius natoque
-                            penatibus et magnis dis parturient montes, nascetur ridiculus
-                            mus. In laoreet rhoncus aliquet. Ut fermentum nulla.
-                        </p>
-                        <div class="read_more">Read More</div>
-                    </div>
-                    <div class="right">
-                        <p>© 2021 Uncommon Capital Group</p>
-                        <a href="">Privacy Policy</a>
-                    </div>
-                </div>
-            </footer>
+          </div>
         </div>
+        <div class="seventh_section single_section" id="news">
+          <div class="seventh_section_content">
+            <h2 class="fadein-wrap fade_up">Resources & News</h2>
+            <div class="news_wrap fadein-wrap fade_up">
+              <div class="single_news_wrap" data-story="1">
+                <div class="single_news">
+                  <img src="images/story_hero.png" alt="" />
+                  <div class="category_wrap">
+                    <div class="category">Resources</div>
+                  </div>
+                  <h3>5 fees you didn’t know you were paying</h3>
+                  <p class="read_more">
+                    Read
+                    <img src="images/arrow_right.svg" />
+                  </p>
+                </div>
+              </div>
+              <div class="single_news_wrap" data-story="2">
+                <div class="single_news">
+                  <img src="images/blog-duediligence.jpg" alt="" />
+                  <div class="category_wrap">
+                    <div class="category">Resources</div>
+                  </div>
+                  <h3>10 due diligence questions everyone should be asking</h3>
+                  <p class="read_more">
+                    Read
+                    <img src="images/arrow_right.svg" />
+                  </p>
+                </div>
+              </div>
+              <div class="single_news_wrap" data-story="3">
+                <div class="single_news">
+                  <img src="images/blog-alert.jpg" alt="" />
+                  <div class="category_wrap">
+                    <div class="category">News</div>
+                  </div>
+                  <h3>Real estate alert: fundraising pro hangs own shingle</h3>
+                  <p class="read_more">
+                    Read
+                    <img src="images/arrow_right.svg" />
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="mobile_slider_holder">
+              <div class="mobile_slider">
+                <div class="single_news_wrap" data-story="1">
+                  <div class="single_news">
+                    <img src="images/story_hero.png" alt="" />
+                    <div class="category_wrap">
+                      <div class="category">Resources</div>
+                    </div>
+                    <h3>5 fees you didn’t know you were paying</h3>
+                    <p class="read_more">
+                      Read
+                      <img src="images/arrow_right.svg" />
+                    </p>
+                  </div>
+                </div>
+                <div class="single_news_wrap" data-story="2">
+                  <div class="single_news">
+                    <img src="images/blog-duediligence.jpg" alt="" />
+                    <div class="category_wrap">
+                      <div class="category">Resources</div>
+                    </div>
+                    <h3>
+                      10 due diligence questions everyone should be asking
+                    </h3>
+                    <p class="read_more">
+                      Read
+                      <img src="images/arrow_right.svg" />
+                    </p>
+                  </div>
+                </div>
+                <div class="single_news_wrap" data-story="3">
+                  <div class="single_news">
+                    <img src="images/blog-alert.jpg" alt="" />
+                    <div class="category_wrap">
+                      <div class="category">News</div>
+                    </div>
+                    <h3>
+                      Real estate alert: fundraising pro hangs own shingle
+                    </h3>
+                    <p class="read_more">
+                      Read
+                      <img src="images/arrow_right.svg" />
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <img src="images/fotter_first_shape.svg" class="fotter_first_shape" />
+          <img
+            src="images/footer_second_shape.svg"
+            class="fotter_second_shape"
+          />
+          <div class="top">
+            <h2>Get Started Today</h2>
+            <a class="button access">Request Deal Flow</a>
+            <div class="contact_section">
+              <div class="left">
+                <div class="logo_holder">
+                  <img src="images/uncommon_capital_logo.svg" />
+                </div>
+                <div class="contact">
+                  <div class="single_contact">
+                    <p>Connect</p>
+                    <a
+                      href="https://www.linkedin.com/company/uncommoncapitalgroup"
+                      target="_blank"
+                      >LinkedIn</a
+                    >
+                  </div>
+                  <div class="single_contact">
+                    <p>Contact</p>
+                    <a href="mailto:ben@investuncommon.com">Email Us</a>
+                  </div>
+                </div>
+              </div>
+              <div class="right">
+                <p>Subscribe to our newsletter for updates</p>
+                <div class="newsletter_form_wrap">
+                  <form>
+                    <input type="email" name="" placeholder="Email Address" />
+                    <button>Sign Up</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bottom">
+            <div class="left">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                consectetur volutpat erat ut luctus. Integer dapibus metus sed
+                leo viverra, cursus dictum nibh condimentum. Aliquam
+                sollicitudin arcu ut neque rhoncus, et cursus orci vehicula.
+                Mauris egestas volutpat nibh in consectetur. Orci varius natoque
+                penatibus et magnis dis parturient montes, nascetur ridiculus
+                mus. In laoreet rhoncus aliquet. Ut fermentum nulla.
+              </p>
+              <p class="hidden">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                consectetur volutpat erat ut luctus. Integer dapibus metus sed
+                leo viverra, cursus dictum nibh condimentum. Aliquam
+                sollicitudin arcu ut neque rhoncus, et cursus orci vehicula.
+                Mauris egestas volutpat nibh in consectetur. Orci varius natoque
+                penatibus et magnis dis parturient montes, nascetur ridiculus
+                mus. In laoreet rhoncus aliquet. Ut fermentum nulla.
+              </p>
+              <div class="read_more">Read More</div>
+            </div>
+            <div class="right">
+              <p>© 2021 Uncommon Capital Group</p>
+              <a href="">Privacy Policy</a>
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>

@@ -4,6 +4,8 @@
         fadeIn();
 
         function openModal() {
+            $('.form_holder').scrollTop(0);
+
             var tl = gsap.timeline({
                 onStart: function() {
                     $("body").addClass("init__modal");
