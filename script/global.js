@@ -26,9 +26,8 @@
             });
             let modal = $(".contact_form_wrap");
             let heading = modal.find(".form_header");
-            let details = modal.find(".form_holder");
+            let details = modal.find(".form_holder, .success_message_content_wrap");
 
-            
             gsap.to(heading, { opacity: 0 });
             tl.to(details, { opacity: 0 });
             tl.to(modal, { width: 0, ease: "Expo.easeOut" });
