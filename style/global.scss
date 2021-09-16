@@ -1787,7 +1787,7 @@ header {
       text-align: center;
       background-color: $color6;
       border-radius: 12px;
-      padding: 5vw 0;
+      padding: 5vw 2em;
       box-sizing: border-box;
 
       @media #{$s750} {
@@ -2160,6 +2160,17 @@ header {
   flex-direction: column;
   position: relative;
   overflow: hidden;
+  &::before {
+    content: "";
+    background: #1d7476;
+    opacity: 0.85;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 
   img {
     position: absolute;
@@ -2337,7 +2348,7 @@ header {
         top: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, .6);
+        background: rgba(29, 116, 118, .85);
         z-index: 2;
       }
 
