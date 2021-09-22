@@ -3,6 +3,8 @@
     $(document).ready(function() {
         fadeIn();
 
+       
+
         function openModal() {
             $('.form_holder').scrollTop(0);
 
@@ -124,6 +126,24 @@
                 $('.form_header_headline').text('Investment Preferences');
             }
         });
+
+        $('.next, .page .second').keypress(function (e) {
+            var key = e.which;
+            if(key == 13)  // the enter key code
+             {
+               $(this).click();
+               return false;  
+             }
+        }); 
+
+        $('.prev, .page .first').keypress(function (e) {
+            var key = e.which;
+            if(key == 13)  // the enter key code
+             {
+               $(this).click();
+               return false;  
+             }
+        }); 
 
         $('.prev, .page .first').on('click', function(event) {
             $('.first_part').css('display', 'block');
