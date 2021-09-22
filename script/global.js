@@ -53,30 +53,31 @@
             sessionStorage.setItem('loader', 'true');
 
             var wordEl = $('.page_loader .word');
+            setTimeout(function() {
+                wordEl.each(function(index) {
+                    setTimeout(function() {
+                        if ((wordEl.length - 1) === index) {
+                            wordEl.eq(index).addClass('animate stay');
+                        } else {
+                            wordEl.eq(index).addClass('animate');
+                        }
+                    }, index * 1800);
 
-            wordEl.each(function(index) {
-                setTimeout(function() {
-                    if ((wordEl.length - 1) === index) {
-                        wordEl.eq(index).addClass('animate stay');
-                    } else {
-                        wordEl.eq(index).addClass('animate');
-                    }
-                }, index * 1800);
+                    setTimeout(function() {
+                        document.getElementById('video').play();
 
-                setTimeout(function() {
-                    document.getElementById('video').play();
-
-                    $('.page_loader').fadeOut(function() {
-                        setTimeout(function() {
-                            $('.hero_content_wrap').addClass('show');
+                        $('.page_loader').fadeOut(function() {
                             setTimeout(function() {
-                                $('.hero_content').addClass('show');
-                                $('header').addClass('show');
-                            }, 500)
-                        }, 1000);
-                    });
-                }, wordEl.length * 1800);
-            });
+                                $('.hero_content_wrap').addClass('show');
+                                setTimeout(function() {
+                                    $('.hero_content').addClass('show');
+                                    $('header').addClass('show');
+                                }, 500)
+                            }, 1000);
+                        });
+                    }, wordEl.length * 1800);
+                });
+            }, 500);
         } else{
             document.getElementById('video').play();
 
