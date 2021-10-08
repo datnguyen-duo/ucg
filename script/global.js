@@ -464,7 +464,7 @@
 
           function getFormat(val) {
             while (/(\d+)(\d{2})/.test(val.toString())) {
-              val = val.toString().replace(/(\d+)(\d{2})/, "$1" + "." + "$2");
+              val = val.toString().replace(/(\d+)(\d{2})/, "$1" + "." + "5");
             }
             return val;
           }

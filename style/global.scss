@@ -100,7 +100,7 @@ button:focus {
   }
 
   @media #{$s1020} {
-    margin-top: 190vh;
+    // margin-top: 190vh;
   }
 }
 
@@ -165,12 +165,17 @@ button:focus {
   color: $color2 !important;
   @extend .small_text;
 }
-.select2-container--default .select2-search--dropdown .select2-search__field {
+.select2-container--default .select2-search--dropdown .select2-search__field,
+.select2-results__option--disabled {
   display: none;
 }
 .select2 {
   //background-color: $color4;
   width: 100% !important;
+  height: 67px;
+  @media #{$s750} {
+    height: 45px;
+  }
   &.select2-container--open {
     .select2-selection {
       border-color: transparent;
@@ -1172,7 +1177,7 @@ header {
     object-fit: cover;
 
     @media #{$s1020} {
-      position: fixed;
+      // position: fixed;
     }
   }
 
@@ -1337,16 +1342,13 @@ header {
 
 .first_section {
   text-align: center;
-  padding-top: 8vw;
-  padding-bottom: 16vw;
+
   box-sizing: border-box;
   position: relative;
+  padding: 8vw 4em 16vw;
 
   @media #{$s1020} {
-    padding: 0px 40px;
     box-sizing: border-box;
-    padding-top: 8vw;
-    padding-bottom: 16vw;
   }
 
   @media #{$s750} {
@@ -1370,7 +1372,6 @@ header {
 
   p {
     @extend .text;
-    max-width: 450px;
     margin: auto;
 
     @media #{$s1020} {
