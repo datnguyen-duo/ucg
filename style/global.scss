@@ -2953,6 +2953,14 @@ footer {
               }
             }
           }
+          .newsletter-success {
+            padding: 10px 0;
+            color: #fff;
+            display: none;
+            &.submitted {
+              display: inline-block;
+            }
+          }
         }
       }
     }

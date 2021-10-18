@@ -35,6 +35,15 @@
       tl.set(".contact_form_wrap *", { clearProps: "all" });
     }
 
+    $("body").on("click", function (e) {
+      if ($(this).hasClass("init__modal")) {
+        var target = e.target;
+        if (!target.closest(".contact_form_wrap")) {
+          closeModal();
+        }
+      }
+    });
+
     $(".mobile_slider").slick({
       infinite: false,
       slidesToShow: 1,
@@ -446,7 +455,7 @@
                     } else if ($(this).hasClass("investors")) {
                       $(this).text(getRupeesFormat(Math.ceil(now)) + "%");
                     } else if ($(this).hasClass("capital")) {
-                      $(this).text(getFormat("$" + Math.ceil(now)) + "B");
+                      $(this).text(getFormat("$" + Math.ceil(now)) + "B+");
                     } else {
                       $(this).text(Math.ceil(now));
                     }
@@ -473,5 +482,38 @@
     });
   }
 
-  //start form
+  $(document).ready(function () {
+    var $form = $("#mc-embedded-subscribe-form");
+
+    if ($form.length > 0) {
+      $("#mc-embedded-subscribe").bind("click", function (event) {
+        if (event) event.preventDefault();
+        register($form);
+      });
+    }
+  });
+
+  function register($form) {
+    $.ajax({
+      type: $form.attr("method"),
+      url: $form.attr("action"),
+      data: $form.serialize(),
+      cache: false,
+      dataType: "json",
+      contentType: "application/json; charset=utf-8",
+      error: function (err) {
+        alert(
+          "Could not connect to the registration server. Please try again later."
+        );
+      },
+      success: function (data) {
+        if (data.result != "success") {
+          // console.log("error")
+        } else {
+          // success
+          $(".newsletter-success").addClass("submitted");
+        }
+      },
+    });
+  }
 })(jQuery);
