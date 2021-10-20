@@ -38,7 +38,7 @@
     $("body").on("click", function (e) {
       if ($(this).hasClass("init__modal")) {
         var target = e.target;
-        if (!target.closest(".contact_form_wrap")) {
+        if (!target.closest(".contact_form_wrap, .select2-container")) {
           closeModal();
         }
       }
@@ -508,10 +508,10 @@
       },
       success: function (data) {
         if (data.result != "success") {
-          // console.log("error")
+          $(".newsletter-message").html(data.msg).addClass("init");
         } else {
           // success
-          $(".newsletter-success").addClass("submitted");
+          $(".newsletter-message").text("Thank you for subscribing!").addClass("init");
         }
       },
     });

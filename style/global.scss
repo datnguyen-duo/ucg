@@ -172,8 +172,8 @@ button:focus {
 .select2 {
   //background-color: $color4;
   width: 100% !important;
-  height: 67px;
-  @media #{$s750} {
+  height: 3.5vw;
+    @media #{$s750} {
     height: 45px;
   }
   &.select2-container--open {
@@ -1411,7 +1411,7 @@ header {
         background: #fff;
         box-shadow: 0px 0px 25px #0000001a;
         border-radius: 25px;
-        padding: 60px;
+        padding: 60px 0;
         box-sizing: border-box;
 
         @media #{$s1020} {
@@ -1420,7 +1420,7 @@ header {
 
         @media #{$s750} {
           width: 100%;
-          padding: 40px 20px;
+          padding: 40px 0;
           margin-bottom: 20px;
         }
 
@@ -2953,11 +2953,17 @@ footer {
               }
             }
           }
-          .newsletter-success {
+          .newsletter-message {
             padding: 10px 0;
             color: #fff;
             display: none;
-            &.submitted {
+
+            a {
+              color: #fff;
+              text-decoration: underline;
+              display: block;
+            }
+            &.init {
               display: inline-block;
             }
           }
