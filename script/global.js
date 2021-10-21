@@ -361,9 +361,11 @@
           istatus: istatus,
           amount: amount,
         },
+        cache: false,
         type: "POST",
         error: function (xhr, ajaxOptions, thrownError) {
           console.log(xhr.responseText);
+          alert(xhr.responseText)
         },
         success: function (data) {
           $("#requestAccessForm").trigger("reset");
