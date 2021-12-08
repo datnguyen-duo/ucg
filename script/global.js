@@ -365,7 +365,7 @@
         type: "POST",
         error: function (xhr, ajaxOptions, thrownError) {
           console.log(xhr.responseText);
-          alert(xhr.responseText)
+          alert(xhr.responseText);
         },
         success: function (data) {
           $("#requestAccessForm").trigger("reset");
@@ -510,10 +510,12 @@
       },
       success: function (data) {
         if (data.result != "success") {
-          $(".newsletter-message").html(data.msg).addClass("init");
+          $(".newsletter-message").html(data.msg.substring(3)).addClass("init");
         } else {
           // success
-          $(".newsletter-message").text("Thank you for subscribing!").addClass("init");
+          $(".newsletter-message")
+            .text("Thank you for subscribing!")
+            .addClass("init");
         }
       },
     });

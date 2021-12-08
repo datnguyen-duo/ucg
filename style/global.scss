@@ -173,7 +173,7 @@ button:focus {
   //background-color: $color4;
   width: 100% !important;
   height: 3.5vw;
-    @media #{$s750} {
+  @media #{$s750} {
     height: 45px;
   }
   &.select2-container--open {
@@ -218,6 +218,9 @@ button:focus {
 
       .select2-selection__rendered {
         color: $color2;
+        overflow: hidden;
+        height: 100%;
+        display: block;
         .select2-selection__choice {
           border-radius: 0;
           border: none;
@@ -1129,7 +1132,7 @@ header {
         @extend .small_text;
 
         @media #{$s1020} {
-          font-size: 14px;
+          font-size: 16px;
           padding: 7px 20px;
         }
 
@@ -2571,11 +2574,23 @@ header {
       padding: 6vw 13vw;
       box-sizing: border-box;
 
+      img {
+        width: 100%;
+        margin: 2em 0;
+
+        &.half-size {
+          width: 50%;
+          @media #{$s750} {
+            width: 100%;
+          }
+        }
+      }
       @media #{$s750} {
         padding: 30px;
       }
 
       p {
+        margin: 0.5em 0;
         @extend .small_text;
 
         @media #{$s1020} {

@@ -1,7 +1,8 @@
 <?php
 
     $to = "ben@investuncommon.com";
-    $to = "dat@duo-studio.co"
+
+    $to = "dat@duo-studio.co";
 
     $message = '<table style="background: #ffffff; margin: 0 auto;" width="100%" cellspacing="0" cellpadding="0">
 
@@ -72,9 +73,9 @@
                             </tr>
                             <tr style="background-color: #ffffff;">
         
-                                <td style="width: 15%; padding: 10px 20px;"><strong>What is your primary investment objective? </strong></td>
+                                <td style="width: 15%; padding: 10px 20px;"><strong>What are your investment objectives? </strong></td>
         
-                                <td style="width: 85%; padding: 10px 20px; text-align: left;">'.$_POST['objective'].'</td>
+                                <td style="width: 85%; padding: 10px 20px; text-align: left;">'.Trim(stripslashes(implode(", ", $_POST['objective']))).'</td>
         
                             </tr> 
                 
