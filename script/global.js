@@ -313,6 +313,18 @@
       closeNews(currentModal);
     });
 
+    $("body").on("click", function (e) {
+      if ($(this).hasClass("init__news")) {
+        var target = e.target;
+        if (
+          !target.closest(".single_story_wrap.active .single_story_content")
+        ) {
+          var currentModal = $(".single_story_wrap.active");
+          closeNews(currentModal);
+        }
+      }
+    });
+
     $("video").hover(
       function () {
         $(".hero_content_wrap").css("width", "60%");
@@ -510,7 +522,8 @@
       },
       success: function (data) {
         if (data.result != "success") {
-          $(".newsletter-message").html(data.msg.substring(3)).addClass("init");
+          console.log(data);
+          $(".newsletter-message").html(data.msg).addClass("init");
         } else {
           // success
           $(".newsletter-message")

@@ -189,7 +189,9 @@ button:focus {
       background-color: $color4;
     }
   }
-
+  .select2-search.select2-search--inline {
+    display: none;
+  }
   .select2-selection {
     box-sizing: border-box;
     border-radius: 5px;
@@ -214,6 +216,7 @@ button:focus {
         font-family: $mainFont;
         //height: 18px; //default
         height: 1vw;
+        width: 0;
       }
 
       .select2-selection__rendered {
@@ -2157,6 +2160,13 @@ header {
   }
 }
 
+.slick-track {
+  display: flex !important;
+  .slick-slide {
+    height: unset !important;
+  }
+}
+
 .single_news {
   // background: $color5;
   box-sizing: border-box;
@@ -2989,7 +2999,7 @@ footer {
 
   .bottom {
     border-top: 1px solid #494c95;
-    padding: 1.5vw 6vw;
+    padding: 1.5vw 0 1.5vw 6vw;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
