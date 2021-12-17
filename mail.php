@@ -12,7 +12,7 @@
 
                         <td style="padding: 20px; text-align: center; background: #000C45" colspan="2">
 
-                            <img src="https://datn13.sg-host.com/images/header_logo.png" alt="logo" width="180" height="auto" />
+                            <img src="https://investuncommon.com/images/header_logo.png" alt="logo" width="180" height="auto" />
 
                         </td>
 
