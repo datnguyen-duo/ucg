@@ -107,7 +107,7 @@
 
                             <p style="text-align: center; color: #000000; font-size: 14px; margin: 10px 0;">
 
-                            Copyright 2021 Uncommon Capital Group. All Rights Reserved
+                            Copyright 2022 Uncommon Capital Group. All Rights Reserved
 
                             </p>
 
