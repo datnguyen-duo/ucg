@@ -2,10 +2,6 @@
 
     $to = "ben@investuncommon.com";
 
-    $to = "benharris600@gmail.com";
-
-    $to = "dat@duo-studio.co";
-
     $message = '<table style="background: #ffffff; margin: 0 auto;" width="100%" cellspacing="0" cellpadding="0">
 
                 <thead>
