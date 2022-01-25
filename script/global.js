@@ -358,35 +358,56 @@
       var istatus = $form.find('select[name="investor_status"]').val();
       var amount = $form.find('select[name="amount_per_offering"]').val();
 
-      $.ajax({
-        url: url,
-        data: {
-          subject: subject,
-          fname: fname,
-          lname: lname,
-          email: email,
-          phone: phone,
-          zip: zip,
-          itype: itype,
-          ptype: ptype,
-          objective: objective,
-          istatus: istatus,
-          amount: amount,
-        },
-        cache: false,
-        type: "POST",
-        error: function (xhr, ajaxOptions, thrownError) {
-          console.log(xhr.responseText);
-          alert(xhr.responseText);
-        },
-        success: function (data) {
-          $("#requestAccessForm").trigger("reset");
-          gsap.to(".success_message_wrap", {
-            opacity: 1,
-            pointerEvents: "initial",
-          });
-        },
-      });
+      var $MCform = $("#mc-embedded-subscribe-form");
+
+      $(".contact_form_holder #mce-EMAIL").val(email);
+      $.when(
+        $.ajax({
+          url: url,
+          data: {
+            subject: subject,
+            fname: fname,
+            lname: lname,
+            email: email,
+            phone: phone,
+            zip: zip,
+            itype: itype,
+            ptype: ptype,
+            objective: objective,
+            istatus: istatus,
+            amount: amount,
+          },
+          cache: false,
+          type: "POST",
+          error: function (xhr, ajaxOptions, thrownError) {
+            console.log(xhr.responseText);
+            alert(xhr.responseText);
+          },
+          success: function (data) {
+            $("#requestAccessForm").trigger("reset");
+            gsap.to(".success_message_wrap", {
+              opacity: 1,
+              pointerEvents: "initial",
+            });
+          },
+        }),
+        $.ajax({
+          type: $MCform.attr("method"),
+          url: $MCform.attr("action"),
+          data: $MCform.serialize(),
+          cache: false,
+          dataType: "json",
+          contentType: "application/json; charset=utf-8",
+          cache: false,
+          error: function (xhr, ajaxOptions, thrownError) {
+            console.log(xhr.responseText);
+            alert(xhr.responseText);
+          },
+          success: function (data) {
+            console.log("ran");
+          },
+        })
+      );
     });
   });
 
