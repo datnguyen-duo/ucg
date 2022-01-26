@@ -518,13 +518,16 @@
   }
 
   $(document).ready(function () {
-    var $form = $("#mc-embedded-subscribe-form");
+    var $form = $(".newsletter_form_wrap #mc-embedded-subscribe-form");
 
     if ($form.length > 0) {
-      $("#mc-embedded-subscribe").bind("click", function (event) {
-        if (event) event.preventDefault();
-        register($form);
-      });
+      $(".newsletter_form_wrap #mc-embedded-subscribe").bind(
+        "click",
+        function (event) {
+          if (event) event.preventDefault();
+          register($form);
+        }
+      );
     }
   });
 
@@ -537,6 +540,7 @@
       dataType: "json",
       contentType: "application/json; charset=utf-8",
       error: function (err) {
+        console.log(err);
         alert(
           "Could not connect to the registration server. Please try again later."
         );
