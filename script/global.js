@@ -1,12 +1,31 @@
 document.addEventListener("DOMContentLoaded", function () {
-  gsap.fromTo(
+  window.scrollTo(0, 0);
+  var loaderTl = gsap.timeline();
+
+  loaderTl.fromTo(
+    ".loader p span",
+    { y: 10, opacity: 0 },
+    { y: 0, opacity: 1, stagger: 0.2, delay: 0.5, ease: "Power2.inOut" }
+  );
+  loaderTl.to(".loader", { opacity: 0, delay: 0.7 });
+  loaderTl.to(
+    ".blur",
+    {
+      backdropFilter: "blur(0px)",
+    },
+
+    "<"
+  );
+  loaderTl.add(function () {
+    document.body.classList.add("loaded");
+  });
+  loaderTl.fromTo(
     "#banner h1 span.bg",
     {
       clipPath: "inset(0 100% 0 0)",
     },
     {
       clipPath: "inset(0 0% 0 0)",
-      delay: 0.3,
       ease: "Power1.inOut",
     }
   );
@@ -47,47 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // function openModal(modal) {
-  //   var tl = gsap.timeline({
-  //     onStart: function () {
-  //       document.body.classList.add("init__news");
-  //       modal.classList.add("active");
-  //     },
-  //     onComplete: function () {
-  //       clicked = true;
-  //     },
-  //   });
-
-  //   let modalT = modal.querySelector(".single_story_content");
-  //   let heading = modal.querySelector(".single_story_hero");
-  //   let details = modal.querySelector(".story_content");
-
-  //   tl.to(modalT, { width: "100%", ease: "Expo.easeIn" });
-  //   tl.from(heading, { opacity: 0 });
-  //   tl.from(details, { opacity: 0 }, "<");
-  // }
-
-  // function closeModal(modal) {
-  //   var tl = gsap.timeline({
-  //     onComplete: function () {
-  //       document.body.classList.remove("init__news");
-  //       modal.classList.remove("active");
-  //       clicked = false;
-  //       window.history.pushState("", "", window.location.href.split("?")[0]);
-  //     },
-  //   });
-
-  //   let modalT = modal.querySelector(".single_story_content");
-  //   let heading = modal.querySelector(".single_story_hero");
-  //   let details = modal.querySelector(".story_content");
-
-  //   gsap.to(heading, { opacity: 0 });
-  //   tl.to(details, { opacity: 0 });
-  //   tl.to(modalT, { width: 0, ease: "Expo.easeOut" });
-  //   tl.set(".single_story_content *", { clearProps: "all" });
-  // }
-
-  var url_string = window.location.href; //window.location.href
+  var url_string = window.location.href;
   var url = new URL(url_string);
   var paramValue = url.searchParams.get("story");
   var posts = document.querySelectorAll(".single_story_wrap");
@@ -142,6 +121,20 @@ document.addEventListener("DOMContentLoaded", function () {
       var url = modal.getAttribute("data-url"),
         pushUrl = "?story=" + url;
       window.history.pushState("", "", pushUrl);
+    });
+  });
+});
+
+window.addEventListener("load", (event) => {
+  gsap.utils.toArray(".st__text").forEach((text) => {
+    gsap.from(text, {
+      y: 20,
+      opacity: 0,
+      ease: "Power2.easeInOut",
+      scrollTrigger: {
+        trigger: text,
+        start: "top 90%",
+      },
     });
   });
 });

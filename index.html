@@ -38,8 +38,24 @@
 
     <link rel="shortcut icon" type="image/png" href="images/favicon.jpg" />
     <link rel="stylesheet" href="https://use.typekit.net/aos8uzp.css" />
-
     <link rel="stylesheet" href="style/main.css" />
+
+    <link
+      rel="preload"
+      href="https://use.typekit.net/aos8uzp.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="https://use.typekit.net/aos8uzp.css"
+    /></noscript>
+    <link
+      rel="preload"
+      href="style/main.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="style/main.css" /></noscript>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"
       defer
@@ -57,7 +73,11 @@
       <ul>
         <li>
           <a href="#banner">
-            <img src="images/header_logo.svg" width="209" height="50" />
+            <img
+              src="images/uncommon_capital_logo.svg"
+              width="209"
+              height="50"
+            />
           </a>
         </li>
         <li>
@@ -70,14 +90,14 @@
       </ul>
     </nav>
 
-    <section id="banner" class="bg__dark">
-      <h1>
-        We curate <span><span class="bg"></span>uncommon</span> investment
-        opportunities.
-      </h1>
-    </section>
-
     <main>
+      <div class="blur"></div>
+      <section id="banner" class="bg__dark">
+        <h1>
+          We curate <span><span class="bg"></span>uncommon</span> investment
+          opportunities.
+        </h1>
+      </section>
       <section id="intro">
         <div class="row">
           <div class="col">
@@ -136,7 +156,7 @@
       <section id="who-we-are">
         <p class="subtitle">Who We Are</p>
         <div class="container">
-          <h2>
+          <h2 class="st__text">
             We provide our private community of family offices, RIAs and
             high-net-worth individuals with insider access to the exclusive
             deals and funds of leading real estate managers.
@@ -160,7 +180,6 @@
               <h3>
                 $<span class="count" data-attribute-count="2.5">0</span>B+
               </h3>
-
               <p class="desc">Value of Transactions Funded</p>
             </div>
           </div>
@@ -170,7 +189,7 @@
       <section id="what-we-do">
         <p class="subtitle">What We Do</p>
         <div class="container">
-          <div class="row">
+          <div class="row st__text">
             <div class="col">
               <h1 class="lg">Connected</h1>
               <p>
@@ -191,7 +210,7 @@
               />
             </div>
           </div>
-          <div class="row">
+          <div class="row st__text">
             <div class="col">
               <h1 class="lg">Curated</h1>
               <p>
@@ -213,7 +232,7 @@
             </div>
           </div>
 
-          <div class="row">
+          <div class="row st__text">
             <div class="col">
               <h1 class="lg">Confidential</h1>
               <p>
@@ -243,9 +262,9 @@
           <div class="row">
             <div class="col">
               <img
-                srcset="/images/blur-placeholder.svg 273w"
+                srcset="/images/recent-investments--1.webp 273w"
                 sizes="273px"
-                src="/images/blur-placeholder.svg"
+                src="/images/recent-investments--1.webp"
                 loading="lazy"
                 width="273"
                 height="148"
@@ -257,9 +276,9 @@
 
             <div class="col">
               <img
-                srcset="/images/blur-placeholder.svg 273w"
+                srcset="/images/recent-investments--1.webp 273w"
                 sizes="273px"
-                src="/images/blur-placeholder.svg"
+                src="/images/recent-investments--1.webp"
                 loading="lazy"
                 width="273"
                 height="148"
@@ -271,9 +290,9 @@
 
             <div class="col">
               <img
-                srcset="/images/blur-placeholder.svg 273w"
+                srcset="/images/recent-investments--1.webp 273w"
                 sizes="273px"
-                src="/images/blur-placeholder.svg"
+                src="/images/recent-investments--1.webp"
                 loading="lazy"
                 width="273"
                 height="148"
@@ -285,9 +304,9 @@
 
             <div class="col">
               <img
-                srcset="/images/blur-placeholder.svg 273w"
+                srcset="/images/recent-investments--1.webp 273w"
                 sizes="273px"
-                src="/images/blur-placeholder.svg"
+                src="/images/recent-investments--1.webp"
                 loading="lazy"
                 width="273"
                 height="148"
@@ -302,15 +321,15 @@
 
       <section id="our-story" class="bg__dark">
         <div class="container">
-          <img src="images/quote.svg" width="75" height="75" />
-          <h2>
+          <img src="images/quote.svg" width="75" height="75" loading="lazy" />
+          <h2 class="st__text">
             We are transforming private real estate investing and who gets
             access to the most exclusive investment opportunities.
           </h2>
           <div class="separator"></div>
-          <p class="subtitle">Ben Harris</p>
-          <p>President of Uncommon Capital Group</p>
-          <div class="row">
+          <p class="subtitle st__text">Ben Harris</p>
+          <p class="st__text">President of Uncommon Capital Group</p>
+          <div class="row st__text">
             <div class="col"><h1 class="lg">Our Story</h1></div>
             <div class="col">
               <p>
@@ -358,31 +377,72 @@
         <div class="container">
           <div class="row resources">
             <div class="col resources__card" data-story="1">
-              <img src="images/story_hero.jpg" alt="" />
-
+              <img
+                srcset="/images/story_hero.webp 446w"
+                sizes="(min-width: 750px) 23vw, 78vw"
+                src="/images/story_hero.webp"
+                loading="lazy"
+                width="446"
+                height="565"
+                alt="thumbnail-image"
+              />
               <h2>The Case For Industrial Real Estate.</h2>
               <p class="read_more desc">
                 Read
-                <img src="images/arrow_right.svg" />
+                <img
+                  src="images/arrow_right.svg"
+                  alt="arrow-icon"
+                  width="22"
+                  height="17"
+                  loading="lazy"
+                />
               </p>
             </div>
 
             <div class="col resources__card" data-story="2">
-              <img src="images/blog-duediligence.jpg" alt="" />
+              <img
+                srcset="/images/blog-duediligence.webp 446w"
+                sizes="(min-width: 750px) 23vw, 78vw"
+                src="/images/blog-duediligence.webp"
+                loading="lazy"
+                width="446"
+                height="565"
+                alt="thumbnail-image"
+              />
 
               <h2>Is Bigger Better? Not For Real Estate Funds.</h2>
               <p class="read_more desc">
                 Read
-                <img src="images/arrow_right.svg" />
+                <img
+                  src="images/arrow_right.svg"
+                  alt="arrow-icon"
+                  width="22"
+                  height="17"
+                  loading="lazy"
+                />
               </p>
             </div>
             <div class="col resources__card" data-story="3">
-              <img src="images/blog-alert.png" alt="" />
+              <img
+                srcset="/images/blog-alert--thumbnail.webp 446w"
+                sizes="(min-width: 750px) 23vw, 78vw"
+                src="/images/blog-alert--thumbnail.webp"
+                loading="lazy"
+                width="446"
+                height="420"
+                alt="thumbnail-image"
+              />
 
               <h2>Real Estate Alert: Fundraising Pro Hangs Own Shingle.</h2>
               <p class="read_more desc">
                 Read
-                <img src="images/arrow_right.svg" />
+                <img
+                  src="images/arrow_right.svg"
+                  alt="arrow-icon"
+                  width="22"
+                  height="17"
+                  loading="lazy"
+                />
               </p>
             </div>
           </div>
@@ -487,7 +547,16 @@
     >
       <div class="single_story_content">
         <div class="single_story_hero">
-          <img src="images/story_hero.jpg" class="cover_image" />
+          <img
+            srcset="/images/story_hero.webp 446w"
+            sizes="(min-width: 750px) 23vw, 78vw"
+            src="/images/story_hero.webp"
+            loading="lazy"
+            width="446"
+            height="565"
+            alt="thumbnail-image"
+            class="cover_image"
+          />
           <p class="main_category">Resources & News</p>
           <div class="close_popup">
             <img src="images/close_popup.svg" />
@@ -496,7 +565,7 @@
             <div class="left">
               <div class="category">Resources</div>
               <div class="category">December 6, 2021</div>
-              <h2>The Case For Industrial Real Estate</h2>
+              <h1>The Case For Industrial Real Estate</h1>
             </div>
             <div class="right">
               <div class="social">
@@ -557,7 +626,18 @@
               continues to adopt online shopping, e-commerce companies will need
               more and more industrial space.
             </p>
-            <img src="/images/blog_1/image1.png" alt="blog-image" />
+            <img
+              srcset="
+                /images/blog_1/image1@600.webp  600w,
+                /images/blog_1/image1.webp     1130w
+              "
+              sizes="(min-width: 750px) 59vw, 83vw"
+              src="/images/blog_1/image1.webp"
+              loading="lazy"
+              width="1130"
+              height="510"
+              alt="blog-image"
+            />
             <p>
               How much more space is needed? CBRE research estimates that every
               $1 billion in incremental e-commerce sales generates 1.25 million
@@ -565,8 +645,14 @@
               growth of e-commerce, it makes sense that a year-over-year
               comparison of leasing volumes looks like this:
             </p>
+
             <img
-              src="/images/blog_1/image6.png"
+              srcset="/images/blog_1/image6.webp 566w"
+              sizes="(min-width: 750px) 29vw, 83vw"
+              src="/images/blog_1/image6.webp"
+              loading="lazy"
+              width="566"
+              height="360"
               alt="blog-image"
               class="half-size"
             />
@@ -578,7 +664,19 @@
               quarters. That means more space has been leased than delivered for
               more than 10 straight years! 
             </p>
-            <img src="/images/blog_1/image4.png" alt="blog-image" />
+
+            <img
+              srcset="
+                /images/blog_1/image4@600.webp  600w,
+                /images/blog_1/image4.webp     1036w
+              "
+              sizes="(min-width: 750px) 59vw, 83vw"
+              src="/images/blog_1/image4.webp"
+              loading="lazy"
+              width="1036"
+              height="524"
+              alt="blog-image"
+            />
             <p>
               Why? One of the primary reasons for limited supply is due to
               highly regulated zoning and land use provisions. Despite the high
@@ -607,7 +705,15 @@
               industrial real estate increased 9.8%, an acceleration from
               previous quarters.
             </p>
-            <img src="/images/blog_1/image2.png" alt="blog-image" />
+            <img
+              srcset="/images/blog_1/image2.webp 975w"
+              sizes="(min-width: 750px) 59vw, 83vw"
+              src="/images/blog_1/image2.webp"
+              loading="lazy"
+              width="975"
+              height="467"
+              alt="blog-image"
+            />
             <h3>How do these metrics translate to profits?</h3>
             <p>
               Well, no one is profiting more than developers since the
@@ -649,8 +755,14 @@
               for the same income stream, resulting in a seller’s market for
               industrial developers.
             </p>
+
             <img
-              src="/images/blog_1/image5.png"
+              srcset="/images/blog_1/image5.webp 564w"
+              sizes="(min-width: 750px) 29vw, 83vw"
+              src="/images/blog_1/image5.webp"
+              loading="lazy"
+              width="564"
+              height="505"
               alt="blog-image"
               class="half-size"
             />
@@ -692,7 +804,15 @@
                   data-url="Is-Bigger-Better"
                 >
                   <div class="single_news">
-                    <img src="images/blog-duediligence.jpg" alt="" />
+                    <img
+                      srcset="/images/blog-duediligence.webp 446w"
+                      sizes="(min-width: 750px) 23vw, 78vw"
+                      src="/images/blog-duediligence.webp"
+                      loading="lazy"
+                      width="446"
+                      height="565"
+                      alt="thumbnail-image"
+                    />
                     <div class="category_wrap">
                       <div class="category">Resources</div>
                     </div>
@@ -705,7 +825,15 @@
                   ata-url="real-esate-alert-fundraising-pro-hangs-own-shingle"
                 >
                   <div class="single_news">
-                    <img src="images/blog-alert.png" alt="" />
+                    <img
+                      srcset="/images/blog-alert--thumbnail.webp 446w"
+                      sizes="(min-width: 750px) 23vw, 78vw"
+                      src="/images/blog-alert--thumbnail.webp"
+                      loading="lazy"
+                      width="446"
+                      height="420"
+                      alt="thumbnail-image"
+                    />
                     <div class="category_wrap">
                       <div class="category">News</div>
                     </div>
@@ -723,7 +851,16 @@
     <div class="single_story_wrap" data-story="2" data-url="Is-Bigger-Better">
       <div class="single_story_content">
         <div class="single_story_hero">
-          <img src="images/blog-duediligence.jpg" class="cover_image" />
+          <img
+            srcset="/images/blog-duediligence.webp 446w"
+            sizes="(min-width: 750px) 23vw, 78vw"
+            src="/images/blog-duediligence.webp"
+            loading="lazy"
+            width="446"
+            height="565"
+            alt="thumbnail-image"
+            class="cover_image"
+          />
           <p class="main_category">Resources & News</p>
           <div class="close_popup">
             <img src="images/close_popup.svg" />
@@ -732,8 +869,7 @@
             <div class="left">
               <div class="category">Resources</div>
               <div class="category">November 22, 2021</div>
-
-              <h2>Is Bigger Better? Not For Real Estate Funds.</h2>
+              <h1>Is Bigger Better? Not For Real Estate Funds.</h1>
             </div>
             <div class="right">
               <div class="social">
@@ -822,7 +958,12 @@
               it to generate the highest absolute returns.
             </p>
             <img
-              src="/images/blog_2/image1.png"
+              srcset="images/blog_2/image1.webp 566w"
+              sizes="(min-width: 750px) 29vw, 83vw"
+              src="images/blog_2/image1.webp"
+              loading="lazy"
+              width="566"
+              height="467"
               alt="blog-image"
               class="half-size"
             />
@@ -887,7 +1028,15 @@
                   data-url="The-Case-For-Industrial-Real-Estate"
                 >
                   <div class="single_news">
-                    <img src="images/story_hero.jpg" alt="" />
+                    <img
+                      srcset="/images/story_hero.webp 446w"
+                      sizes="(min-width: 750px) 23vw, 78vw"
+                      src="/images/story_hero.webp"
+                      loading="lazy"
+                      width="446"
+                      height="565"
+                      alt="thumbnail-image"
+                    />
                     <div class="category_wrap">
                       <div class="category">Resources</div>
                     </div>
@@ -931,7 +1080,7 @@
             <div class="left">
               <div class="category">News</div>
               <div class="category">November 11, 2020</div>
-              <h2>Real Estate Alert: Fundraising Pro Hangs Own Shingle</h2>
+              <h1>Real Estate Alert: Fundraising Pro Hangs Own Shingle</h1>
             </div>
             <div class="right">
               <div class="social">
@@ -969,7 +1118,12 @@
         <div class="story_content">
           <div class="story_first_section">
             <img
-              src="/images/realestatealert.png"
+              srcset="/images/realestatealert.webp 566w"
+              sizes="(min-width: 750px) 29vw, 83vw"
+              src="/images/realestatealert.webp"
+              loading="lazy"
+              width="566"
+              height="79"
               alt="blog-image"
               class="half-size"
             />
@@ -1030,6 +1184,15 @@
             </p>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="loader">
+      <div class="container">
+        <img src="images/uncommon_capital_logo.svg" width="209" height="50" />
+        <p>
+          <span>Connected.</span> <span>Curated.</span>
+          <span>Confidential.</span>
+        </p>
       </div>
     </div>
   </body>
