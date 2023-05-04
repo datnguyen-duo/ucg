@@ -38,300 +38,448 @@
 
     <link rel="shortcut icon" type="image/png" href="images/favicon.jpg" />
     <link rel="stylesheet" href="https://use.typekit.net/aos8uzp.css" />
-    <link rel="stylesheet" href="style/select2.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
-    <link rel="stylesheet" href="style/global.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="style/main.css" />
     <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"
+      defer
     ></script>
-    <script src="script/select2.js"></script>
-    <script src="script/global.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.min.js"
+      defer
+    ></script>
+
+    <script src="script/global.js" defer></script>
   </head>
 
   <body>
-    <div id="top"></div>
-    <header>
-      <a href="#top" class="logo_holder">
-        <img src="images/header_logo.svg" />
-      </a>
-      <a class="button access">Request Deal Flow</a>
-    </header>
-    <div class="page_loader">
-      <div class="word">Connected</div>
-      <div class="word">Curated</div>
-      <div class="word">Confidential</div>
-      <div class="word last"><img src="images/header_logo.svg" /></div>
-    </div>
-    <div class="secondary_header">
-      <nav>
-        <a href="#top" class="logo_holder secondary">
-          <img src="images/header_logo.svg" />
-        </a>
-        <ul>
-          <li>
-            <a href="#numbers">About</a>
-          </li>
-          <li>
-            <a href="#about">Founder Story</a>
-          </li>
-          <li>
-            <a href="#faq">FAQs</a>
-          </li>
-          <li>
-            <a href="#news">Resources & News</a>
-          </li>
-        </ul>
-      </nav>
-      <a class="button access"> Request Deal Flow </a>
-    </div>
-    <div class="contact_form_holder">
-      <div class="contact_form_wrap">
-        <div class="success_message_wrap">
-          <div class="success_message_content_wrap">
-            <div class="close_form">
-              <img src="images/form_close.svg" alt="close-icon" />
+    <nav class="bg__dark">
+      <ul>
+        <li>
+          <a href="#banner">
+            <img src="images/header_logo.svg" width="209" height="50" />
+          </a>
+        </li>
+        <li>
+          <a href="#who-we-are">Who We Are</a>
+        </li>
+        <li><a href="#what-we-do">What We Do</a></li>
+        <li><a href="#recent-investments">Investments</a></li>
+        <li><a href="#our-story">Our Story</a></li>
+        <li><a href="#resources">Resources & News</a></li>
+      </ul>
+    </nav>
+
+    <section id="banner" class="bg__dark">
+      <h1>
+        We curate <span><span class="bg"></span>uncommon</span> investment
+        opportunities.
+      </h1>
+    </section>
+
+    <main>
+      <section id="intro">
+        <div class="row">
+          <div class="col">
+            <img
+              srcset="/images/wsj-icon.svg 101w"
+              sizes="101px"
+              src="/images/wsj-icon.svg"
+              loading="lazy"
+              width="101"
+              height="54"
+            />
+          </div>
+          <div class="col">
+            <img
+              srcset="/images/barrons-logo.svg 255w"
+              sizes="255px"
+              src="/images/barrons-logo.svg"
+              loading="lazy"
+              width="255"
+              height="54"
+            />
+          </div>
+          <div class="col">
+            <img
+              srcset="/images/wmre-logo.svg 174w"
+              sizes="174px"
+              src="/images/wmre-logo.svg"
+              loading="lazy"
+              width="174"
+              height="59"
+            />
+          </div>
+
+          <div class="col">
+            <img
+              srcset="/images/greenstreet-logo.svg 171w"
+              sizes="171px"
+              src="/images/greenstreet-logo.svg"
+              loading="lazy"
+              width="171"
+              height="72"
+            />
+          </div>
+          <div class="col">
+            <img
+              srcset="/images/rejournals-logo.svg 199w"
+              sizes="199px"
+              src="/images/rejournals-logo.svg"
+              loading="lazy"
+              width="199"
+              height="79"
+            />
+          </div>
+        </div>
+      </section>
+      <section id="who-we-are">
+        <p class="subtitle">Who We Are</p>
+        <div class="container">
+          <h2>
+            We provide our private community of family offices, RIAs and
+            high-net-worth individuals with insider access to the exclusive
+            deals and funds of leading real estate managers.
+          </h2>
+          <div class="row">
+            <div class="col">
+              <h3>
+                $<span class="count" data-attribute-count="850">0</span>M+
+              </h3>
+              <p class="desc">Investor Capital Placed</p>
             </div>
-            <div class="success_message_content">
-              <img src="images/email.svg" alt="email-icon" />
-              <h3>Thank You!</h3>
-              <p>We will email you shortly to notify you of next steps.</p>
+            <div class="col">
+              <h3><span class="count" data-attribute-count="122">0</span>%</h3>
+              <p class="desc">Oversubscription Rate</p>
+            </div>
+            <div class="col">
+              <h3 class="count" data-attribute-count="23">0</h3>
+              <p class="desc">Markets Invested In</p>
+            </div>
+            <div class="col">
+              <h3>
+                $<span class="count" data-attribute-count="2.5">0</span>B+
+              </h3>
+
+              <p class="desc">Value of Transactions Funded</p>
             </div>
           </div>
         </div>
-        <div class="form_header">
-          <div class="page">
-            <span class="first active">1</span>
-            <span class="second">2</span>
+      </section>
+
+      <section id="what-we-do">
+        <p class="subtitle">What We Do</p>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h1 class="lg">Connected</h1>
+              <p>
+                Private investing is about who you know. As real estate industry
+                veterans, we have fostered deep relationships with leading
+                sponsors across the country, and we are the first call when they
+                have a new, exclusive offering.
+              </p>
+            </div>
+            <div class="col">
+              <img
+                srcset="/images/connected.webp 545w"
+                sizes="545px"
+                src="/images/connected.webp"
+                loading="lazy"
+                width="545"
+                height="391"
+              />
+            </div>
           </div>
-          <p class="form_header_headline">Personal information</p>
-          <div class="close_form">
-            <img src="images/form_close.svg" alt="close-icon" />
+          <div class="row">
+            <div class="col">
+              <h1 class="lg">Curated</h1>
+              <p>
+                Uncommon investments have one thing in common - an edge. We
+                specialize in delivering differentiated offerings to our members
+                that are usually reserved for the friends and family of leading
+                sponsors. Quality is our focus. Quantity can be found elsewhere.
+              </p>
+            </div>
+            <div class="col">
+              <img
+                srcset="/images/curated.webp 488w"
+                sizes="488px"
+                src="/images/curated.webp"
+                loading="lazy"
+                width="488"
+                height="491"
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <h1 class="lg">Confidential</h1>
+              <p>
+                Leading sponsors only share their most private offerings with
+                who they know and trust. We are their longtime peers and
+                understand the importance of confidentiality, so they can move
+                quickly and quietly on a unique investment opportunity.
+              </p>
+            </div>
+            <div class="col">
+              <img
+                srcset="/images/confidential.webp 485w"
+                sizes="485px"
+                src="/images/confidential.webp"
+                loading="lazy"
+                width="485"
+                height="505"
+              />
+            </div>
           </div>
         </div>
-        <div class="form_holder">
-          <div class="form_description">
-            <h3>Request Deal Flow</h3>
+      </section>
+
+      <section id="recent-investments">
+        <p class="subtitle">Recent Investments</p>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <img
+                srcset="/images/blur-placeholder.svg 273w"
+                sizes="273px"
+                src="/images/blur-placeholder.svg"
+                loading="lazy"
+                width="273"
+                height="148"
+              />
+              <p>Lorem ipsum dolor sit amet Donec neque ipsum fermentum.</p>
+              <h3>$265,000,000</h3>
+              <span>OVERSUBSCRIBED | 2022</span>
+            </div>
+
+            <div class="col">
+              <img
+                srcset="/images/blur-placeholder.svg 273w"
+                sizes="273px"
+                src="/images/blur-placeholder.svg"
+                loading="lazy"
+                width="273"
+                height="148"
+              />
+              <p>Lorem ipsum dolor sit amet Donec neque ipsum fermentum.</p>
+              <h3>$265,000,000</h3>
+              <span>OVERSUBSCRIBED | 2022</span>
+            </div>
+
+            <div class="col">
+              <img
+                srcset="/images/blur-placeholder.svg 273w"
+                sizes="273px"
+                src="/images/blur-placeholder.svg"
+                loading="lazy"
+                width="273"
+                height="148"
+              />
+              <p>Lorem ipsum dolor sit amet Donec neque ipsum fermentum.</p>
+              <h3>$265,000,000</h3>
+              <span>OVERSUBSCRIBED | 2022</span>
+            </div>
+
+            <div class="col">
+              <img
+                srcset="/images/blur-placeholder.svg 273w"
+                sizes="273px"
+                src="/images/blur-placeholder.svg"
+                loading="lazy"
+                width="273"
+                height="148"
+              />
+              <p>Lorem ipsum dolor sit amet Donec neque ipsum fermentum.</p>
+              <h3>$265,000,000</h3>
+              <span>OVERSUBSCRIBED | 2022</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="our-story" class="bg__dark">
+        <div class="container">
+          <img src="images/quote.svg" width="75" height="75" />
+          <h2>
+            We are transforming private real estate investing and who gets
+            access to the most exclusive investment opportunities.
+          </h2>
+          <div class="separator"></div>
+          <p class="subtitle">Ben Harris</p>
+          <p>President of Uncommon Capital Group</p>
+          <div class="row">
+            <div class="col"><h1 class="lg">Our Story</h1></div>
+            <div class="col">
+              <p>
+                Over nearly a decade in the commercial real estate industry, Ben
+                has established himself as a thought leader and premier capital
+                raising professional. He has been featured in the Wall Street
+                Journal and other prominent industry publications, such as Real
+                Estate Alert, RE Journals and
+                <a
+                  href="https://www.wealthmanagement.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >wealthmanagement.com</a
+                >.
+              </p>
+              <p>
+                Ben has introduced more than one thousand family offices,
+                high-net-worth-individuals, and wealth managers to unique deals
+                and funds across the country.
+              </p>
+              <p>
+                He also currently serves as a Senior Vice President of CRG, a
+                leading national real estate developer where he oversees capital
+                raising efforts and structures the company’s investment
+                vehicles. He previously served as Vice President of Investor
+                Relations and Business Development at Origin Investments, a
+                Chicago-based real estate investment firm, where he expanded the
+                firm’s local footprint to a national one. Prior to Origin, Ben
+                was one of the first employees at Starwood Retail Group, a
+                subsidiary of Starwood Capital.
+              </p>
+              <p>
+                Ben is a graduate from the Wisconsin School of Business at
+                UW-Madison and is an active member in the Wisconsin Real Estate
+                Alumni Association. He currently holds the Series 7 and 63
+                registrations with FINRA.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="resources">
+        <p class="subtitle">Resources & News</p>
+        <div class="container">
+          <div class="row resources">
+            <div class="col resources__card" data-story="1">
+              <img src="images/story_hero.jpg" alt="" />
+
+              <h2>The Case For Industrial Real Estate.</h2>
+              <p class="read_more desc">
+                Read
+                <img src="images/arrow_right.svg" />
+              </p>
+            </div>
+
+            <div class="col resources__card" data-story="2">
+              <img src="images/blog-duediligence.jpg" alt="" />
+
+              <h2>Is Bigger Better? Not For Real Estate Funds.</h2>
+              <p class="read_more desc">
+                Read
+                <img src="images/arrow_right.svg" />
+              </p>
+            </div>
+            <div class="col resources__card" data-story="3">
+              <img src="images/blog-alert.png" alt="" />
+
+              <h2>Real Estate Alert: Fundraising Pro Hangs Own Shingle.</h2>
+              <p class="read_more desc">
+                Read
+                <img src="images/arrow_right.svg" />
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg__dark">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <img
+              srcset="/images/uncommon_capital_logo.svg 276w"
+              sizes="276px"
+              src="/images/uncommon_capital_logo.svg"
+              loading="lazy"
+              width="276"
+              height="66"
+            />
+          </div>
+          <div class="col">
+            <p class="subtitle">Follow Us</p>
+            <a
+              href="https://www.linkedin.com/company/uncommoncapitalgroup"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </div>
+          <div class="col">
+            <p class="subtitle">Email Us</p>
+            <a href="mailto:investorrelations@investuncommon.com"
+              >investorrelations@investuncommon.com</a
+            >
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
             <p>
-              Please provide your information and a member of our team will
-              reach out to discuss next steps and answer any questions you have.
+              Uncommon Capital Group, LLC offers securities through Stonehaven
+              LLC, a Member
+              <a
+                href="https://www.finra.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >FINRA</a
+              >
+              /
+              <a
+                href="https://www.sipc.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >SIPC</a
+              >. Information on all FINRA-registered representatives and
+              broker-dealers can be found on FINRA’s
+              <a
+                href="https://brokercheck.finra.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >BrokerCheck</a
+              >. Investments in private placements involve a high degree of risk
+              and may result in a partial or total loss of your investment.
+              Private placements are generally illiquid investments. Investors
+              should consult with their investment, legal, and tax advisors
+              regarding any real estate private placement investment. Please
+              refer to the following links for additional disclosure and
+              disclaimer information:
+              <a
+                href="https://stonehaven-llc.com/disclaimer/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Disclaimers & Risks</a
+              >,
+              <a
+                href="https://stonehaven-llc.com/privacy/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Privacy Policy
+              </a>
+              and
+              <a
+                href="https://stonehaven-llc.com/form-crs/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Form CRS</a
+              >.
             </p>
           </div>
-          <form action="#" name="contact" method="POST" id="requestAccessForm">
-            <div class="second_part">
-              <div class="input_holder">
-                <label for="">Investor Type</label>
-                <select class="custom_select" name="investor_type">
-                  <option
-                    disabled
-                    selected
-                    value
-                    style="display: none"
-                  ></option>
-                  <option value="Family Office">Family Office</option>
-                  <option value="Registered Investment Advisor">
-                    Registered Investment Advisor
-                  </option>
-                  <option value="Individual">Individual</option>
-                  <option value="Institution">Institution</option>
-                </select>
-              </div>
-              <div class="input_holder">
-                <label for=""
-                  >Which property types are you interested in?<br />
-                  <em>Select all that apply</em></label
-                >
-                <select
-                  class="custom_select"
-                  multiple="multiple"
-                  name="property_types"
-                >
-                  <option value="Multifamily">Multifamily</option>
-                  <option value="Industrial">Industrial</option>
-                  <option value="Office">Office</option>
-                  <option value="Retail">Retail</option>
-                  <option value="Hotels">Hotels</option>
-                  <option value="Self storage">Self storage</option>
-                  <option value="Student housing">Student housing</option>
-                  <option value="Data Centers">Data Centers</option>
-                </select>
-              </div>
-              <div class="input_holder">
-                <label for=""
-                  >What are your investment objectives?<br />
-                  <em>Select all that apply</em></label
-                >
-                <select
-                  class="custom_select"
-                  name="investment_objective"
-                  multiple="multiple"
-                >
-                  <option
-                    disabled
-                    selected
-                    value
-                    style="display: none"
-                  ></option>
-                  <option value="Diversified funds for capital appreciation">
-                    Diversified funds for capital appreciation
-                  </option>
-                  <option value="Diversified funds for current income">
-                    Diversified funds for current income
-                  </option>
-                  <option value="Individual deals for capital appreciation">
-                    Individual deals for capital appreciation
-                  </option>
-                  <option value="Individual deals for current income">
-                    Individual deals for current income
-                  </option>
-                </select>
-              </div>
-              <div class="input_holder">
-                <label for="">Investor Status</label>
-                <select class="custom_select" name="investor_status">
-                  <option
-                    disabled
-                    selected
-                    value
-                    style="display: none"
-                  ></option>
-                  <option value="Qualified Purchaser">
-                    Qualified Purchaser
-                  </option>
-                  <option value="Accredited Investor">
-                    Accredited Investor
-                  </option>
-                  <option value="Non-Accredited Investor">
-                    Non-Accredited Investor
-                  </option>
-                  <option value="Not sure">Not sure</option>
-                </select>
-              </div>
-              <div class="input_holder">
-                <label for=""
-                  >What is your typical investment amount per offering?</label
-                >
-                <select class="custom_select" name="amount_per_offering">
-                  <option
-                    disabled
-                    selected
-                    value
-                    style="display: none"
-                  ></option>
-                  <option value="$5,000,000 or more">$5,000,000 or more</option>
-                  <option value="$1,000,000 - $4,999,999">
-                    $1,000,000 - $4,999,999
-                  </option>
-                  <option value="$250,000 – 999,999">$250,000 – 999,999</option>
-                  <option value="Less than $250,000">Less than $250,000</option>
-                </select>
-              </div>
-              <div class="button_holder">
-                <p class="prev" tabindex="0">Previous</p>
-                <button class="submit" tabindex="0">Submit</button>
-              </div>
-            </div>
-            <div class="first_part">
-              <div class="input_holder">
-                <label>First Name</label>
-                <input
-                  type="text"
-                  name="first_name"
-                  placeholder="First Name"
-                  required
-                />
-                <span class="error">Required Field</span>
-              </div>
-              <div class="input_holder">
-                <label>Last Name</label>
-                <input
-                  type="text"
-                  name="last_name"
-                  placeholder="Last Name"
-                  required
-                />
-                <span class="error">Required Field</span>
-              </div>
-              <div class="input_holder">
-                <label>Email Address</label>
-                <input type="email" name="email" placeholder="Email" required />
-                <span class="error">Required Field</span>
-              </div>
-              <div class="input_holder">
-                <label>Phone Number</label>
-                <input
-                  type="phone"
-                  name="phone"
-                  placeholder="Phone Number"
-                  required
-                />
-                <span class="error">Required Field</span>
-              </div>
-              <div class="input_holder">
-                <label>Zip Code</label>
-                <input type="text" name="zip" placeholder="Zip Code" required />
-                <span class="error">Required Field</span>
-              </div>
-              <div class="button_holder">
-                <div class="next" tabindex="0">Next</div>
-              </div>
-            </div>
-          </form>
-          <div id="mc_embed_signup" class="hidden">
-            <form
-              action="https://investuncommon.us5.list-manage.com/subscribe/post-json?u=140352ac6d34eaf48d74fed01&amp;id=7f8533431c&c=?"
-              method="GET"
-              id="mc-embedded-subscribe-form"
-              name="mc-embedded-subscribe-form"
-              class="validate"
-              target="_blank"
-              novalidate
-            >
-              <div id="mc_embed_signup_scroll">
-                <input
-                  type="email"
-                  value=""
-                  name="EMAIL"
-                  class="email"
-                  id="mce-EMAIL"
-                  placeholder="Email Address"
-                  required
-                />
-                <div
-                  style="position: absolute; left: -5000px"
-                  aria-hidden="true"
-                >
-                  <input
-                    type="text"
-                    name="b_140352ac6d34eaf48d74fed01_7f8533431c"
-                    tabindex="-1"
-                    value=""
-                  />
-                </div>
-                <div class="clear">
-                  <input
-                    type="submit"
-                    value="Sign Up"
-                    name="subscribe"
-                    id="mc-embedded-subscribe"
-                    class="button"
-                  />
-                </div>
-              </div>
-              <div class="newsletter-message"></div>
-            </form>
+          <div class="col">
+            <p>© 2023 Uncommon Capital Group, LLC</p>
+            <a href="/privacy-policy.html">Privacy Policy</a>
           </div>
         </div>
       </div>
-    </div>
+    </footer>
+
     <div
       class="single_story_wrap"
       data-story="1"
@@ -354,8 +502,7 @@
               <div class="social">
                 <span>Share On</span>
                 <a
-                  href=""
-                  onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+                  href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.investuncommon.com/?story=The-Case-For-Industrial-Real-Estate"
                   target="_blank"
                   title="Share on Facebook"
                   class="facebook"
@@ -363,13 +510,16 @@
                   <img src="images/facebook.svg" />
                   <img src="images/facebook_white.svg" class="hover_icon" />
                 </a>
-                <a href="" target="_blank" class="linkedin">
+                <a
+                  href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//www.investuncommon.com/?story=The-Case-For-Industrial-Real-Estate"
+                  target="_blank"
+                  class="linkedin"
+                >
                   <img src="images/linkedin.svg" />
                   <img src="images/linkedin_white.svg" class="hover_icon" />
                 </a>
                 <a
-                  href=""
-                  onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+                  href="https://twitter.com/share?url=https://www.investuncommon.com/?story=The-Case-For-Industrial-Real-Estate&text=The%20Case%20For%20Industrial%20Real%20Estate"
                   target="_blank"
                   title="Share on Twitter"
                   class="twitter"
@@ -537,7 +687,7 @@
               <h4>More Resources & News</h4>
               <div class="news_wrap">
                 <div
-                  class="single_news_wrap"
+                  class="single_news_wrap resources__card"
                   data-story="2"
                   data-url="Is-Bigger-Better"
                 >
@@ -550,7 +700,7 @@
                   </div>
                 </div>
                 <div
-                  class="single_news_wrap"
+                  class="single_news_wrap resources__card"
                   data-story="3"
                   ata-url="real-esate-alert-fundraising-pro-hangs-own-shingle"
                 >
@@ -589,8 +739,7 @@
               <div class="social">
                 <span>Share On</span>
                 <a
-                  href=""
-                  onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+                  href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.investuncommon.com/?story=Is-Bigger-Better"
                   target="_blank"
                   title="Share on Facebook"
                   class="facebook"
@@ -598,13 +747,16 @@
                   <img src="images/facebook.svg" />
                   <img src="images/facebook_white.svg" class="hover_icon" />
                 </a>
-                <a href="" target="_blank" class="linkedin">
+                <a
+                  href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//www.investuncommon.com/?story=Is-Bigger-Better"
+                  target="_blank"
+                  class="linkedin"
+                >
                   <img src="images/linkedin.svg" />
                   <img src="images/linkedin_white.svg" class="hover_icon" />
                 </a>
                 <a
-                  href=""
-                  onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+                  href="https://twitter.com/share?url=https://www.investuncommon.com/?story=Is-Bigger-Better&text=Is%20Bigger%20Better?%20Not%20For%20Real%20Estate%20Funds."
                   target="_blank"
                   title="Share on Twitter"
                   class="twitter"
@@ -730,7 +882,7 @@
               <h4>More Resources & News</h4>
               <div class="news_wrap">
                 <div
-                  class="single_news_wrap"
+                  class="single_news_wrap resources__card"
                   data-story="1"
                   data-url="The-Case-For-Industrial-Real-Estate"
                 >
@@ -743,7 +895,7 @@
                   </div>
                 </div>
                 <div
-                  class="single_news_wrap"
+                  class="single_news_wrap resources__card"
                   data-story="3"
                   ata-url="real-esate-alert-fundraising-pro-hangs-own-shingle"
                 >
@@ -785,8 +937,7 @@
               <div class="social">
                 <span>Share On</span>
                 <a
-                  href=""
-                  onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+                  href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.investuncommon.com/?story=real-esate-alert-fundraising-pro-hangs-own-shingle"
                   target="_blank"
                   title="Share on Facebook"
                   class="facebook"
@@ -794,13 +945,16 @@
                   <img src="images/facebook.svg" />
                   <img src="images/facebook_white.svg" class="hover_icon" />
                 </a>
-                <a href="" target="_blank" class="linkedin">
+                <a
+                  href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//www.investuncommon.com/?story=real-esate-alert-fundraising-pro-hangs-own-shingle"
+                  target="_blank"
+                  class="linkedin"
+                >
                   <img src="images/linkedin.svg" />
                   <img src="images/linkedin_white.svg" class="hover_icon" />
                 </a>
                 <a
-                  href=""
-                  onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+                  href="https://twitter.com/share?url=https://www.investuncommon.com/?story=real-esate-alert-fundraising-pro-hangs-own-shingle&text=Real%20Estate%20Alert:%20Fundraising%20Pro%20Hangs%20Own%20Shingle"
                   target="_blank"
                   title="Share on Twitter"
                   class="twitter"
@@ -876,570 +1030,6 @@
             </p>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="home_wrap">
-      <div class="hero_wrap fixed-hero animate-scale">
-        <div class="tint-mask"></div>
-        <video muted loop id="video">
-          <source src="videos/uncommon_video.mp4" type="video/mp4" />
-        </video>
-        <div class="hero_content_wrap">
-          <img src="images/hero_shape.svg" alt="" class="hero_shape" />
-          <div class="hero_content">
-            <h1>Your Way In</h1>
-            <p>
-              Our team has connected over $650M of investor capital with
-              exclusive offerings from leading real estate managers.
-            </p>
-            <!-- <div class="clients_wrap">
-                        <p>Our clients include:</p>
-                        <img src="images/betterment.png" />
-                        <img src="images/origin.svg" />
-                        <div class="more">+ More</div>
-                    </div> -->
-          </div>
-        </div>
-      </div>
-      <div class="scroll-wrap">
-        <div class="first_section single_section" id="numbers">
-          <img
-            src="images/first_section_shape.svg"
-            class="first_section_shape"
-          />
-          <h2 class="fadein-wrap fade_up">Why uncommon capital?</h2>
-          <p class="fadein-wrap fade_up">
-            We curate exclusive real estate investment opportunities for our
-            premier community of private investors.
-          </p>
-          <div class="three_box_section fadein-wrap fade_up">
-            <div class="single_box_wrap">
-              <div class="single_box">
-                <h3 class="count transactions">650</h3>
-                <p>Investor Capital Placed</p>
-              </div>
-            </div>
-            <div class="single_box_wrap">
-              <div class="single_box">
-                <h3 class="count investors">100</h3>
-                <p>Veteran Real Estate Managers</p>
-              </div>
-            </div>
-            <div class="single_box_wrap">
-              <div class="single_box">
-                <h3 class="count capital">150</h3>
-                <p>Value of Transactions Funded</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="single_section" id="connected">
-          <div class="second_section">
-            <div class="left fadein-wrap fade_up">
-              <h2>Connected</h2>
-              <p>
-                Our team of industry insiders has worked at institutional
-                private real estate firms for nearly a decade. We have deep
-                relationships with talented managers across the country that
-                specialize in all property types and strategies. We are the
-                first call when they have new, unique investment offerings.
-              </p>
-            </div>
-            <div class="right fadein-wrap fade_up">
-              <p>Our Manager Requirements:</p>
-              <ul>
-                <li>
-                  <img src="images/checkmark.svg" />
-                  <p>Track record of success</p>
-                </li>
-                <li>
-                  <img src="images/checkmark.svg" />
-                  <p>Differentiated, defensible strategy</p>
-                </li>
-                <li>
-                  <img src="images/checkmark.svg" />
-                  <p>Material co-investment</p>
-                </li>
-                <li>
-                  <img src="images/checkmark.svg" />
-                  <p>Strong reputation in the marketplace</p>
-                </li>
-                <li>
-                  <img src="images/checkmark.svg" />
-                  <p>Fair and transparent fee structures</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="third_section">
-            <div class="left fadein-wrap fade_up">
-              <h2>Curated</h2>
-              <p>
-                We are highly selective with what we share with you. Our
-                expertise in sourcing and analyzing real estate offerings allows
-                us to provide opportunities with strong risk-return profiles
-                that are structured fairly and transparently for you.
-              </p>
-            </div>
-            <div class="right fadein-wrap fade_up">
-              <div class="image_holder">
-                <img src="images/curated.png" />
-              </div>
-            </div>
-          </div>
-          <div class="fourth_section">
-            <div class="left fadein-wrap fade_up">
-              <h2>Confidential</h2>
-              <p>
-                We work with real estate managers on an exclusive basis, so we
-                are the only place you will find their coveted offerings. We
-                have established ourselves as a preferred partner to leading
-                managers because we consistently perform and connect them with
-                great investors.
-              </p>
-            </div>
-            <div class="right fadein-wrap fade_up">
-              <div class="image_holder">
-                <img src="images/confidential.png" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="fifth_section single_section" id="about">
-          <img
-            src="images/fifth_section_first_shape.svg"
-            class="fifth_section_first_shape"
-          />
-          <img
-            src="images/fifth_section_second_shape.svg"
-            class="fifth_section_second_shape"
-          />
-          <div class="quote_wrap">
-            <div class="quote fadein-wrap fade_up">
-              <img src="images/quote.svg" />
-              <p>
-                We are transforming private real estate investing and who gets
-                access to the most exclusive investment opportunities.
-              </p>
-            </div>
-            <div class="separator"></div>
-            <div class="author_info fadein-wrap fade_up">
-              <h3>Ben Harris</h3>
-              <p>Founder of Uncommon Capital Group</p>
-            </div>
-          </div>
-          <div class="founder_info">
-            <div class="founder_info_content">
-              <div class="image_holder_mobile">
-                <img src="images/founder_mobile.png" />
-              </div>
-              <h2 class="fadein-wrap fade_up">About The Founder</h2>
-              <div class="founder_description fadein-wrap fade_up">
-                <div class="left">
-                  <div class="image_holder">
-                    <img src="images/founder.png" alt="founder-image" />
-                  </div>
-                </div>
-                <div class="right">
-                  <p>
-                    Over nearly a decade in the commercial real estate industry,
-                    Ben has established himself as a thought leader and premier
-                    capital raising professional. He has been featured in the
-                    Wall Street Journal and other prominent industry
-                    publications, such as Real Estate Alert, RE Journals and
-                    wealthmanagement.com.<br /><br />
-
-                    Ben has introduced more than one thousand family offices,
-                    high-net-worth-individuals, and wealth managers to unique
-                    deals and funds across the country. <br /><br />
-
-                    He also currently serves as a Senior Vice President of CRG,
-                    a leading national real estate developer where he oversees
-                    capital raising efforts and structures the company’s
-                    investment vehicles. He previously served as Vice President
-                    of Investor Relations and Business Development at Origin
-                    Investments, a Chicago-based real estate investment firm,
-                    where he expanded the firm’s local footprint to a national
-                    one. Prior to Origin, Ben was one of the first employees at
-                    Starwood Retail Group, a subsidiary of Starwood Capital.
-                    <br /><br />
-                    Ben is a graduate from the Wisconsin School of Business at
-                    UW-Madison and is an active member in the Wisconsin Real
-                    Estate Alumni Association. He currently holds the Series 7
-                    and 63 registrations with FINRA.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="sixth_section single_section" id="faq">
-          <img src="images/faq_shape.svg" class="faq_shape" />
-          <div class="sixth_section_content">
-            <h2 class="fadein-wrap fade_up">Frequently Asked Questions</h2>
-            <div class="faq_section">
-              <div class="single_question fadein-wrap fade_up">
-                <h3>
-                  How can I access Uncommon investment opportunities?
-                  <div class="opener">
-                    <span></span>
-                    <span></span>
-                  </div>
-                </h3>
-                <p>
-                  Click the “Request Deal Flow” button and fill out the form.
-                  After you submit your form, a member of our team will reach
-                  out to discuss next steps and answer any questions you have.
-                  We value getting to know each investor in our community and
-                  like to learn about your investment preferences, so we can
-                  curate offerings for you.
-                </p>
-              </div>
-              <div class="single_question fadein-wrap fade_up">
-                <h3>
-                  How much does it cost to join the Uncommon community?
-                  <div class="opener">
-                    <span></span>
-                    <span></span>
-                  </div>
-                </h3>
-                <p>
-                  It is free to join our community and to access our exclusive
-                  deal flow. Real estate managers compensate Uncommon for
-                  introductions, at no cost to you.
-                </p>
-              </div>
-              <div class="single_question fadein-wrap fade_up">
-                <h3>
-                  What is a typical investment minimum for an offering?
-                  <div class="opener">
-                    <span></span>
-                    <span></span>
-                  </div>
-                </h3>
-                <p>
-                  The minimum investment varies per manager and offering.
-                  Typically, minimums range from $250,000 to $1,000,000 or more.
-                  All offerings require investors to at least be Accredited
-                  Investors and many offerings require investors to be Qualified
-                  Purchasers.
-                </p>
-              </div>
-              <div class="single_question fadein-wrap fade_up">
-                <h3>
-                  Do I invest with Uncommon Capital or directly with the real
-                  estate manager?
-                  <div class="opener">
-                    <span></span>
-                    <span></span>
-                  </div>
-                </h3>
-                <p>
-                  Uncommon Capital provides exclusive access to real estate
-                  managers and then your investment is directly with the
-                  manager. They handle your funds and provide updates on the
-                  performance of your investments.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="seventh_section single_section" id="news">
-          <div class="seventh_section_content">
-            <h2 class="fadein-wrap fade_up">Resources & News</h2>
-            <div class="news_wrap fadein-wrap fade_up">
-              <div class="single_news_wrap" data-story="1">
-                <div class="single_news">
-                  <img src="images/story_hero.jpg" alt="" />
-                  <div class="category_wrap">
-                    <div class="category">Resources</div>
-                  </div>
-                  <h3>The Case For Industrial Real Estate</h3>
-                  <p class="read_more">
-                    Read
-                    <img src="images/arrow_right.svg" />
-                  </p>
-                </div>
-              </div>
-              <div class="single_news_wrap" data-story="2">
-                <div class="single_news">
-                  <img src="images/blog-duediligence.jpg" alt="" />
-                  <div class="category_wrap">
-                    <div class="category">Resources</div>
-                  </div>
-                  <h3>Is Bigger Better? Not For Real Estate Funds.</h3>
-                  <p class="read_more">
-                    Read
-                    <img src="images/arrow_right.svg" />
-                  </p>
-                </div>
-              </div>
-              <div class="single_news_wrap" data-story="3">
-                <div class="single_news">
-                  <img src="images/blog-alert.png" alt="" />
-                  <div class="category_wrap">
-                    <div class="category">News</div>
-                  </div>
-                  <h3>Real Estate Alert: Fundraising Pro Hangs Own Shingle</h3>
-                  <p class="read_more">
-                    Read
-                    <img src="images/arrow_right.svg" />
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="mobile_slider_holder">
-              <div class="mobile_slider">
-                <div class="single_news_wrap" data-story="1">
-                  <div class="single_news">
-                    <img src="images/story_hero.jpg" alt="" />
-                    <div class="category_wrap">
-                      <div class="category">Resources</div>
-                    </div>
-                    <h3>The Case For Industrial Real Estate</h3>
-                    <p class="read_more">
-                      Read
-                      <img src="images/arrow_right.svg" />
-                    </p>
-                  </div>
-                </div>
-                <div class="single_news_wrap" data-story="2">
-                  <div class="single_news">
-                    <img src="images/blog-duediligence.jpg" alt="" />
-                    <div class="category_wrap">
-                      <div class="category">Resources</div>
-                    </div>
-                    <h3>Is Bigger Better? Not For Real Estate Funds.</h3>
-                    <p class="read_more">
-                      Read
-                      <img src="images/arrow_right.svg" />
-                    </p>
-                  </div>
-                </div>
-                <div class="single_news_wrap" data-story="3">
-                  <div class="single_news">
-                    <img src="images/blog-alert.png" alt="" />
-                    <div class="category_wrap">
-                      <div class="category">News</div>
-                    </div>
-                    <h3>
-                      Real Estate Alert: Fundraising Pro Hangs Own Shingle
-                    </h3>
-                    <p class="read_more">
-                      Read
-                      <img src="images/arrow_right.svg" />
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <footer>
-          <img src="images/footer_first_shape.svg" class="footer_first_shape" />
-          <img
-            src="images/footer_second_shape.svg"
-            class="footer_second_shape"
-          />
-          <div class="top">
-            <h2>Get Started Today</h2>
-            <a class="button access">Request Deal Flow</a>
-            <div class="contact_section">
-              <div class="left">
-                <div class="logo_holder">
-                  <img src="images/uncommon_capital_logo.svg" />
-                </div>
-                <div class="contact">
-                  <div class="single_contact">
-                    <p>Connect</p>
-                    <a
-                      href="https://www.linkedin.com/company/uncommoncapitalgroup"
-                      target="_blank"
-                      >LinkedIn</a
-                    >
-                  </div>
-                  <div class="single_contact">
-                    <p>Contact</p>
-                    <a href="mailto:investorrelations@investuncommon.com"
-                      >Email Us</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="right">
-                <p>Subscribe to our newsletter for updates</p>
-                <div class="newsletter_form_wrap">
-                  <div id="mc_embed_signup">
-                    <form
-                      action="https://investuncommon.us5.list-manage.com/subscribe/post-json?u=140352ac6d34eaf48d74fed01&amp;id=92a6971397&c=?"
-                      method="GET"
-                      id="mc-embedded-subscribe-form"
-                      name="mc-embedded-subscribe-form"
-                      class="validate"
-                      target="_blank"
-                      novalidate
-                    >
-                      <div id="mc_embed_signup_scroll">
-                        <div class="mc-field-group">
-                          <input
-                            type="email"
-                            value=""
-                            name="EMAIL"
-                            class="required email"
-                            id="mce-EMAIL"
-                            placeholder="Email Address"
-                          />
-                        </div>
-                        <div id="mce-responses" class="clear">
-                          <div
-                            class="response"
-                            id="mce-error-response"
-                            style="display: none"
-                          ></div>
-                          <div
-                            class="response"
-                            id="mce-success-response"
-                            style="display: none"
-                          ></div>
-                        </div>
-                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                        <div
-                          style="position: absolute; left: -5000px"
-                          aria-hidden="true"
-                        >
-                          <input
-                            type="text"
-                            name="b_140352ac6d34eaf48d74fed01_92a6971397"
-                            tabindex="-1"
-                            value=""
-                          />
-                        </div>
-                        <div class="clear">
-                          <input
-                            type="submit"
-                            value="Sign Up"
-                            name="subscribe"
-                            id="mc-embedded-subscribe"
-                            class="button"
-                          />
-                        </div>
-                      </div>
-                      <div class="newsletter-message"></div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="bottom">
-            <div class="left">
-              <p>
-                Uncommon Capital Group, LLC offers securities through Stonehaven
-                LLC, a Member
-                <a
-                  href="https://www.finra.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >FINRA</a
-                >
-                /
-                <a
-                  href="https://www.sipc.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >SIPC</a
-                >. Information on all FINRA-registered representatives and
-                broker-dealers can be found on FINRA’s
-                <a
-                  href="https://brokercheck.finra.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >BrokerCheck</a
-                >. Investments in private placements involve a high degree of
-                risk and may result in a partial or total loss of your
-                investment. Private placements are generally illiquid
-                investments. Investors should consult with their investment,
-                legal, and tax advisors regarding any real estate private
-                placement investment. Please refer to the following links for
-                additional disclosure and disclaimer information:
-                <a
-                  href="https://stonehaven-llc.com/disclaimer/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Disclaimers & Risks</a
-                >,
-                <a
-                  href="https://stonehaven-llc.com/privacy/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Privacy Policy
-                </a>
-                and
-                <a
-                  href="https://stonehaven-llc.com/form-crs/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Form CRS</a
-                >.
-              </p>
-              <p class="hidden">
-                Uncommon Capital Group, LLC offers securities through Stonehaven
-                LLC, a Member
-                <a
-                  href="https://www.finra.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >FINRA</a
-                >
-                /
-                <a
-                  href="https://www.sipc.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >SIPC</a
-                >. Information on all FINRA-registered representatives and
-                broker-dealers can be found on FINRA’s
-                <a
-                  href="https://brokercheck.finra.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >BrokerCheck</a
-                >. Investments in private placements involve a high degree of
-                risk and may result in a partial or total loss of your
-                investment. Private placements are generally illiquid
-                investments. Investors should consult with their investment,
-                legal, and tax advisors regarding any real estate private
-                placement investment. Please refer to the following links for
-                additional disclosure and disclaimer information:
-                <a
-                  href="https://stonehaven-llc.com/disclaimer/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Disclaimers & Risks</a
-                >,
-                <a
-                  href="https://stonehaven-llc.com/privacy/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Privacy Policy
-                </a>
-                and
-                <a
-                  href="https://stonehaven-llc.com/form-crs/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Form CRS</a
-                >.
-              </p>
-            </div>
-            <div class="right">
-              <p>© 2022 Uncommon Capital Group, LLC</p>
-              <a href="/privacy-policy.html">Privacy Policy</a>
-            </div>
-          </div>
-        </footer>
       </div>
     </div>
   </body>
