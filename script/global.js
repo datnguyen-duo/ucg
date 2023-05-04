@@ -1,36 +1,41 @@
 document.addEventListener("DOMContentLoaded", function () {
   window.scrollTo(0, 0);
-  var loaderTl = gsap.timeline();
 
-  loaderTl.to(".loader h2 span", {
-    y: 0,
-    opacity: 1,
-    stagger: 0.1,
-    delay: 0.5,
-    ease: "Power2.Out",
-  });
-  loaderTl.to(".loader", 0.5, { opacity: 0, delay: 0.7 });
-  loaderTl.to(
-    ".blur",
-    0.5,
-    {
-      backdropFilter: "blur(0px)",
-    },
-    "<.1"
-  );
-  loaderTl.add(function () {
+  if (document.querySelector(".loader")) {
+    var loaderTl = gsap.timeline();
+
+    loaderTl.to(".loader h2 span", {
+      y: 0,
+      opacity: 1,
+      stagger: 0.1,
+      delay: 0.5,
+      ease: "Power2.Out",
+    });
+    loaderTl.to(".loader", 0.5, { opacity: 0, delay: 0.7 });
+    loaderTl.to(
+      ".blur",
+      0.5,
+      {
+        backdropFilter: "blur(0px)",
+      },
+      "<.1"
+    );
+    loaderTl.add(function () {
+      document.body.classList.add("loaded");
+    });
+    loaderTl.fromTo(
+      "#banner h1 span.bg",
+      {
+        clipPath: "inset(0 100% 0 0)",
+      },
+      {
+        clipPath: "inset(0 0% 0 0)",
+        ease: "Power1.inOut",
+      }
+    );
+  } else {
     document.body.classList.add("loaded");
-  });
-  loaderTl.fromTo(
-    "#banner h1 span.bg",
-    {
-      clipPath: "inset(0 100% 0 0)",
-    },
-    {
-      clipPath: "inset(0 0% 0 0)",
-      ease: "Power1.inOut",
-    }
-  );
+  }
 
   gsap.utils.toArray("main section").forEach((section, i) => {
     ScrollTrigger.create({

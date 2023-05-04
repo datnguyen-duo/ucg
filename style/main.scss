@@ -427,6 +427,30 @@ main {
       }
     }
   }
+
+  #privacy {
+    padding: calc(#{$mobile-spacer} + 70px) $mobile-gutter $mobile-spacer;
+    max-width: 1200px;
+    margin: 0 auto;
+    @media #{$s750} {
+      padding-top: $mobile-spacer;
+      width: 100%;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    ul {
+      padding-left: 20px;
+      margin: 1rem 0;
+    }
+
+    p {
+      &:not(:last-child) {
+        margin: 0 0 1em;
+      }
+    }
+  }
 }
 footer {
   padding: #{$gutter / 2};

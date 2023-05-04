@@ -1,259 +1,232 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Uncommon Investments</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="shortcut icon" type="image/png" href="images/favicon.jpg" />
-    <link rel="stylesheet" href="https://use.typekit.net/aos8uzp.css" />
-    <link rel="stylesheet" href="style/select2.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta property="og:title" content="Uncommon Capital Group" />
+    <meta
+      property="og:image"
+      content="https://www.investuncommon.com/images/UCG_meta-image.jpg"
     />
-    <link rel="stylesheet" href="style/global.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <meta property="og:description" content="" />
+
+    <!-- HTML Meta Tags -->
+    <meta name="description" content="" />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://investuncommon.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Uncommon Capital Group" />
+    <meta property="og:description" content="" />
+    <meta
+      property="og:image"
+      content="https://www.investuncommon.com/images/UCG_meta-image.jpg"
+    />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="investuncommon.com" />
+    <meta property="twitter:url" content="https://investuncommon.com/" />
+    <meta name="twitter:title" content="Uncommon Capital Group" />
+    <meta name="twitter:description" content="" />
+    <meta
+      name="twitter:image"
+      content="https://www.investuncommon.com/images/UCG_meta-image.jpg"
+    />
+
+    <link rel="shortcut icon" type="image/png" href="images/favicon.jpg" />
+    <link rel="stylesheet" href="style/main--inline.css" />
+
+    <link
+      rel="preload"
+      href="style/main.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="style/main.css" /></noscript>
     <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"
+      defer
     ></script>
-    <script src="script/select2.js"></script>
-    <script src="script/global.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script src="script/global.js" defer></script>
   </head>
 
   <body class="privacy">
-    <header>
-      <a href="/" class="logo_holder">
-        <img src="images/header_logo.svg" />
-      </a>
-      <a class="button access">Request Deal Flow</a>
-    </header>
-
-    <div class="contact_form_holder">
-      <div class="contact_form_wrap">
-        <div class="success_message_wrap">
-          <div class="success_message_content_wrap">
-            <div class="close_form">
-              <img src="images/form_close.svg" alt="close-icon" />
-            </div>
-            <div class="success_message_content">
-              <img src="images/email.svg" alt="email-icon" />
-              <h3>Message Submitted!</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut
-                commodo ante, ut efficitur neque.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="form_header">
-          <div class="page">
-            <span class="first active">1</span>
-            <span class="second">2</span>
-          </div>
-          <p class="form_header_headline">Personal information</p>
-          <div class="close_form">
-            <img src="images/form_close.svg" alt="close-icon" />
-          </div>
-        </div>
-        <div class="form_holder">
-          <div class="form_description">
-            <h3>Request Access Today</h3>
-            <p>
-              Please provide your information and a member of our team will
-              reach out to discuss next steps and answer any questions you have.
-            </p>
-          </div>
-          <form action="#" name="contact" method="POST" id="requestAccessForm">
-            <div class="second_part">
-              <div class="input_holder">
-                <label for="">Investor Type</label>
-                <select class="custom_select" name="investor_type">
-                  <option value="Family Office" selected>Family Office</option>
-                  <option value="Registered Investment Advisor">
-                    Registered Investment Advisor
-                  </option>
-                  <option value="Individual">Individual</option>
-                  <option value="Institution">Institution</option>
-                </select>
-              </div>
-              <div class="input_holder">
-                <label for=""
-                  >Which property types are you interested in?</label
-                >
-                <select
-                  class="custom_select"
-                  multiple="multiple"
-                  name="property_types"
-                >
-                  <option value="Multifamily" selected>Multifamily</option>
-                  <option value="Industrial">Industrial</option>
-                  <option value="Office">Office</option>
-                  <option value="Retail">Retail</option>
-                  <option value="Hotels">Hotels</option>
-                  <option value="Self storage">Self storage</option>
-                  <option value="Student housing">Student housing</option>
-                  <option value="Data Centers">Data Centers</option>
-                </select>
-              </div>
-              <div class="input_holder">
-                <label for="">What is your primary investment objective?</label>
-                <select class="custom_select" name="investment_objective">
-                  <option value="Growth: higher risk, higher return" selected>
-                    Growth: higher risk, higher return
-                  </option>
-                  <option value="Current Income: lower risk, lower return">
-                    Current Income: lower risk, lower return
-                  </option>
-                  <option value="Growth and Income: medium risk, medium return">
-                    Growth and Income: medium risk, medium return
-                  </option>
-                </select>
-              </div>
-              <div class="input_holder">
-                <label for="">Investor Status</label>
-                <select class="custom_select" name="investor_status">
-                  <option value="Qualified Purchaser" selected>
-                    Qualified Purchaser
-                  </option>
-                  <option value="Accredited Investor">
-                    Accredited Investor
-                  </option>
-                  <option value="Non-Accredited Investor">
-                    Non-Accredited Investor
-                  </option>
-                  <option value="Not sure">Not sure</option>
-                </select>
-              </div>
-              <div class="input_holder">
-                <label for=""
-                  >What is your typical investment amount per offering?</label
-                >
-                <select class="custom_select" name="amount_per_offering">
-                  <option value="$250,000 – 999,999">$250,000 – 999,999</option>
-                  <option value="$1,000,000 - $4,999,999">
-                    $1,000,000 - $4,999,999
-                  </option>
-                  <option value="$5,000,000 or more">$5,000,000 or more</option>
-                </select>
-              </div>
-              <div class="button_holder">
-                <p class="prev" tabindex="0">Previous</p>
-                <button class="submit" tabindex="0">Submit</button>
-              </div>
-            </div>
-            <div class="first_part">
-              <div class="input_holder">
-                <label>First Name</label>
-                <input
-                  type="text"
-                  name="first_name"
-                  placeholder="First Name"
-                  required
-                />
-                <span class="error">Required Field</span>
-              </div>
-              <div class="input_holder">
-                <label>Last Name</label>
-                <input
-                  type="text"
-                  name="last_name"
-                  placeholder="Last Name"
-                  required
-                />
-                <span class="error">Required Field</span>
-              </div>
-              <div class="input_holder">
-                <label>Email Address</label>
-                <input type="email" name="email" placeholder="Email" required />
-                <span class="error">Required Field</span>
-              </div>
-              <div class="input_holder">
-                <label>Phone Number</label>
-                <input
-                  type="phone"
-                  name="phone"
-                  placeholder="Phone Number"
-                  required
-                />
-                <span class="error">Required Field</span>
-              </div>
-              <div class="input_holder">
-                <label>Zip Code</label>
-                <input type="text" name="zip" placeholder="Zip Code" required />
-                <span class="error">Required Field</span>
-              </div>
-              <div class="button_holder">
-                <div class="next" tabindex="0">Next</div>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <section id="privacy">
-      <h1>Uncommon Capital Group, LLC Privacy Policy</h1>
-      <p class="center">
-        <em
-          >SEC Regulation S-P, “Privacy of Consumer Financial Information”
-          (Gramm-Leach-Bliley Act)</em
-        >
-      </p>
-      <p>
-        At Uncommon Capital Group, LLC, maintaining the trust and confidence of
-        our clients is of paramount importance. We are committed to safeguarding
-        your personal information and providing you with facts and options about
-        how this information may be shared. Please read this notice to learn
-        more about our privacy policies.
-      </p>
-      <p>
-        This notice replaces all previous statements of our privacy policy, and
-        may be amended at any time. We will provide you with revised policies
-        should any changes or amendments in how we handle your personal
-        information be implemented due to new legislation or changes in our
-        Written Supervisory Procedures (WSP). We will continue to adhere to the
-        policies and practices described in this notice should your relationship
-        with Uncommon Capital Group, LLC be for any reason terminated in the
-        future. If you have any questions regarding this privacy policy you may
-        contact us.
-      </p>
-      <p><strong>Information That We Collect</strong></p>
-      <p>
-        Uncommon Capital Group, LLC, along with our affiliates, use or share
-        information in a limited and carefully controlled manner. We do not
-        disclose any nonpublic information about our investors or former
-        investors for any reason, except as required by law, unless authorized
-        by you. In the case of Uncommon Capital Group, LLC, this is limited to:
-      </p>
+    <nav class="bg__dark">
       <ul>
         <li>
-          Disclosure to companies that provide services necessary to service
-          your account such as custodians, brokers, accountants, banks,
-          attorneys, administrators or investment managers regarding your
-          specific investments.
-        </li>
-        <li>
-          Disclosure to government agencies, courts, parties to lawsuits, or
-          regulators in response to subpoenas. In such cases, we share only the
-          information that we are required and/or authorized to share.
+          <a href="#banner">
+            <img
+              src="images/uncommon_capital_logo.svg"
+              width="209"
+              height="50"
+              alt="logo"
+            />
+          </a>
         </li>
       </ul>
-      <p><strong>Confidentiality & Security</strong></p>
-      <p>
-        The security of your account information is important to us. Only those
-        persons who need your information to perform their job may have access
-        to it. In addition, we maintain physical, electronic and procedural
-        security measures to protect your information. Uncommon Capital Group,
-        LLC instructs all of its employees to protect the confidentiality of
-        your personal information as described in these policies, which are
-        strictly enforced.
-      </p>
-    </section>
+    </nav>
+
+    <main>
+      <section id="privacy">
+        <h1>
+          Uncommon Capital Group, LLC<br />
+          Privacy Policy
+        </h1>
+        <p class="center">
+          <em
+            >SEC Regulation S-P, “Privacy of Consumer Financial Information”
+            (Gramm-Leach-Bliley Act)</em
+          >
+        </p>
+        <p>
+          At Uncommon Capital Group, LLC, maintaining the trust and confidence
+          of our clients is of paramount importance. We are committed to
+          safeguarding your personal information and providing you with facts
+          and options about how this information may be shared. Please read this
+          notice to learn more about our privacy policies.
+        </p>
+        <p>
+          This notice replaces all previous statements of our privacy policy,
+          and may be amended at any time. We will provide you with revised
+          policies should any changes or amendments in how we handle your
+          personal information be implemented due to new legislation or changes
+          in our Written Supervisory Procedures (WSP). We will continue to
+          adhere to the policies and practices described in this notice should
+          your relationship with Uncommon Capital Group, LLC be for any reason
+          terminated in the future. If you have any questions regarding this
+          privacy policy you may contact us.
+        </p>
+        <p><strong>Information That We Collect</strong></p>
+        <p>
+          Uncommon Capital Group, LLC, along with our affiliates, use or share
+          information in a limited and carefully controlled manner. We do not
+          disclose any nonpublic information about our investors or former
+          investors for any reason, except as required by law, unless authorized
+          by you. In the case of Uncommon Capital Group, LLC, this is limited
+          to:
+        </p>
+        <ul>
+          <li>
+            Disclosure to companies that provide services necessary to service
+            your account such as custodians, brokers, accountants, banks,
+            attorneys, administrators or investment managers regarding your
+            specific investments.
+          </li>
+          <li>
+            Disclosure to government agencies, courts, parties to lawsuits, or
+            regulators in response to subpoenas. In such cases, we share only
+            the information that we are required and/or authorized to share.
+          </li>
+        </ul>
+        <p><strong>Confidentiality & Security</strong></p>
+        <p>
+          The security of your account information is important to us. Only
+          those persons who need your information to perform their job may have
+          access to it. In addition, we maintain physical, electronic and
+          procedural security measures to protect your information. Uncommon
+          Capital Group, LLC instructs all of its employees to protect the
+          confidentiality of your personal information as described in these
+          policies, which are strictly enforced.
+        </p>
+      </section>
+    </main>
+    <footer class="bg__dark">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <img
+              srcset="/images/uncommon_capital_logo.svg 276w"
+              sizes="276px"
+              src="/images/uncommon_capital_logo.svg"
+              loading="lazy"
+              width="276"
+              height="66"
+              alt="logo"
+            />
+          </div>
+          <div class="col">
+            <p class="subtitle">Follow Us</p>
+            <a
+              href="https://www.linkedin.com/company/uncommoncapitalgroup"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </div>
+          <div class="col">
+            <p class="subtitle">Email Us</p>
+            <a href="mailto:investorrelations@investuncommon.com"
+              >investorrelations@investuncommon.com</a
+            >
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <p>
+              Uncommon Capital Group, LLC offers securities through Stonehaven
+              LLC, a Member
+              <a
+                href="https://www.finra.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >FINRA</a
+              >
+              /
+              <a
+                href="https://www.sipc.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >SIPC</a
+              >. Information on all FINRA-registered representatives and
+              broker-dealers can be found on FINRA’s
+              <a
+                href="https://brokercheck.finra.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >BrokerCheck</a
+              >. Investments in private placements involve a high degree of risk
+              and may result in a partial or total loss of your investment.
+              Private placements are generally illiquid investments. Investors
+              should consult with their investment, legal, and tax advisors
+              regarding any real estate private placement investment. Please
+              refer to the following links for additional disclosure and
+              disclaimer information:
+              <a
+                href="https://stonehaven-llc.com/disclaimer/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Disclaimers & Risks</a
+              >,
+              <a
+                href="https://stonehaven-llc.com/privacy/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Privacy Policy
+              </a>
+              and
+              <a
+                href="https://stonehaven-llc.com/form-crs/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Form CRS</a
+              >.
+            </p>
+          </div>
+          <div class="col">
+            <p>© 2023 Uncommon Capital Group, LLC</p>
+            <a href="/privacy-policy.html">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
