@@ -2,19 +2,21 @@ document.addEventListener("DOMContentLoaded", function () {
   window.scrollTo(0, 0);
   var loaderTl = gsap.timeline();
 
-  loaderTl.fromTo(
-    ".loader p span",
-    { y: 10, opacity: 0 },
-    { y: 0, opacity: 1, stagger: 0.2, delay: 0.5, ease: "Power2.inOut" }
-  );
-  loaderTl.to(".loader", { opacity: 0, delay: 0.7 });
+  loaderTl.to(".loader h2 span", {
+    y: 0,
+    opacity: 1,
+    stagger: 0.1,
+    delay: 0.5,
+    ease: "Power2.Out",
+  });
+  loaderTl.to(".loader", 0.5, { opacity: 0, delay: 0.7 });
   loaderTl.to(
     ".blur",
+    0.5,
     {
       backdropFilter: "blur(0px)",
     },
-
-    "<"
+    "<.1"
   );
   loaderTl.add(function () {
     document.body.classList.add("loaded");

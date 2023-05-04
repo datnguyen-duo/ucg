@@ -1,0 +1,49 @@
+/*	-----------------------------------------------------------------------------
+  VARIABLES
+--------------------------------------------------------------------------------- */
+
+// Fonts
+$font-headline: "PPRadioGrotesk-Regular";
+$font-body: "pragmatica";
+
+// Colors
+$color-blue-1: #000c45;
+$color-blue-2: #365bc1;
+$color-blue-3: #1a2765;
+
+$color1: #000c45;
+$color2: #365bc1;
+$color3: #4c4e58;
+$color4: #eff4f7;
+$color5: #1d7476;
+$color6: #096162;
+
+// Breakpoints
+$mobile-breakpoint: 1024px;
+
+$s1920: "only screen and (max-width : 1920px)";
+$s1800: "only screen and (max-width : 1800px)";
+$s1500: "only screen and (max-width : 1500px)";
+$s1300: "only screen and (max-width : 1300px)";
+$s1200: "only screen and (max-width : 1200px)";
+$s1100: "only screen and (max-width : 1100px)";
+$s1020: "only screen and (max-width : 1020px)";
+$s750: "only screen and (max-width : 750px)";
+$s680: "only screen and (max-width : 680px)";
+$s390: "only screen and (max-width : 390px)";
+$shover: "only screen and (min-width : 1030px)";
+
+// Transitions
+@mixin transition($el: all, $speed: 600ms, $tf: ease, $delay: 0ms) {
+  -webkit-transition: $el $speed $tf $delay;
+  -moz-transition: $el $speed $tf $delay;
+  -o-transition: $el $speed $tf $delay;
+  transition: $el $speed $tf $delay;
+}
+
+// Spacing
+$spacer: 6vw;
+$gutter: 8.86vw;
+
+$mobile-spacer: 4rem;
+$mobile-gutter: 2rem;

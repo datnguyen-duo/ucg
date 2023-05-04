@@ -37,18 +37,8 @@
     />
 
     <link rel="shortcut icon" type="image/png" href="images/favicon.jpg" />
-    <link rel="stylesheet" href="https://use.typekit.net/aos8uzp.css" />
-    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/main--inline.css" />
 
-    <link
-      rel="preload"
-      href="https://use.typekit.net/aos8uzp.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript
-      ><link rel="stylesheet" href="https://use.typekit.net/aos8uzp.css"
-    /></noscript>
     <link
       rel="preload"
       href="style/main.css"
@@ -64,7 +54,6 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.min.js"
       defer
     ></script>
-
     <script src="script/global.js" defer></script>
   </head>
 
@@ -77,6 +66,7 @@
               src="images/uncommon_capital_logo.svg"
               width="209"
               height="50"
+              alt="logo"
             />
           </a>
         </li>
@@ -108,6 +98,7 @@
               loading="lazy"
               width="101"
               height="54"
+              alt="wsj-logo"
             />
           </div>
           <div class="col">
@@ -118,6 +109,7 @@
               loading="lazy"
               width="255"
               height="54"
+              alt="barrons-logo"
             />
           </div>
           <div class="col">
@@ -128,6 +120,7 @@
               loading="lazy"
               width="174"
               height="59"
+              alt="wmre-logo"
             />
           </div>
 
@@ -139,6 +132,7 @@
               loading="lazy"
               width="171"
               height="72"
+              alt="greenstreet-logo"
             />
           </div>
           <div class="col">
@@ -149,6 +143,7 @@
               loading="lazy"
               width="199"
               height="79"
+              alt="rejournals-logo"
             />
           </div>
         </div>
@@ -200,13 +195,15 @@
               </p>
             </div>
             <div class="col">
+              <p class="desc">Our manager requirements</p>
               <img
-                srcset="/images/connected.webp 545w"
-                sizes="545px"
+                srcset="/images/connected.webp 488w"
+                sizes="488px"
                 src="/images/connected.webp"
                 loading="lazy"
-                width="545"
-                height="391"
+                width="488"
+                height="333"
+                alt="connected-graphic"
               />
             </div>
           </div>
@@ -228,6 +225,7 @@
                 loading="lazy"
                 width="488"
                 height="491"
+                alt="curated-graphic"
               />
             </div>
           </div>
@@ -250,6 +248,7 @@
                 loading="lazy"
                 width="485"
                 height="505"
+                alt="confidential-graphic"
               />
             </div>
           </div>
@@ -268,10 +267,11 @@
                 loading="lazy"
                 width="273"
                 height="148"
+                alt="investment-thumbnail"
               />
               <p>Lorem ipsum dolor sit amet Donec neque ipsum fermentum.</p>
               <h3>$265,000,000</h3>
-              <span>OVERSUBSCRIBED | 2022</span>
+              <p class="desc">OVERSUBSCRIBED | 2022</p>
             </div>
 
             <div class="col">
@@ -282,10 +282,11 @@
                 loading="lazy"
                 width="273"
                 height="148"
+                alt="investment-thumbnail"
               />
               <p>Lorem ipsum dolor sit amet Donec neque ipsum fermentum.</p>
               <h3>$265,000,000</h3>
-              <span>OVERSUBSCRIBED | 2022</span>
+              <p class="desc">OVERSUBSCRIBED | 2022</p>
             </div>
 
             <div class="col">
@@ -296,10 +297,11 @@
                 loading="lazy"
                 width="273"
                 height="148"
+                alt="investment-thumbnail"
               />
               <p>Lorem ipsum dolor sit amet Donec neque ipsum fermentum.</p>
               <h3>$265,000,000</h3>
-              <span>OVERSUBSCRIBED | 2022</span>
+              <p class="desc">OVERSUBSCRIBED | 2022</p>
             </div>
 
             <div class="col">
@@ -310,10 +312,11 @@
                 loading="lazy"
                 width="273"
                 height="148"
+                alt="investment-thumbnail"
               />
               <p>Lorem ipsum dolor sit amet Donec neque ipsum fermentum.</p>
               <h3>$265,000,000</h3>
-              <span>OVERSUBSCRIBED | 2022</span>
+              <p class="desc">OVERSUBSCRIBED | 2022</p>
             </div>
           </div>
         </div>
@@ -321,7 +324,13 @@
 
       <section id="our-story" class="bg__dark">
         <div class="container">
-          <img src="images/quote.svg" width="75" height="75" loading="lazy" />
+          <img
+            src="images/quote.svg"
+            width="75"
+            height="75"
+            loading="lazy"
+            alt="quote-icon"
+          />
           <h2 class="st__text">
             We are transforming private real estate investing and who gets
             access to the most exclusive investment opportunities.
@@ -395,6 +404,7 @@
                   width="22"
                   height="17"
                   loading="lazy"
+                  alt="arrow-icon"
                 />
               </p>
             </div>
@@ -419,6 +429,7 @@
                   width="22"
                   height="17"
                   loading="lazy"
+                  alt="arrow-icon"
                 />
               </p>
             </div>
@@ -442,6 +453,7 @@
                   width="22"
                   height="17"
                   loading="lazy"
+                  alt="arrow-icon"
                 />
               </p>
             </div>
@@ -460,6 +472,7 @@
               loading="lazy"
               width="276"
               height="66"
+              alt="logo"
             />
           </div>
           <div class="col">
@@ -559,7 +572,12 @@
           />
           <p class="main_category">Resources & News</p>
           <div class="close_popup">
-            <img src="images/close_popup.svg" />
+            <img
+              src="images/close_popup.svg"
+              width="42"
+              height="42"
+              alt="close-icon"
+            />
           </div>
           <div class="hero_content">
             <div class="left">
@@ -576,16 +594,38 @@
                   title="Share on Facebook"
                   class="facebook"
                 >
-                  <img src="images/facebook.svg" />
-                  <img src="images/facebook_white.svg" class="hover_icon" />
+                  <img
+                    src="images/facebook.svg"
+                    width="60"
+                    height="60"
+                    alt="facebook-icon"
+                  />
+                  <img
+                    src="images/facebook_white.svg"
+                    class="hover_icon"
+                    width="60"
+                    height="60"
+                    alt="facebook-icon"
+                  />
                 </a>
                 <a
                   href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//www.investuncommon.com/?story=The-Case-For-Industrial-Real-Estate"
                   target="_blank"
                   class="linkedin"
                 >
-                  <img src="images/linkedin.svg" />
-                  <img src="images/linkedin_white.svg" class="hover_icon" />
+                  <img
+                    src="images/linkedin.svg"
+                    width="60"
+                    height="60"
+                    alt="linkedin-icon"
+                  />
+                  <img
+                    src="images/linkedin_white.svg"
+                    class="hover_icon"
+                    width="60"
+                    height="60"
+                    alt="linkedin-icon"
+                  />
                 </a>
                 <a
                   href="https://twitter.com/share?url=https://www.investuncommon.com/?story=The-Case-For-Industrial-Real-Estate&text=The%20Case%20For%20Industrial%20Real%20Estate"
@@ -593,8 +633,19 @@
                   title="Share on Twitter"
                   class="twitter"
                 >
-                  <img src="images/twitter.svg" />
-                  <img src="images/twitter_white.svg" class="hover_icon" />
+                  <img
+                    src="images/twitter.svg"
+                    width="60"
+                    height="60"
+                    alt="twitter-icon"
+                  />
+                  <img
+                    src="images/twitter_white.svg"
+                    class="hover_icon"
+                    width="60"
+                    height="60"
+                    alt="twitter-icon"
+                  />
                 </a>
               </div>
             </div>
@@ -863,7 +914,12 @@
           />
           <p class="main_category">Resources & News</p>
           <div class="close_popup">
-            <img src="images/close_popup.svg" />
+            <img
+              src="images/close_popup.svg"
+              width="42"
+              height="42"
+              alt="close-icon"
+            />
           </div>
           <div class="hero_content">
             <div class="left">
@@ -880,16 +936,38 @@
                   title="Share on Facebook"
                   class="facebook"
                 >
-                  <img src="images/facebook.svg" />
-                  <img src="images/facebook_white.svg" class="hover_icon" />
+                  <img
+                    src="images/facebook.svg"
+                    width="60"
+                    height="60"
+                    alt="facebook-icon"
+                  />
+                  <img
+                    src="images/facebook_white.svg"
+                    class="hover_icon"
+                    width="60"
+                    height="60"
+                    alt="facebook-icon"
+                  />
                 </a>
                 <a
                   href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//www.investuncommon.com/?story=Is-Bigger-Better"
                   target="_blank"
                   class="linkedin"
                 >
-                  <img src="images/linkedin.svg" />
-                  <img src="images/linkedin_white.svg" class="hover_icon" />
+                  <img
+                    src="images/linkedin.svg"
+                    width="60"
+                    height="60"
+                    alt="linkedin-icon"
+                  />
+                  <img
+                    src="images/linkedin_white.svg"
+                    class="hover_icon"
+                    width="60"
+                    height="60"
+                    alt="linkedin-icon"
+                  />
                 </a>
                 <a
                   href="https://twitter.com/share?url=https://www.investuncommon.com/?story=Is-Bigger-Better&text=Is%20Bigger%20Better?%20Not%20For%20Real%20Estate%20Funds."
@@ -897,8 +975,19 @@
                   title="Share on Twitter"
                   class="twitter"
                 >
-                  <img src="images/twitter.svg" />
-                  <img src="images/twitter_white.svg" class="hover_icon" />
+                  <img
+                    src="images/twitter.svg"
+                    width="60"
+                    height="60"
+                    alt="twitter-icon"
+                  />
+                  <img
+                    src="images/twitter_white.svg"
+                    class="hover_icon"
+                    width="60"
+                    height="60"
+                    alt="twitter-icon"
+                  />
                 </a>
               </div>
             </div>
@@ -1049,7 +1138,15 @@
                   ata-url="real-esate-alert-fundraising-pro-hangs-own-shingle"
                 >
                   <div class="single_news">
-                    <img src="images/blog-alert.png" alt="" />
+                    <img
+                      srcset="/images/blog-alert--thumbnail.webp 446w"
+                      sizes="(min-width: 750px) 23vw, 78vw"
+                      src="/images/blog-alert--thumbnail.webp"
+                      loading="lazy"
+                      width="446"
+                      height="420"
+                      alt="thumbnail-image"
+                    />
                     <div class="category_wrap">
                       <div class="category">News</div>
                     </div>
@@ -1071,10 +1168,26 @@
     >
       <div class="single_story_content">
         <div class="single_story_hero">
-          <img src="images/blog-alert.png" class="cover_image" />
+          <img
+            srcset="
+              /images/blog-alert@750.webp  750w,
+              /images/blog-alert.webp     1634w
+            "
+            sizes="(min-width: 750px) 85vw, 100vw"
+            src="/images/blog-alert.webp"
+            loading="lazy"
+            width="1634"
+            height="420"
+            alt="blog-image"
+          />
           <p class="main_category">Resources & News</p>
           <div class="close_popup">
-            <img src="images/close_popup.svg" />
+            <img
+              src="images/close_popup.svg"
+              width="42"
+              height="42"
+              alt="close-icon"
+            />
           </div>
           <div class="hero_content">
             <div class="left">
@@ -1091,16 +1204,38 @@
                   title="Share on Facebook"
                   class="facebook"
                 >
-                  <img src="images/facebook.svg" />
-                  <img src="images/facebook_white.svg" class="hover_icon" />
+                  <img
+                    src="images/facebook.svg"
+                    width="60"
+                    height="60"
+                    alt="facebook-icon"
+                  />
+                  <img
+                    src="images/facebook_white.svg"
+                    class="hover_icon"
+                    width="60"
+                    height="60"
+                    alt="facebook-icon"
+                  />
                 </a>
                 <a
                   href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//www.investuncommon.com/?story=real-esate-alert-fundraising-pro-hangs-own-shingle"
                   target="_blank"
                   class="linkedin"
                 >
-                  <img src="images/linkedin.svg" />
-                  <img src="images/linkedin_white.svg" class="hover_icon" />
+                  <img
+                    src="images/linkedin.svg"
+                    width="60"
+                    height="60"
+                    alt="linkedin-icon"
+                  />
+                  <img
+                    src="images/linkedin_white.svg"
+                    class="hover_icon"
+                    width="60"
+                    height="60"
+                    alt="linkedin-icon"
+                  />
                 </a>
                 <a
                   href="https://twitter.com/share?url=https://www.investuncommon.com/?story=real-esate-alert-fundraising-pro-hangs-own-shingle&text=Real%20Estate%20Alert:%20Fundraising%20Pro%20Hangs%20Own%20Shingle"
@@ -1108,8 +1243,19 @@
                   title="Share on Twitter"
                   class="twitter"
                 >
-                  <img src="images/twitter.svg" />
-                  <img src="images/twitter_white.svg" class="hover_icon" />
+                  <img
+                    src="images/twitter.svg"
+                    width="60"
+                    height="60"
+                    alt="twitter-icon"
+                  />
+                  <img
+                    src="images/twitter_white.svg"
+                    class="hover_icon"
+                    width="60"
+                    height="60"
+                    alt="twitter-icon"
+                  />
                 </a>
               </div>
             </div>
@@ -1188,11 +1334,16 @@
     </div>
     <div class="loader">
       <div class="container">
-        <img src="images/uncommon_capital_logo.svg" width="209" height="50" />
-        <p>
+        <img
+          src="images/ucg_stamp_navy.svg"
+          width="148"
+          height="148"
+          alt="logo"
+        />
+        <h2>
           <span>Connected.</span> <span>Curated.</span>
           <span>Confidential.</span>
-        </p>
+        </h2>
       </div>
     </div>
   </body>
