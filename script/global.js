@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
     loaderTl.to(".loader h2 span", {
       y: 0,
       opacity: 1,
-      stagger: 0.1,
+      stagger: 0.55,
       delay: 0.5,
-      ease: "Power2.Out",
+      ease: "Power2.In",
     });
     loaderTl.to(".loader", 0.5, { opacity: 0, delay: 0.7 });
     loaderTl.to(

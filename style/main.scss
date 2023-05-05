@@ -120,19 +120,20 @@
 
 main {
   #intro {
+    padding-top: 0;
     @media #{$s750} {
       width: 100%;
     }
     .row {
       justify-content: center;
-      padding: $spacer;
+      padding: #{$spacer / 1.5};
       align-items: center;
       @media #{$s750} {
         flex-wrap: wrap;
         padding: $mobile-gutter 0;
       }
       .col {
-        height: 4vw;
+        height: 3.5vw;
         max-width: 12vw;
         margin: 0 1.5rem;
         @media #{$s750} {
@@ -156,7 +157,7 @@ main {
     border-top: 1px solid $color-blue-1;
     .container {
       h2 {
-        width: 63vw;
+        width: 57vw;
         @media #{$s750} {
           width: 100%;
         }
@@ -198,7 +199,7 @@ main {
   #what-we-do {
     border-top: 1px solid $color-blue-1;
     .container {
-      padding-right: 0;
+      // padding-right: 0;
       .row {
         justify-content: space-between;
         align-items: center;
@@ -219,7 +220,7 @@ main {
             }
           }
           &:nth-child(2) {
-            width: 28vw;
+            width: 25vw;
             @media #{$s750} {
               width: 70%;
               margin: 1rem 0 $mobile-gutter;
@@ -275,7 +276,7 @@ main {
     }
   }
 
-  #our-story {
+  #about {
     width: 100%;
     padding: $spacer #{$gutter / 2} #{$gutter / 2};
     text-align: center;
@@ -291,7 +292,7 @@ main {
         min-width: 28px;
       }
       > h2 {
-        padding: 0 2em;
+        padding: 0 5em;
         @media #{$s750} {
           padding: 0 $mobile-gutter;
         }
@@ -320,7 +321,7 @@ main {
           flex-direction: column;
           border-radius: 0;
           width: 100%;
-          padding: $mobile-gutter $mobile-gutter $mobile-spacer;
+          padding: $mobile-gutter 1rem $mobile-spacer;
           margin-top: $mobile-gutter;
         }
         .col {
@@ -368,7 +369,7 @@ main {
         .col {
           position: relative;
           width: calc(100% / 3 - 1.5rem);
-          padding: 2.5rem 1rem;
+          padding: 4rem 1rem;
           border-radius: 15px;
           background-color: $color-blue-2;
           overflow: hidden;
@@ -402,10 +403,10 @@ main {
           h2 {
             font-size: 2.5vw;
             margin-bottom: auto;
-            padding-bottom: 2rem;
+            padding-bottom: 4rem;
             @media #{$s750} {
               overflow-x: auto;
-              padding: 0 0 1rem 0;
+              padding: 0 0 2rem 0;
               font-size: 6.12vw;
             }
           }
@@ -415,12 +416,18 @@ main {
             img {
               width: 16px;
               margin-left: 0.2em;
+              transition: transform 0.2s ease-in-out;
             }
           }
 
           &:hover {
             > img {
               opacity: 0.2;
+            }
+            p {
+              img {
+                transform: translateX(5px);
+              }
             }
           }
         }
@@ -463,7 +470,7 @@ footer {
     @media #{$s750} {
       flex-direction: column;
       text-align: center;
-      padding: 0 $mobile-gutter;
+      padding: 0 1rem;
     }
     p {
       &:not(.subtitle) {
@@ -774,7 +781,7 @@ footer {
     }
 
     .story_content {
-      padding: 6vw 13vw;
+      padding: $gutter;
       box-sizing: border-box;
 
       img {
@@ -789,7 +796,7 @@ footer {
         }
       }
       @media #{$s750} {
-        padding: 30px;
+        padding: $mobile-gutter 1rem;
       }
 
       p {
