@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.classList.add("loaded");
   }
 
-  gsap.utils.toArray("main section").forEach((section, i) => {
+  gsap.utils.toArray("main section:not(#banner)").forEach((section, i) => {
     ScrollTrigger.create({
       trigger: section,
       start: "top 50%",
