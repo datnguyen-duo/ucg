@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const sliders = new Swiper(".swiper", {
       slidesPerView: "auto",
       allowTouchMove: true,
-      touchMoveStopPropagation: true,
+      // touchMoveStopPropagation: true,
       // freeMode: {
       //   enabled: true,
       //   sticky: false,
