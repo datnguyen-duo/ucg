@@ -54,6 +54,10 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.min.js"
       defer
     ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"
+      defer
+    ></script>
     <script src="script/global.js" defer></script>
   </head>
 
@@ -81,7 +85,7 @@
     </nav>
 
     <main>
-      <div class="blur"></div>
+      <!-- <div class="blur"></div> -->
       <section id="banner" class="bg__dark">
         <h1>
           We curate <span><span class="bg"></span>uncommon</span> investment
@@ -257,9 +261,9 @@
 
       <section id="recent-investments">
         <p class="subtitle">Recent Investments</p>
-        <div class="container">
-          <div class="row">
-            <div class="col">
+        <div class="container swiper">
+          <div class="row swiper-wrapper">
+            <div class="col swiper-slide">
               <img
                 srcset="/images/recent-investments--1.webp 273w"
                 sizes="273px"
@@ -274,7 +278,7 @@
               <p class="desc">OVERSUBSCRIBED | 2022</p>
             </div>
 
-            <div class="col">
+            <div class="col swiper-slide">
               <img
                 srcset="/images/recent-investments--1.webp 273w"
                 sizes="273px"
@@ -289,7 +293,7 @@
               <p class="desc">OVERSUBSCRIBED | 2022</p>
             </div>
 
-            <div class="col">
+            <div class="col swiper-slide">
               <img
                 srcset="/images/recent-investments--1.webp 273w"
                 sizes="273px"
@@ -304,7 +308,7 @@
               <p class="desc">OVERSUBSCRIBED | 2022</p>
             </div>
 
-            <div class="col">
+            <div class="col swiper-slide">
               <img
                 srcset="/images/recent-investments--1.webp 273w"
                 sizes="273px"
@@ -318,6 +322,26 @@
               <h3>$265,000,000</h3>
               <p class="desc">OVERSUBSCRIBED | 2022</p>
             </div>
+          </div>
+          <div class="swiper-button-prev">
+            <img
+              src="images/arrow_right.svg"
+              alt="arrow-icon"
+              width="22"
+              height="17"
+              loading="lazy"
+              alt="arrow-icon"
+            />
+          </div>
+          <div class="swiper-button-next">
+            <img
+              src="images/arrow_right.svg"
+              alt="arrow-icon"
+              width="22"
+              height="17"
+              loading="lazy"
+              alt="arrow-icon"
+            />
           </div>
         </div>
       </section>
@@ -337,7 +361,7 @@
           </h2>
           <div class="separator"></div>
           <p class="subtitle st__text">Ben Harris</p>
-          <p class="st__text">President of Uncommon Capital Group</p>
+          <p class="st__text">Founder of Uncommon Capital Group</p>
           <div class="row st__text" id="our-story">
             <div class="col"><h1 class="lg">Our Story</h1></div>
             <div class="col">
@@ -383,9 +407,9 @@
 
       <section id="resources">
         <p class="subtitle">Resources & News</p>
-        <div class="container">
-          <div class="row resources">
-            <div class="col resources__card" data-story="1">
+        <div class="container swiper">
+          <div class="row resources swiper-wrapper">
+            <div class="col resources__card swiper-slide" data-story="1">
               <img
                 srcset="/images/story_hero.webp 446w"
                 sizes="(min-width: 750px) 23vw, 78vw"
@@ -409,7 +433,7 @@
               </p>
             </div>
 
-            <div class="col resources__card" data-story="2">
+            <div class="col resources__card swiper-slide" data-story="2">
               <img
                 srcset="/images/blog-duediligence.webp 446w"
                 sizes="(min-width: 750px) 23vw, 78vw"
@@ -433,7 +457,7 @@
                 />
               </p>
             </div>
-            <div class="col resources__card" data-story="3">
+            <div class="col resources__card swiper-slide" data-story="3">
               <img
                 srcset="/images/blog-alert--thumbnail.webp 446w"
                 sizes="(min-width: 750px) 23vw, 78vw"
@@ -457,6 +481,26 @@
                 />
               </p>
             </div>
+          </div>
+          <div class="swiper-button-prev">
+            <img
+              src="images/arrow_right.svg"
+              alt="arrow-icon"
+              width="22"
+              height="17"
+              loading="lazy"
+              alt="arrow-icon"
+            />
+          </div>
+          <div class="swiper-button-next">
+            <img
+              src="images/arrow_right.svg"
+              alt="arrow-icon"
+              width="22"
+              height="17"
+              loading="lazy"
+              alt="arrow-icon"
+            />
           </div>
         </div>
       </section>
@@ -494,7 +538,7 @@
 
         <div class="row">
           <div class="col">
-            <p>
+            <p class="copyright">
               Uncommon Capital Group, LLC offers securities through Stonehaven
               LLC, a Member
               <a
@@ -1333,7 +1377,7 @@
         </div>
       </div>
     </div>
-    <div class="loader">
+    <!-- <div class="loader">
       <div class="container">
         <img
           src="images/ucg_stamp_navy.svg"
@@ -1346,6 +1390,6 @@
           <span>Confidential.</span>
         </h2>
       </div>
-    </div>
+    </div> -->
   </body>
 </html>

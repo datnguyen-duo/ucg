@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  window.scrollTo(0, 0);
+  // window.scrollTo(0, 0);
 
   if (document.querySelector(".loader")) {
     var loaderTl = gsap.timeline();
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     loaderTl.to(".loader h2 span", {
       y: 0,
       opacity: 1,
-      stagger: 0.55,
+      stagger: 0.6,
       delay: 0.5,
       ease: "Power2.In",
     });
@@ -72,6 +72,23 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     });
   });
+
+  if (document.querySelector(".swiper") && window.innerWidth < 750) {
+    const sliders = new Swiper(".swiper", {
+      slidesPerView: "auto",
+      allowTouchMove: true,
+      touchMoveStopPropagation: true,
+      freeMode: {
+        enabled: true,
+        sticky: false,
+        momentumBounce: false,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  }
 
   var url_string = window.location.href;
   var url = new URL(url_string);
@@ -144,4 +161,6 @@ window.addEventListener("load", (event) => {
       },
     });
   });
+
+  ScrollTrigger.refresh();
 });

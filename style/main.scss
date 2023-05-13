@@ -137,7 +137,7 @@ main {
         max-width: 12vw;
         margin: 0 1.5rem;
         @media #{$s750} {
-          height: 9vw;
+          height: 8vw;
           margin: 1rem;
           max-width: 100%;
           width: calc(100% / 3 - 2rem);
@@ -184,7 +184,7 @@ main {
             color: $color-blue-2;
 
             @media #{$s750} {
-              font-size: 10.556vw;
+              font-size: 9.5vw;
             }
           }
 
@@ -221,9 +221,13 @@ main {
           }
           &:nth-child(2) {
             width: 25vw;
+            img {
+              width: 80%;
+              margin: 0 auto;
+            }
             @media #{$s750} {
               width: 70%;
-              margin: 1rem 0 $mobile-gutter;
+              margin: 3rem 0 $mobile-gutter;
             }
           }
         }
@@ -241,17 +245,32 @@ main {
 
   #recent-investments {
     border-top: 1px solid $color-blue-1;
+    position: relative;
     @media #{$s750} {
-      // width: 100%;
+      width: 100%;
+      overflow: hidden;
+      border-top: none;
+
+      > p {
+        padding-top: 0.5rem;
+        width: calc(100% - 2rem);
+        border-top: 1px solid $color-blue-1;
+        margin: 0 auto;
+      }
       .container {
         padding-top: 0;
+
+        @media #{$s750} {
+          padding-right: 3rem;
+          padding-bottom: 6rem;
+        }
       }
     }
     .row {
       justify-content: space-between;
       @media #{$s750} {
-        overflow-x: auto;
-        padding: 2rem 2rem 1rem 1rem;
+        display: flex;
+        padding: 2rem 2rem 1rem;
       }
       .col {
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.06);
@@ -262,9 +281,7 @@ main {
         @media #{$s750} {
           width: 85%;
           flex-shrink: 0;
-          &:not(:last-child) {
-            margin-right: 1rem;
-          }
+          margin-right: 1rem;
         }
         h3 {
           margin: 2rem 0 0.2rem;
@@ -277,7 +294,7 @@ main {
 
   #about {
     width: 100%;
-    padding: $spacer #{$gutter / 2} #{$gutter / 2};
+    padding: 0 #{$gutter / 2} #{$gutter / 2};
     text-align: center;
     @media #{$s750} {
       padding: $mobile-spacer 0 0;
@@ -314,14 +331,14 @@ main {
         text-align: left;
         justify-content: space-between;
         align-items: center;
-        margin-top: #{$gutter / 2};
+        margin-top: #{$gutter};
         border-radius: 15px;
         @media #{$s750} {
           flex-direction: column;
           border-radius: 0;
           width: 100%;
           padding: $mobile-gutter 1rem $mobile-spacer;
-          margin-top: $mobile-gutter;
+          margin-top: $mobile-gutter * 2;
         }
         .col {
           &:nth-child(1) {
@@ -351,7 +368,25 @@ main {
   #resources {
     padding-top: $spacer;
     @media #{$s750} {
-      padding-top: $mobile-spacer;
+      width: 100%;
+      overflow: hidden;
+      border-top: none;
+      padding-top: 4rem;
+
+      > p {
+        padding-top: 0.5rem;
+        width: calc(100% - 2rem);
+        border-top: 1px solid $color-blue-1;
+        margin: 0 auto;
+      }
+      .container {
+        padding-top: 0;
+
+        @media #{$s750} {
+          padding-right: 3rem;
+          padding-bottom: 6rem;
+        }
+      }
     }
 
     > .subtitle {
@@ -362,24 +397,22 @@ main {
       .row {
         justify-content: space-between;
         @media #{$s750} {
-          overflow-x: auto;
-          padding: 0 0 1rem 0;
+          display: flex;
+          padding: 2rem 2rem 1rem;
         }
         .col {
           position: relative;
           width: calc(100% / 3 - 1.5rem);
-          padding: 4rem 1rem;
+          padding: 4rem 3rem;
           border-radius: 15px;
           background-color: $color-blue-2;
           overflow: hidden;
           cursor: pointer;
           @media #{$s750} {
-            width: 85%;
+            width: 100%;
             flex-shrink: 0;
-            padding: 2rem;
-            &:not(:last-child) {
-              margin-right: 1rem;
-            }
+            margin-right: 1rem;
+            padding: 3rem;
           }
           > img {
             position: absolute;
@@ -414,7 +447,7 @@ main {
             text-align: center;
             img {
               width: 16px;
-              margin-left: 0.2em;
+              margin-left: 1em;
               transition: transform 0.2s ease-in-out;
             }
           }
@@ -463,7 +496,6 @@ footer {
   font-size: 14px;
   @media #{$s750} {
     padding: $mobile-gutter 0;
-    font-size: 12px;
   }
   .row {
     padding: 0 #{$gutter / 2};
@@ -473,8 +505,15 @@ footer {
       padding: 0 1rem;
     }
     p {
+      &.white {
+        margin-bottom: 0.5rem;
+      }
       &:not(.white) {
         opacity: 0.7;
+      }
+
+      &.copyright {
+        font-size: 12px;
       }
     }
     &:nth-child(1) {
@@ -499,6 +538,7 @@ footer {
           @media #{$s750} {
             border-right: none;
             padding-right: 0;
+            margin-bottom: 2rem;
           }
         }
       }
@@ -512,7 +552,7 @@ footer {
           padding-right: 2rem;
           @media #{$s750} {
             width: 100%;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
             padding-right: 0;
           }
         }
@@ -537,30 +577,27 @@ footer {
   background-color: rgba(0, 3, 15, 0.9);
   opacity: 0;
   pointer-events: none;
-  // transition: 0.2s ease-in-out;
+  transition: opacity 0.2s 0.6s ease-in-out;
 
   .single_story_content {
     background-color: #fff;
-    width: 100%;
+    width: 0%;
     max-width: 85%;
     margin-left: auto;
     height: 100vh;
     overflow: hidden;
     overflow-y: scroll;
-
+    transition: width 0.4s 0.2s ease-in-out;
     @media #{$s750} {
       max-width: 100%;
     }
 
-    &.active {
-      width: 100%;
-    }
-
     .single_story_hero {
       position: relative;
-      padding-top: 39%;
+      padding-top: 37%;
       overflow: hidden;
-
+      opacity: 0;
+      transition: opacity 0.2s 0s ease-in-out;
       &::before {
         content: "";
         position: absolute;
@@ -568,7 +605,8 @@ footer {
         top: 0;
         width: 100%;
         height: 100%;
-        background: rgba(29, 116, 118, 0.85);
+
+        background: rgba(54, 91, 193, 0.85);
         z-index: 2;
       }
 
@@ -665,7 +703,7 @@ footer {
             min-width: 150px;
             border-radius: 100px;
             display: inline-block;
-            padding: 15px 20px;
+            padding: 0.5em 1.5em;
             box-sizing: border-box;
             margin-bottom: 2vw;
             color: $color6;
@@ -675,16 +713,6 @@ footer {
             font-display: auto;
             font-style: normal;
             font-weight: 400;
-
-            @media #{$s1020} {
-              min-width: 140px;
-              padding: 10px 15px;
-              font-size: 14px;
-            }
-
-            @media #{$s750} {
-              min-width: 120px;
-            }
           }
 
           h1 {
@@ -742,16 +770,15 @@ footer {
               margin-bottom: 15px;
               @include transition();
 
+              @media #{$s750} {
+                margin-bottom: 0;
+              }
               &:last-child {
                 margin-bottom: 0px;
               }
 
               img {
-                width: 4vw;
-
-                @media #{$s1020} {
-                  width: 40px;
-                }
+                width: 3.5vw;
 
                 @media #{$s750} {
                   width: 50px;
@@ -781,8 +808,10 @@ footer {
     }
 
     .story_content {
-      padding: $gutter;
+      padding: $spacer $gutter;
       box-sizing: border-box;
+      opacity: 0;
+      transition: opacity 0.2s 0s ease-in-out;
 
       img {
         width: 100%;
@@ -905,7 +934,7 @@ footer {
             .single_news_wrap {
               position: relative;
               width: calc(100% / 2 - 1rem);
-              padding: 4rem 1rem;
+              padding: 4rem 3rem;
               border-radius: 15px;
               background-color: $color-blue-2;
               overflow: hidden;
@@ -914,10 +943,13 @@ footer {
               align-items: center;
               @media #{$s750} {
                 width: 100%;
+                padding: 3rem;
+
                 &:nth-child(1) {
                   margin-bottom: 1rem;
                 }
               }
+
               .single_news {
                 > img {
                   position: absolute;
@@ -975,5 +1007,46 @@ footer {
   &.active {
     opacity: 1;
     pointer-events: initial;
+    transition: opacity 0.2s 0s ease-in-out;
+
+    .single_story_content {
+      width: 100%;
+      transition: width 0.4s ease-in-out;
+
+      .single_story_hero {
+        opacity: 1;
+        transition: opacity 0.2s 0.4s ease-in-out;
+      }
+      .story_content {
+        opacity: 1;
+        transition: opacity 0.2s 0.4s ease-in-out;
+      }
+    }
   }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  background: $color-blue-2;
+  padding: 1rem;
+  border-radius: 15px;
+  left: 50%;
+  bottom: 2rem;
+  margin: auto;
+  display: none;
+  @media #{$s750} {
+    display: block;
+  }
+}
+
+.swiper-button-next {
+  transform: translate(1rem);
+}
+.swiper-button-prev {
+  transform: translate(calc(-100% - 1rem)) rotate(180deg);
 }
