@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // window.scrollTo(0, 0);
+  window.scrollTo(0, 0);
 
   if (document.querySelector(".loader")) {
     var loaderTl = gsap.timeline();
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (document.querySelector(".swiper") && window.innerWidth < 750) {
     const sliders = new Swiper(".swiper", {
       slidesPerView: "auto",
-      allowTouchMove: true,
+      // allowTouchMove: true,
       touchMoveStopPropagation: true,
       freeMode: {
         enabled: true,
