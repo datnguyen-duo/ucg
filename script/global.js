@@ -76,13 +76,6 @@ document.addEventListener("DOMContentLoaded", function () {
   if (document.querySelector(".swiper") && window.innerWidth < 750) {
     const sliders = new Swiper(".swiper", {
       slidesPerView: "auto",
-      allowTouchMove: true,
-      // touchMoveStopPropagation: true,
-      // freeMode: {
-      //   enabled: true,
-      //   sticky: false,
-      //   momentumBounce: false,
-      // },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
