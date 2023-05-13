@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (document.querySelector(".swiper") && window.innerWidth < 750) {
     const sliders = new Swiper(".swiper", {
-      slidesPerView: "auto",
+      slidesPerView: 1.2,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
