@@ -186,6 +186,8 @@ nav {
         body.sec__#{$i} & {
           &:nth-child(#{$i}) {
             &::before {
+              transition: width 0.2s 0.2s ease-in-out;
+
               width: 100%;
             }
           }
