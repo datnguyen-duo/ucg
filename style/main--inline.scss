@@ -64,7 +64,7 @@ h1 {
   line-height: 1.05;
   letter-spacing: 0.02em;
   @media #{$s750} {
-    font-size: 10.45vw;
+    font-size: 11vw;
   }
   &.lg {
     font-size: 6.75vw;
@@ -266,7 +266,7 @@ main {
     width: 100%;
 
     @media #{$s750} {
-      padding: 6rem 8vw 8rem;
+      padding: 8rem 8vw 10rem;
     }
     h1 {
       > span {

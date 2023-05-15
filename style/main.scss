@@ -207,7 +207,7 @@ main {
           flex-direction: column;
         }
         &:not(:last-of-type) {
-          margin-bottom: $spacer;
+          margin-bottom: #{$spacer * 1.5};
         }
         .col {
           &:nth-child(1) {
@@ -221,13 +221,24 @@ main {
           }
           &:nth-child(2) {
             width: 25vw;
-            img {
+            @media #{$s750} {
               width: 80%;
+              margin: 3rem 0 $mobile-gutter;
+            }
+
+            img {
+              width: 100%;
               margin: 0 auto;
             }
-            @media #{$s750} {
-              width: 70%;
-              margin: 3rem 0 $mobile-gutter;
+          }
+        }
+
+        &:nth-child(2) {
+          .col {
+            &:nth-child(2) {
+              img {
+                width: 80%;
+              }
             }
           }
         }
@@ -304,13 +315,13 @@ main {
         padding: 0;
       }
       > img {
-        width: 4vw;
-        min-width: 28px;
+        width: 4.5vw;
+        min-width: 32px;
       }
       > h2 {
         padding: 1.5rem 5em 0;
         @media #{$s750} {
-          padding: 0 $mobile-gutter;
+          padding: 1rem $mobile-gutter 0;
         }
       }
       > .separator {
@@ -346,7 +357,7 @@ main {
             @media #{$s750} {
               width: 100%;
               text-align: center;
-              margin-bottom: #{$mobile-gutter / 2};
+              margin-bottom: #{$mobile-gutter};
             }
           }
           &:nth-child(2) {
@@ -514,6 +525,7 @@ footer {
 
       &.copyright {
         font-size: 12px;
+        text-align: left;
       }
     }
     &:nth-child(1) {
@@ -538,7 +550,7 @@ footer {
           @media #{$s750} {
             border-right: none;
             padding-right: 0;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
           }
         }
       }
@@ -558,6 +570,9 @@ footer {
         }
         a {
           opacity: 0.7;
+          &.privacy {
+            margin-top: 0.5rem;
+          }
         }
       }
     }
@@ -615,7 +630,7 @@ footer {
       }
 
       @media #{$s750} {
-        padding-top: 85vh;
+        padding-top: 70vh;
       }
 
       .main_category {
@@ -694,21 +709,19 @@ footer {
           @media #{$s750} {
             width: 100%;
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 2rem;
           }
 
           .category {
             background: #fff;
             text-align: center;
-            min-width: 150px;
             border-radius: 100px;
             display: inline-block;
-            padding: 0.5em 1.5em;
+            padding: 0.5em 1em;
             box-sizing: border-box;
             margin-bottom: 2vw;
             color: $color6;
-            letter-spacing: 0.27px;
-            font-size: 16px;
+            font-size: 14px;
             font-family: "pragmatica";
             font-display: auto;
             font-style: normal;
@@ -738,7 +751,7 @@ footer {
 
             @media #{$s750} {
               flex-direction: row;
-              justify-content: space-between;
+              justify-content: center;
               flex-wrap: wrap;
             }
 
@@ -771,7 +784,7 @@ footer {
               @include transition();
 
               @media #{$s750} {
-                margin-bottom: 0;
+                margin: 0 0.25rem;
               }
               &:last-child {
                 margin-bottom: 0px;
@@ -781,7 +794,7 @@ footer {
                 width: 3.5vw;
 
                 @media #{$s750} {
-                  width: 50px;
+                  width: 45px;
                 }
 
                 &.hover_icon {
@@ -1028,25 +1041,32 @@ footer {
 .swiper-button-next,
 .swiper-button-prev {
   position: absolute;
-  display: flex;
   align-items: center;
   justify-content: center;
   align-self: center;
   background: $color-blue-2;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 15px;
   left: 50%;
   bottom: 2rem;
   margin: auto;
   display: none;
+  transition: opacity 0.2s ease-in-out;
   @media #{$s750} {
-    display: block;
+    display: flex;
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0.5;
+  }
+  img {
+    width: 80%;
   }
 }
 
 .swiper-button-next {
-  transform: translate(1rem);
+  transform: translate(0.5rem);
 }
 .swiper-button-prev {
-  transform: translate(calc(-100% - 1rem)) rotate(180deg);
+  transform: translate(calc(-100% - 0.5rem)) rotate(180deg);
 }
