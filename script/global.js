@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // window.scrollTo(0, 0);
+  window.scrollTo(0, 0);
 
   if (document.querySelector(".loader")) {
     var loaderTl = gsap.timeline();
