@@ -173,11 +173,17 @@ main {
           box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.06);
           width: calc(100% / 4 - 1.5rem);
           text-align: center;
-          padding: 2.5rem 0;
+          padding: 2rem 0.5rem;
           border-radius: 15px;
+          br {
+            display: none;
+          }
           @media #{$s750} {
             width: calc(100% / 2 - 0.5rem);
             margin: 1rem 0 0;
+            br {
+              display: block;
+            }
           }
           h3 {
             font-size: 4.167vw;
@@ -319,7 +325,10 @@ main {
         padding: 0;
       }
       > img {
-        min-width: 32px;
+        width: 3.5vw;
+        @media #{$s750} {
+          width: 8vw;
+        }
       }
       > h2 {
         padding: 1.5rem 5em 0;
@@ -380,12 +389,13 @@ main {
   }
 
   #resources {
-    padding-top: $spacer;
+    margin-top: $spacer;
     @media #{$s750} {
       width: 100%;
       overflow: hidden;
       border-top: none;
       padding-top: 4rem;
+      margin-top: 0;
 
       > p {
         padding-top: 0.5rem;

@@ -12,14 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
       ease: "Power2.In",
     });
     loaderTl.to(".loader", 0.5, { opacity: 0, delay: 0.7 });
-    loaderTl.to(
-      ".blur",
-      0.5,
-      {
-        backdropFilter: "blur(0px)",
-      },
-      "<.1"
-    );
     loaderTl.add(function () {
       document.body.classList.add("loaded");
     });
