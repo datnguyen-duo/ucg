@@ -111,6 +111,29 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
+  window.onload = function () {
+    if (typeof history.pushState === "function") {
+      history.pushState("pushState", null, null);
+      window.onpopstate = function () {
+        history.pushState("newPushState", null, null);
+        posts.forEach((post) => {
+          post.classList.remove("active");
+        });
+        document.body.classList.remove("init__news");
+        window.history.pushState("", "", window.location.href.split("?")[0]);
+      };
+    } else {
+      var ignoreHashChange = true;
+      window.onhashchange = function () {
+        if (!ignoreHashChange) {
+          ignoreHashChange = true;
+          window.location.hash = Math.random();
+        } else {
+          ignoreHashChange = false;
+        }
+      };
+    }
+  };
 
   var blogCards = document.querySelectorAll(".resources__card");
   blogCards.forEach((card) => {
