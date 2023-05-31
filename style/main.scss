@@ -202,7 +202,7 @@ main {
     }
   }
 
-  #what-we-do {
+  #our-edge {
     border-top: 1px solid $color-blue-1;
     .container {
       // padding-right: 0;
@@ -232,6 +232,9 @@ main {
               margin: 3rem 0 $mobile-gutter;
             }
 
+            p.desc {
+              margin-bottom: 0.5rem;
+            }
             img {
               width: 100%;
               margin: 0 auto;
@@ -307,7 +310,8 @@ main {
 
         img {
           max-height: 50px;
-          margin-bottom: 1rem;
+          margin: 1rem auto 1.5rem;
+          object-fit: contain;
           @media #{$s750} {
             max-height: 40px;
           }
