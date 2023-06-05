@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
       {
         clipPath: "inset(0 0% 0 0)",
         ease: "Power1.inOut",
+        duration: 0.8,
       }
     );
   } else {
