@@ -508,6 +508,11 @@ main {
   #footnote {
     border-top: 1px solid $color-blue-1;
     padding-top: 0;
+    .container {
+      @media #{$s750} {
+        padding-bottom: 2rem;
+      }
+    }
     p {
       font-size: 12px;
       color: #8a8a8a;
