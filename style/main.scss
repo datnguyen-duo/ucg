@@ -504,6 +504,16 @@ main {
     }
   }
 
+  #footnote {
+    border-top: 1px solid $color-blue-1;
+    padding-top: 0;
+    p {
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
   #privacy {
     padding: calc(#{$mobile-spacer} + 70px) $mobile-gutter $mobile-spacer;
     max-width: 1200px;
