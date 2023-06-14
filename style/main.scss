@@ -873,7 +873,7 @@ footer {
       transition: opacity 0.2s 0s ease-in-out;
 
       img {
-        width: 100%;
+        width: 90%;
         margin: 2em 0;
 
         &.half-size {
@@ -885,6 +885,7 @@ footer {
       }
       @media #{$s750} {
         padding: $mobile-gutter 1rem;
+        width: 100%;
       }
 
       p {
