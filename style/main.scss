@@ -915,6 +915,16 @@ footer {
         text-decoration: underline;
       }
 
+      ul,
+      ol {
+        padding-left: 1em;
+        li {
+          &:not(:last-child) {
+            margin-bottom: 0.2em;
+          }
+        }
+      }
+
       .story_first_section {
         display: flex;
         flex-wrap: wrap;
