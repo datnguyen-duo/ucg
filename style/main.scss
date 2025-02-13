@@ -929,11 +929,7 @@ footer {
         display: flex;
         flex-wrap: wrap;
         border-bottom: 1px solid #c9cad0;
-        padding-bottom: 4vw;
-
-        @media #{$s750} {
-          padding-bottom: 30px;
-        }
+        padding-bottom: 2rem;
 
         .left {
           width: 60%;

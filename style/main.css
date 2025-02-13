@@ -683,10 +683,7 @@ footer {
         display: flex;
         flex-wrap: wrap;
         border-bottom: 1px solid #c9cad0;
-        padding-bottom: 4vw; }
-        @media only screen and (max-width: 750px) {
-          .single_story_wrap .single_story_content .story_content .story_first_section {
-            padding-bottom: 30px; } }
+        padding-bottom: 2rem; }
         .single_story_wrap .single_story_content .story_content .story_first_section .left {
           width: 60%; }
           @media only screen and (max-width: 1020px) {
