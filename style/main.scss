@@ -441,7 +441,7 @@ main {
         .col {
           position: relative;
           width: calc(100% / 3 - 1.5rem);
-          padding: 4rem 3rem;
+          padding: 2rem 3rem 2rem;
           border-radius: 15px;
           background-color: $color-blue-2;
           overflow: hidden;
@@ -923,6 +923,12 @@ footer {
             margin-bottom: 0.2em;
           }
         }
+      }
+
+      .story_top {
+        border-bottom: 1px solid #c9cad0;
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
       }
 
       .story_first_section {

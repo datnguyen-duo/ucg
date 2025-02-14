@@ -69,7 +69,7 @@ main #intro {
       width: 100%; } }
   main #intro .row {
     justify-content: center;
-    padding: 4vw;
+    padding: 2.6666666667vw;
     align-items: center; }
     @media only screen and (max-width: 750px) {
       main #intro .row {
@@ -136,7 +136,7 @@ main #why-ucg {
       main #why-ucg .container .row {
         flex-direction: column; } }
     main #why-ucg .container .row:not(:last-of-type) {
-      margin-bottom: 9vw; }
+      margin-bottom: 6vw; }
     main #why-ucg .container .row .col:nth-child(1) {
       width: 33vw; }
       @media only screen and (max-width: 750px) {
@@ -270,7 +270,7 @@ main #about {
       main #about .container .row .col:nth-child(2) p:not(:last-of-type) {
         margin-bottom: 1em; }
 main #resources {
-  margin-top: 6vw;
+  margin-top: 4vw;
   position: relative; }
   @media only screen and (max-width: 750px) {
     main #resources {
@@ -303,7 +303,7 @@ main #resources {
     main #resources .container .row .col {
       position: relative;
       width: calc(100% / 3 - 1.5rem);
-      padding: 4rem 3rem;
+      padding: 2rem 3rem 2rem;
       border-radius: 15px;
       background-color: #365bc1;
       overflow: hidden;
@@ -630,7 +630,7 @@ footer {
               .single_story_wrap .single_story_content .single_story_hero .hero_content .right .social a:hover img.hover_icon {
                 opacity: 1; }
     .single_story_wrap .single_story_content .story_content {
-      padding: 6vw 8vw;
+      padding: 4vw 8vw;
       box-sizing: border-box;
       opacity: 0;
       transition: opacity 0.2s 0s ease-in-out; }
@@ -679,6 +679,10 @@ footer {
         .single_story_wrap .single_story_content .story_content ul li:not(:last-child),
         .single_story_wrap .single_story_content .story_content ol li:not(:last-child) {
           margin-bottom: 0.2em; }
+      .single_story_wrap .single_story_content .story_content .story_top {
+        border-bottom: 1px solid #c9cad0;
+        padding-bottom: 2rem;
+        margin-bottom: 2rem; }
       .single_story_wrap .single_story_content .story_content .story_first_section {
         display: flex;
         flex-wrap: wrap;

@@ -54,12 +54,12 @@ h4 {
   font-weight: 400; }
 
 h1 {
-  font-size: 4.7vw;
+  font-size: 4vw;
   line-height: 1.05;
   letter-spacing: 0.02em; }
   @media only screen and (max-width: 750px) {
     h1 {
-      font-size: 11.2vw; } }
+      font-size: 9.2vw; } }
   h1.lg {
     font-size: 6.75vw; }
     @media only screen and (max-width: 750px) {
@@ -226,7 +226,7 @@ main {
       main section {
         width: calc(100% - 2rem); } }
     main section .container {
-      padding: 6vw 4vw; }
+      padding: 4vw 4vw; }
       @media only screen and (max-width: 750px) {
         main section .container {
           padding: 2rem 0 4rem; } }
